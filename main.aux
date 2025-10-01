@@ -1,0 +1,382 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\bibstyle{biblatex}
+\bibdata{main-blx,main}
+\citation{biblatex-control}
+\abx@aux@refcontext{nty/global//global/global/global}
+\providecommand \oddpage@label [2]{}
+\newlabel{sec:abstract}{{}{2}{}{Doc-Start}{}}
+\citation{objaverse}
+\abx@aux@cite{0}{objaverse}
+\abx@aux@segm{0}{0}{objaverse}
+\citation{objaverse_xl}
+\abx@aux@cite{0}{objaverse_xl}
+\abx@aux@segm{0}{0}{objaverse_xl}
+\citation{shapenet}
+\abx@aux@cite{0}{shapenet}
+\abx@aux@segm{0}{0}{shapenet}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:topogen-samples}{{\caption@xref {fig:topogen-samples}{ on input line 8}}{3}{DONUT: \underline {D}ataset \underline {O}f ma\underline {N}ifold str\underline {U}c\underline {T}ures}{figure.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Random samples from the dataset.} Despite the fact that each sample is generated from a rather small family of shapes, both the topology preserving placement and augmentations allow for a rich variety of shapes, while ensuring topological consistency.}}{3}{figure.caption.1}\protected@file@percent }
+\newlabel{fig:short}{{1}{3}{\textbf {Random samples from the dataset.} Despite the fact that each sample is generated from a rather small family of shapes, both the topology preserving placement and augmentations allow for a rich variety of shapes, while ensuring topological consistency}{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{3}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}DONUT: \underline  {D}ataset \underline  {O}f ma\underline  {N}ifold str\underline  {U}c\underline  {T}ures}{3}{section.2}\protected@file@percent }
+\newlabel{sec:topogen}{{2}{3}{DONUT: \underline {D}ataset \underline {O}f ma\underline {N}ifold str\underline {U}c\underline {T}ures}{section.2}{}}
+\citation{mantra}
+\abx@aux@cite{0}{mantra}
+\abx@aux@segm{0}{0}{mantra}
+\citation{mantra}
+\abx@aux@cite{0}{mantra}
+\abx@aux@segm{0}{0}{mantra}
+\citation{abc}
+\abx@aux@cite{0}{abc}
+\abx@aux@segm{0}{0}{abc}
+\citation{thingi}
+\abx@aux@cite{0}{thingi}
+\abx@aux@segm{0}{0}{thingi}
+\citation{eulearn}
+\abx@aux@cite{0}{eulearn}
+\abx@aux@segm{0}{0}{eulearn}
+\citation{thingi}
+\abx@aux@cite{0}{thingi}
+\abx@aux@segm{0}{0}{thingi}
+\citation{objaverse}
+\abx@aux@cite{0}{objaverse}
+\abx@aux@segm{0}{0}{objaverse}
+\citation{abc}
+\abx@aux@cite{0}{abc}
+\abx@aux@segm{0}{0}{abc}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Existing datasets}{4}{subsection.2.1}\protected@file@percent }
+\newlabel{ssec:existing_datasets}{{2.1}{4}{Existing datasets}{subsection.2.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Combinatorial benchmarks.}{4}{subsection.2.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces \textbf  {Overview of existing datasets and their capabilities.} We summarize here the main characteristics of existing datasets with topological annotations. Besides EuLearn, all existing datasets with topological annotations come with downsides, discussed in Section~\ref {ssec:existing_datasets}. However, since EuLearn seems to be the most promising dataset, we carried out an extensive analysis to (1) highlight limitations that make it unreliable for further experiments and (2) motivate the use of DONUT (see Appendix~\ref {ssec:suppl_eulearn_analysis}). \textit  {Note:} The number of samples for MANTRA only takes into account 2-manifolds.}}{4}{table.caption.2}\protected@file@percent }
+\newlabel{tab:datasets}{{1}{4}{\textbf {Overview of existing datasets and their capabilities.} We summarize here the main characteristics of existing datasets with topological annotations. Besides EuLearn, all existing datasets with topological annotations come with downsides, discussed in Section~\ref {ssec:existing_datasets}. However, since EuLearn seems to be the most promising dataset, we carried out an extensive analysis to (1) highlight limitations that make it unreliable for further experiments and (2) motivate the use of DONUT (see Appendix~\ref {ssec:suppl_eulearn_analysis}). \textit {Note:} The number of samples for MANTRA only takes into account 2-manifolds}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Geometric datasets with noisy topology.}{4}{table.caption.2}\protected@file@percent }
+\citation{manifold}
+\abx@aux@cite{0}{manifold}
+\abx@aux@segm{0}{0}{manifold}
+\citation{manifoldplus}
+\abx@aux@cite{0}{manifoldplus}
+\abx@aux@segm{0}{0}{manifoldplus}
+\citation{dogn}
+\abx@aux@cite{0}{dogn}
+\abx@aux@segm{0}{0}{dogn}
+\citation{clay}
+\abx@aux@cite{0}{clay}
+\abx@aux@segm{0}{0}{clay}
+\citation{eulearn}
+\abx@aux@cite{0}{eulearn}
+\abx@aux@segm{0}{0}{eulearn}
+\newlabel{eq:euler}{{1}{5}{Geometric datasets with noisy topology}{equation.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Synthetic datasets with limited diversity.}{5}{equation.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {Genus distribution of Thingi10K.} Both axes are plotted in log scale. The genus was estimated from the Euler characteristic, provided as metadata with the dataset; however, 2,651 samples do not fulfill the requirements to directly compute the genus from the Euler characteristic (see \ref {eq:euler}). They are therefore not taken into account here. The histogram shows that a large fraction of the dataset (over 3,000 samples out of 7,344) has genera of 0 or 1, indicating that higher-genus components are significantly underrepresented, which may limit accurate classification and probing analyses for those cases.}}{5}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:thingi-genus}{{2}{5}{\textbf {Genus distribution of Thingi10K.} Both axes are plotted in log scale. The genus was estimated from the Euler characteristic, provided as metadata with the dataset; however, 2,651 samples do not fulfill the requirements to directly compute the genus from the Euler characteristic (see \ref {eq:euler}). They are therefore not taken into account here. The histogram shows that a large fraction of the dataset (over 3,000 samples out of 7,344) has genera of 0 or 1, indicating that higher-genus components are significantly underrepresented, which may limit accurate classification and probing analyses for those cases}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {Samples from the EuLearn dataset across different genera.} As the genus increases, shapes become geometrically more complex. This trend highlights a confounding factor in the dataset: geometric complexity grows together with genus. As a result, classification performance may be driven not only by topological information but also by correlated geometric cues.}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:eulearn-samples}{{3}{5}{\textbf {Samples from the EuLearn dataset across different genera.} As the genus increases, shapes become geometrically more complex. This trend highlights a confounding factor in the dataset: geometric complexity grows together with genus. As a result, classification performance may be driven not only by topological information but also by correlated geometric cues}{figure.caption.4}{}}
+\citation{superquadrics}
+\abx@aux@cite{0}{superquadrics}
+\abx@aux@segm{0}{0}{superquadrics}
+\citation{superdec}
+\abx@aux@cite{0}{superdec}
+\abx@aux@segm{0}{0}{superdec}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Method}{6}{subsection.2.2}\protected@file@percent }
+\newlabel{ssec:topogen-method}{{2.2}{6}{Method}{subsection.2.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Labels Distribution}{6}{subsubsection.2.2.1}\protected@file@percent }
+\newlabel{sssec:labels-distribution}{{2.2.1}{6}{Labels Distribution}{subsubsection.2.2.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Sample-Level Properties}{6}{subsubsection.2.2.2}\protected@file@percent }
+\newlabel{sssec:sample-level-properties}{{2.2.2}{6}{Sample-Level Properties}{subsubsection.2.2.2}{}}
+\citation{pmaezero}
+\abx@aux@cite{0}{pmaezero}
+\abx@aux@segm{0}{0}{pmaezero}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Mesh Generation}{7}{subsubsection.2.2.3}\protected@file@percent }
+\newlabel{sssec:mesh-generation}{{2.2.3}{7}{Mesh Generation}{subsubsection.2.2.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Cones.}{7}{subsubsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Superquadrics.}{7}{subsubsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{$K$-tori.}{7}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:toroids-overview}{{4a}{8}{Supertoroids}{figure.caption.5}{}}
+\newlabel{sub@fig:toroids-overview}{{a}{8}{Supertoroids}{figure.caption.5}{}}
+\newlabel{fig:ellipsoids-overview}{{4b}{8}{Superellipsoids}{figure.caption.5}{}}
+\newlabel{sub@fig:ellipsoids-overview}{{b}{8}{Superellipsoids}{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Overview of different shapes obtained for fixed values of $a_i, i \in \{1, 2, 3\}$ and increasing values of $\epsilon _1$ (left to right) and $\epsilon _2$ (bottom to top). (a) Different supertoroids. As mentioned in TO ADD, using these shapes for $k$-tori ($k \geq 2$) is challenging because they may not preserve the genus, for instance if some parts are too thin or sharp. (b) Different superellipsoids.}}{8}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:overview}{{4}{8}{Overview of different shapes obtained for fixed values of $a_i, i \in \{1, 2, 3\}$ and increasing values of $\epsilon _1$ (left to right) and $\epsilon _2$ (bottom to top). (a) Different supertoroids. As mentioned in TO ADD, using these shapes for $k$-tori ($k \geq 2$) is challenging because they may not preserve the genus, for instance if some parts are too thin or sharp. (b) Different superellipsoids}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4}Topological Consistency and Diversity}{8}{subsubsection.2.2.4}\protected@file@percent }
+\newlabel{sssec:top-consistency}{{2.2.4}{8}{Topological Consistency and Diversity}{subsubsection.2.2.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Consistency.}{8}{subsubsection.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Variability.}{8}{subsubsection.2.2.4}\protected@file@percent }
+\newlabel{fig:ktori-overview}{{5a}{9}{\textbf {Degrees of freedom allowed on $k$-tori.} Prior to the sequence of transformations applied to each individual component (e.g. rotation, twisting) we allow some variability during the generation. The x-axis represents the ratio \textit {major radius / minor radius}. The y-axis shows how the template shape is modified as we increase the value of $k$ (i.e. the genus). \textit {Note:} In the actual dataset, $1$-tori are generated with the parametric representation of supertoroids, since a regular torus is a particular case of supertoroid. However, for $k \geq 2$, using a composition of $1$-tori is more reliable. Some parameter sets can lead to undesirable holes in the final shape}{figure.caption.6}{}}
+\newlabel{sub@fig:ktori-overview}{{a}{9}{\textbf {Degrees of freedom allowed on $k$-tori.} Prior to the sequence of transformations applied to each individual component (e.g. rotation, twisting) we allow some variability during the generation. The x-axis represents the ratio \textit {major radius / minor radius}. The y-axis shows how the template shape is modified as we increase the value of $k$ (i.e. the genus). \textit {Note:} In the actual dataset, $1$-tori are generated with the parametric representation of supertoroids, since a regular torus is a particular case of supertoroid. However, for $k \geq 2$, using a composition of $1$-tori is more reliable. Some parameter sets can lead to undesirable holes in the final shape}{figure.caption.6}{}}
+\newlabel{fig:twisted-comparison}{{5b}{9}{\textbf {Effect of twisting.} Original template shapes (left) are twisted along the purple axis (right). Twisting deformations introduce non-rigid variability while preserving the genus and connectivity of each component. Here the scalar function defined along the axis is affine between $-\pi /6$ and $\pi /3$. We apply this augmentation at the component and sample level}{figure.caption.6}{}}
+\newlabel{sub@fig:twisted-comparison}{{b}{9}{\textbf {Effect of twisting.} Original template shapes (left) are twisted along the purple axis (right). Twisting deformations introduce non-rigid variability while preserving the genus and connectivity of each component. Here the scalar function defined along the axis is affine between $-\pi /6$ and $\pi /3$. We apply this augmentation at the component and sample level}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Analysis}{9}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}General Properties}{9}{subsubsection.2.3.1}\protected@file@percent }
+\newlabel{sssec:topogen-general-properties}{{2.3.1}{9}{General Properties}{subsubsection.2.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Dataset statistics.}{9}{subsubsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Distributions and scalability.}{9}{subsubsection.2.3.1}\protected@file@percent }
+\citation{pointnet}
+\abx@aux@cite{0}{pointnet}
+\abx@aux@segm{0}{0}{pointnet}
+\citation{pointnet++}
+\abx@aux@cite{0}{pointnet++}
+\abx@aux@segm{0}{0}{pointnet++}
+\citation{dgcnn}
+\abx@aux@cite{0}{dgcnn}
+\abx@aux@segm{0}{0}{dgcnn}
+\citation{persformer}
+\abx@aux@cite{0}{persformer}
+\abx@aux@segm{0}{0}{persformer}
+\citation{xpert}
+\abx@aux@cite{0}{xpert}
+\abx@aux@segm{0}{0}{xpert}
+\citation{perslay}
+\abx@aux@cite{0}{perslay}
+\abx@aux@segm{0}{0}{perslay}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \textbf  {UMAP embeddings of features learned by 3D encoders.} DONUT samples project into the same space as the original training data, indicating that they are not out-of-distribution.}}{10}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:topogen-umaps-overview}{{6}{10}{\textbf {UMAP embeddings of features learned by 3D encoders.} DONUT samples project into the same space as the original training data, indicating that they are not out-of-distribution}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Baselines and Transferability}{10}{subsubsection.2.3.2}\protected@file@percent }
+\newlabel{sssec:topogen-transferability}{{2.3.2}{10}{Baselines and Transferability}{subsubsection.2.3.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces \textbf  {Performance of baseline models trained on DONUT and evaluated both in-distribution and on ABC.} Values are reported as \textit  {DONUT/ABC}. We report mean squared error (MSE), balanced accuracy (Acc.), and balanced F1-score (F1). MSE is reported to capture how far off predictions are from the ground-truth on average, which is particularly relevant given the natural hierarchy of the labels (genus and connected components): misclassifying by a larger margin is more severe than a closer miss. }}{10}{table.caption.7}\protected@file@percent }
+\newlabel{tab:topogen-results}{{2}{10}{\textbf {Performance of baseline models trained on DONUT and evaluated both in-distribution and on ABC.} Values are reported as \textit {DONUT/ABC}. We report mean squared error (MSE), balanced accuracy (Acc.), and balanced F1-score (F1). MSE is reported to capture how far off predictions are from the ground-truth on average, which is particularly relevant given the natural hierarchy of the labels (genus and connected components): misclassifying by a larger margin is more severe than a closer miss}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Saliency Analysis}{10}{subsubsection.2.3.3}\protected@file@percent }
+\newlabel{sssec:topogen-saliency}{{2.3.3}{10}{Saliency Analysis}{subsubsection.2.3.3}{}}
+\citation{superformula}
+\abx@aux@cite{0}{superformula}
+\abx@aux@segm{0}{0}{superformula}
+\newlabel{fig:topogen-gen-comp-hist}{{7a}{11}{Label distributions for genus and connected components}{figure.caption.9}{}}
+\newlabel{sub@fig:topogen-gen-comp-hist}{{a}{11}{Label distributions for genus and connected components}{figure.caption.9}{}}
+\newlabel{fig:topogen-gen-time}{{7b}{11}{Scalability of dataset generation}{figure.caption.9}{}}
+\newlabel{sub@fig:topogen-gen-time}{{b}{11}{Scalability of dataset generation}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \textbf  {General properties of DONUT.} \textit  {(a),(b)} The marginal distributions of genus and connected components are approximately uniform, ensuring balanced supervision across topological classes. \textit  {(c)} The time required to generate datasets of varying sizes demonstrates that even large-scale variants remain practical.}}{11}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:topogen-properties}{{7}{11}{\textbf {General properties of DONUT.} \textit {(a),(b)} The marginal distributions of genus and connected components are approximately uniform, ensuring balanced supervision across topological classes. \textit {(c)} The time required to generate datasets of varying sizes demonstrates that even large-scale variants remain practical}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Limitations and Further Improvements}{11}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Topological Variety.}{11}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Geometric Complexity.}{11}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Used Models}{11}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Baselines Models}{11}{subsection.3.1}\protected@file@percent }
+\newlabel{ssec:baselines_models}{{3.1}{11}{Baselines Models}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Transformer-based models}{11}{subsection.3.2}\protected@file@percent }
+\newlabel{ssec:transformer_based_models}{{3.2}{11}{Transformer-based models}{subsection.3.2}{}}
+\citation{pbert}
+\abx@aux@cite{0}{pbert}
+\abx@aux@segm{0}{0}{pbert}
+\citation{pmae}
+\abx@aux@cite{0}{pmae}
+\abx@aux@segm{0}{0}{pmae}
+\citation{mae}
+\abx@aux@cite{0}{mae}
+\abx@aux@segm{0}{0}{mae}
+\citation{pm2ae}
+\abx@aux@cite{0}{pm2ae}
+\abx@aux@segm{0}{0}{pm2ae}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Point-BERT: Discrete Tokenization and Masked Modeling}{12}{subsubsection.3.2.1}\protected@file@percent }
+\newlabel{sssec:pointbert}{{3.2.1}{12}{Point-BERT: Discrete Tokenization and Masked Modeling}{subsubsection.3.2.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Point-MAE: Continuous Tokens and Masked Autoencoding}{12}{subsubsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Hierarchical Extensions: Multi-Scale Representations}{12}{subsubsection.3.2.3}\protected@file@percent }
+\newlabel{sssec:hierarchical_extensions}{{3.2.3}{12}{Hierarchical Extensions: Multi-Scale Representations}{subsubsection.3.2.3}{}}
+\citation{pcpmae}
+\abx@aux@cite{0}{pcpmae}
+\abx@aux@segm{0}{0}{pcpmae}
+\citation{hfbrimae}
+\abx@aux@cite{0}{hfbrimae}
+\abx@aux@segm{0}{0}{hfbrimae}
+\citation{prae}
+\abx@aux@cite{0}{prae}
+\abx@aux@segm{0}{0}{prae}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}Further Improvements}{13}{subsubsection.3.2.4}\protected@file@percent }
+\newlabel{sssec:further_improvements}{{3.2.4}{13}{Further Improvements}{subsubsection.3.2.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5}Comparative View}{13}{subsubsection.3.2.5}\protected@file@percent }
+\newlabel{sssec:comparative_view}{{3.2.5}{13}{Comparative View}{subsubsection.3.2.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Persistent Homology}{13}{section.4}\protected@file@percent }
+\newlabel{sec:ph}{{4}{13}{Persistent Homology}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Persistence Diagrams}{13}{subsection.4.1}\protected@file@percent }
+\newlabel{ssec:persistence_diagrams}{{4.1}{13}{Persistence Diagrams}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Filtrations.}{13}{subsection.4.1}\protected@file@percent }
+\citation{perslay}
+\abx@aux@cite{0}{perslay}
+\abx@aux@segm{0}{0}{perslay}
+\citation{perslay}
+\abx@aux@cite{0}{perslay}
+\abx@aux@segm{0}{0}{perslay}
+\citation{perslay}
+\abx@aux@cite{0}{perslay}
+\abx@aux@segm{0}{0}{perslay}
+\citation{perslay}
+\abx@aux@cite{0}{perslay}
+\abx@aux@segm{0}{0}{perslay}
+\@writefile{toc}{\contentsline {paragraph}{Homology and persistent maps.}{14}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Persistence modules, barcodes and diagrams.}{14}{equation.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Why a persistence diagram is not a Euclidean vector object.}{14}{equation.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Distances between diagrams.}{14}{equation.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stability theorems.}{14}{equation.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Extended persistence.}{14}{figure.caption.10}\protected@file@percent }
+\citation{persistence_landscapes}
+\abx@aux@cite{0}{persistence_landscapes}
+\abx@aux@segm{0}{0}{persistence_landscapes}
+\citation{betti_curves}
+\abx@aux@cite{0}{betti_curves}
+\abx@aux@segm{0}{0}{betti_curves}
+\citation{persistence_images}
+\abx@aux@cite{0}{persistence_images}
+\abx@aux@segm{0}{0}{persistence_images}
+\citation{atol}
+\abx@aux@cite{0}{atol}
+\abx@aux@segm{0}{0}{atol}
+\citation{adaptive_topological_feature}
+\abx@aux@cite{0}{adaptive_topological_feature}
+\abx@aux@segm{0}{0}{adaptive_topological_feature}
+\citation{topological_signature}
+\abx@aux@cite{0}{topological_signature}
+\abx@aux@segm{0}{0}{topological_signature}
+\citation{extended_persistence}
+\abx@aux@cite{0}{extended_persistence}
+\abx@aux@segm{0}{0}{extended_persistence}
+\citation{perslay}
+\abx@aux@cite{0}{perslay}
+\abx@aux@segm{0}{0}{perslay}
+\citation{pllay}
+\abx@aux@cite{0}{pllay}
+\abx@aux@segm{0}{0}{pllay}
+\citation{persformer}
+\abx@aux@cite{0}{persformer}
+\abx@aux@segm{0}{0}{persformer}
+\citation{multiset_transformer}
+\abx@aux@cite{0}{multiset_transformer}
+\abx@aux@segm{0}{0}{multiset_transformer}
+\citation{xpert}
+\abx@aux@cite{0}{xpert}
+\abx@aux@segm{0}{0}{xpert}
+\newlabel{fig:filtrations_top}{{8a}{15}{\textbf {Sub- (resp. super-) level set filtrations on a graph.} (Figure adapted from PersLay~\cite {perslay}) Each node of the graph is assigned its height. Persistence intervals are shown under the sequence. Figure ... highlights key differences between ordinary and extended persistence}{figure.caption.10}{}}
+\newlabel{sub@fig:filtrations_top}{{a}{15}{\textbf {Sub- (resp. super-) level set filtrations on a graph.} (Figure adapted from PersLay~\cite {perslay}) Each node of the graph is assigned its height. Persistence intervals are shown under the sequence. Figure ... highlights key differences between ordinary and extended persistence}{figure.caption.10}{}}
+\newlabel{fig:filtrations_left}{{8b}{15}{Left panel explanation}{figure.caption.10}{}}
+\newlabel{sub@fig:filtrations_left}{{b}{15}{Left panel explanation}{figure.caption.10}{}}
+\newlabel{fig:filtrations_right}{{8c}{15}{Right panel explanation}{figure.caption.10}{}}
+\newlabel{sub@fig:filtrations_right}{{c}{15}{Right panel explanation}{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Overall caption describing how the panels relate. (Figure adapted from \blx@tocontentsinit {0}\cite {perslay}).}}{15}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:filtrations}{{8}{15}{Overall caption describing how the panels relate. (Figure adapted from \cite {perslay})}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Vectorization of Persistence Diagrams}{15}{subsection.4.2}\protected@file@percent }
+\newlabel{ssec:vectorization_persistence_diagrams}{{4.2}{15}{Vectorization of Persistence Diagrams}{subsection.4.2}{}}
+\citation{topology_aware_latent_diffusion}
+\abx@aux@cite{0}{topology_aware_latent_diffusion}
+\abx@aux@segm{0}{0}{topology_aware_latent_diffusion}
+\citation{eulearn}
+\abx@aux@cite{0}{eulearn}
+\abx@aux@segm{0}{0}{eulearn}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Supplementary Material for DONUT}{17}{appendix.A}\protected@file@percent }
+\newlabel{sec:suppl_topogen}{{A}{17}{Supplementary Material for DONUT}{appendix.A}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}EuLearn Dataset Analysis}{17}{subsection.A.1}\protected@file@percent }
+\newlabel{ssec:suppl_eulearn_analysis}{{A.1}{17}{EuLearn Dataset Analysis}{subsection.A.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \textbf  {UMAP projections of Point-BERT embeddings colored by genus.} Clear clusters by genus appear for canonical orientations (left) but vanish under random rotations (right), showing that genus separation in EuLearn is tied to orientation rather than topology.}}{17}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:eulearn-umap-comparison}{{9}{17}{\textbf {UMAP projections of Point-BERT embeddings colored by genus.} Clear clusters by genus appear for canonical orientations (left) but vanish under random rotations (right), showing that genus separation in EuLearn is tied to orientation rather than topology}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Sampling Labels}{17}{subsection.A.2}\protected@file@percent }
+\newlabel{ssec:suppl_sampling_labels}{{A.2}{17}{Sampling Labels}{subsection.A.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {Classification accuracy of a $k$-nearest neighbor classifier vs. training rotation range.} Accuracy is perfect when training and testing on canonical orientations but collapses as random rotations along the z-axis are introduced, revealing orientation-dependent bias in EuLearn. \textit  {Note:} Results are cross-validated with 5 folds.}}{18}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:eulearn-acc-angle}{{10}{18}{\textbf {Classification accuracy of a $k$-nearest neighbor classifier vs. training rotation range.} Accuracy is perfect when training and testing on canonical orientations but collapses as random rotations along the z-axis are introduced, revealing orientation-dependent bias in EuLearn. \textit {Note:} Results are cross-validated with 5 folds}{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \textbf  {Linear probing accuracy on Point-BERT embeddings of canonical vs. rotated shapes.} Probes trained on canonical orientations (\includegraphics [height=1em,valign=c]{figs/utils/unrotated.pdf}) achieve high accuracy only on canonical test data, collapsing under rotation. (\includegraphics [height=1em,valign=c]{figs/utils/rotated.pdf}). Probes trained on rotated shapes generalize poorly in both cases, confirming that EuLearn does not provide a stable signal for genus.}}{18}{figure.caption.12}\protected@file@percent }
+\newlabel{tab:eulearn-overfit}{{11}{18}{\textbf {Linear probing accuracy on Point-BERT embeddings of canonical vs. rotated shapes.} Probes trained on canonical orientations (\includegraphics [height=1em,valign=c]{figs/utils/unrotated.pdf}) achieve high accuracy only on canonical test data, collapsing under rotation. (\includegraphics [height=1em,valign=c]{figs/utils/rotated.pdf}). Probes trained on rotated shapes generalize poorly in both cases, confirming that EuLearn does not provide a stable signal for genus}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{Role of $k$.}{18}{subsection.A.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Sampling $(\beta _0, g)$   \textbf  {Input:} $g^{\max },\tmspace  +\thickmuskip {.2777em} G^{\max },\tmspace  +\thickmuskip {.2777em} \beta _0^{\min },\tmspace  +\thickmuskip {.2777em} \beta _0^{\max },\tmspace  +\thickmuskip {.2777em} k$}}{18}{algorithm.1}\protected@file@percent }
+\newlabel{alg:topogen-labels-sampling}{{1}{18}{Sampling $(\beta _0, g)$ \\ \textbf {Input:} $g^{\max },\; G^{\max },\; \beta _0^{\min },\; \beta _0^{\max },\; k$}{algorithm.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Choosing Components Shapes}{18}{subsection.A.3}\protected@file@percent }
+\newlabel{ssec:suppl_choosing_components}{{A.3}{18}{Choosing Components Shapes}{subsection.A.3}{}}
+\citation{counting}
+\abx@aux@cite{0}{counting}
+\abx@aux@segm{0}{0}{counting}
+\newlabel{tab:topogen-hyperparams}{{\caption@xref {tab:topogen-hyperparams}{ on input line 93}}{19}{Role of $k$}{table.caption.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Hyperparameter values used for the DONUT dataset for the experiments. Probing tasks boil down to classifying shapes across $\beta _0^{\max } - \beta _0^{\min } + 1 = 6$ categories for connected components and 11 categories for genera.}}{19}{table.caption.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Algorithmic Details.}{19}{subsection.A.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Complexity.}{19}{subsection.A.3}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces \textsc  {Enumerate-Solutions}   \textbf  {Input:} $a$, $b$, $g^{max}$   \textbf  {Output:} $S$}}{20}{algorithm.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces \textsc  {Backtrack}   \textbf  {Input:} $r_{\text  {count}}$, $r_{\text  {sum}}$, $k$, $\mathbf  {x}$, $S$   \textbf  {Output:} $S$}}{20}{algorithm.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Baselines Training Details}{20}{subsection.A.4}\protected@file@percent }
+\newlabel{ssec:topogen-baseline-training}{{A.4}{20}{Baselines Training Details}{subsection.A.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Comparison of typical training hyperparameters for point-based models (PointNet, PointNet++, DGCNN) and topology-based models (PersFormer, xPerT, PersLay). A vertical line separates the two families of architectures.}}{20}{table.caption.14}\protected@file@percent }
+\newlabel{suppl:topogen-baseline-training}{{4}{20}{Comparison of typical training hyperparameters for point-based models (PointNet, PointNet++, DGCNN) and topology-based models (PersFormer, xPerT, PersLay). A vertical line separates the two families of architectures}{table.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5}Additional Results}{21}{subsection.A.5}\protected@file@percent }
+\newlabel{ssec:topogen-additional-results}{{A.5}{21}{Additional Results}{subsection.A.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Supplementary Definitions}{21}{appendix.B}\protected@file@percent }
+\newlabel{sec:suppl-definitions}{{B}{21}{Supplementary Definitions}{appendix.B}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}Metrics}{21}{subsection.B.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Balanced accuracy}{21}{subsection.B.1}\protected@file@percent }
+\newlabel{eq:balanced-accuracy}{{11}{21}{Balanced accuracy}{equation.11}{}}
+\abx@aux@read@bbl@mdfivesum{FE8A7BDDBA0EB842DB448F5AC5604917}
+\abx@aux@defaultrefcontext{0}{persistence_images}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{mantra}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{superquadrics}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{persistence_landscapes}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{perslay}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{shapenet}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{pmaezero}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{extended_persistence}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{objaverse}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{objaverse_xl}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{superdec}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{eulearn}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{superformula}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{betti_curves}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{topological_signature}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{topology_aware_latent_diffusion}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{manifold}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{manifoldplus}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{pllay}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{xpert}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{abc}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{prae}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{adaptive_topological_feature}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{pmae}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{pointnet++}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{pointnet}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{persformer}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{atol}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{counting}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{multiset_transformer}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{dogn}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{dgcnn}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{hfbrimae}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{pbert}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{mae}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{clay}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{pm2ae}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{pcpmae}{nty/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{thingi}{nty/global//global/global/global}
+\abx@aux@defaultlabelprefix{0}{persistence_images}{}
+\abx@aux@defaultlabelprefix{0}{mantra}{}
+\abx@aux@defaultlabelprefix{0}{superquadrics}{}
+\abx@aux@defaultlabelprefix{0}{persistence_landscapes}{}
+\abx@aux@defaultlabelprefix{0}{perslay}{}
+\abx@aux@defaultlabelprefix{0}{shapenet}{}
+\abx@aux@defaultlabelprefix{0}{pmaezero}{}
+\abx@aux@defaultlabelprefix{0}{extended_persistence}{}
+\abx@aux@defaultlabelprefix{0}{objaverse}{}
+\abx@aux@defaultlabelprefix{0}{objaverse_xl}{}
+\abx@aux@defaultlabelprefix{0}{superdec}{}
+\abx@aux@defaultlabelprefix{0}{eulearn}{}
+\abx@aux@defaultlabelprefix{0}{superformula}{}
+\abx@aux@defaultlabelprefix{0}{betti_curves}{}
+\abx@aux@defaultlabelprefix{0}{topological_signature}{}
+\abx@aux@defaultlabelprefix{0}{topology_aware_latent_diffusion}{}
+\abx@aux@defaultlabelprefix{0}{manifold}{}
+\abx@aux@defaultlabelprefix{0}{manifoldplus}{}
+\abx@aux@defaultlabelprefix{0}{pllay}{}
+\abx@aux@defaultlabelprefix{0}{xpert}{}
+\abx@aux@defaultlabelprefix{0}{abc}{}
+\abx@aux@defaultlabelprefix{0}{prae}{}
+\abx@aux@defaultlabelprefix{0}{adaptive_topological_feature}{}
+\abx@aux@defaultlabelprefix{0}{pmae}{}
+\abx@aux@defaultlabelprefix{0}{pointnet++}{}
+\abx@aux@defaultlabelprefix{0}{pointnet}{}
+\abx@aux@defaultlabelprefix{0}{persformer}{}
+\abx@aux@defaultlabelprefix{0}{atol}{}
+\abx@aux@defaultlabelprefix{0}{counting}{}
+\abx@aux@defaultlabelprefix{0}{multiset_transformer}{}
+\abx@aux@defaultlabelprefix{0}{dogn}{}
+\abx@aux@defaultlabelprefix{0}{dgcnn}{}
+\abx@aux@defaultlabelprefix{0}{hfbrimae}{}
+\abx@aux@defaultlabelprefix{0}{pbert}{}
+\abx@aux@defaultlabelprefix{0}{mae}{}
+\abx@aux@defaultlabelprefix{0}{clay}{}
+\abx@aux@defaultlabelprefix{0}{pm2ae}{}
+\abx@aux@defaultlabelprefix{0}{pcpmae}{}
+\abx@aux@defaultlabelprefix{0}{thingi}{}
+\gdef \@abspage@last{24}

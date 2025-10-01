@@ -1,0 +1,14 @@
+\section{Introduction}
+\label{sec:intro}
+
+
+Foundation models for 3D data have recently emerged a promising direction for scaling 3D shapes analysis. Inspired by the success of large language models and images encoders, especially the expressivity of the learned representations, this paradigm has been adapted to 3D shapes, leading to significant improvements in various tasks such as shape classification, segmentation, and generation. These models are pretrained on vast amounts of unlabeled 3D data to learn rich representations that can be further fine-tuned for downstream tasks, enabling better generalization. Although these models can capture semantic and geometric information from 3D shapes quite well, it remains unclear to what extent they also encode non-semantic, structural information, such as the topology. More generally, pretraining procedures for 3D shapes encoders have been directly adapted from the image and text domains, without considering the specific characteristics of 3D data. As a consequence, sate-of-the-art methods have a fairly limited range of validity. For instance, models trained on object centric data can't generalize to larger scenes, while models aimed to process large scenes struggle in capturing fine-grained details. This raises the question of whether these models are truly capable of capturing the unique properties of 3D shapes at different scales, or if they simply learn to mimic the patterns found in the training data. The actual quality of the learned representations remains an open question. In this report, we aim to shed light on these issues by investigating the extent to which 3D shapes encoders capture structural information, and how this impacts their performance across different tasks and scales. We also explore the limitations of current pretraining procedures and propose potential improvements to enhance the robustness and generalization capabilities of 3D shapes encoders. 
+
+The contributions of this report are 3-folds:
+
+
+\begin{itemize}
+    \item We introduce TopoGen, a scalable dataset of 3D shapes with full control over the topology of the generated 3D shapes
+    \item We carry out comprehensive experiments to understand and quantify to what extent current state-of-the-art 3D shape encoders capture structural, non-semantic information from 3D shapes.
+    \item Guided by the results obtained from our experiments, we propose architectural improvements and pretraining strategies to encourage the presence of such properties.
+\end{itemize}

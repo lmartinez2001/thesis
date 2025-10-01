@@ -1,0 +1,55 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}DONUT: \underline {D}ataset \underline {O}f ma\underline {N}ifold str\underline {U}c\underline {T}ures}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Existing datasets}{4}{subsection.2.1}%
+\contentsline {paragraph}{Combinatorial benchmarks.}{4}{subsection.2.1}%
+\contentsline {paragraph}{Geometric datasets with noisy topology.}{4}{table.caption.2}%
+\contentsline {paragraph}{Synthetic datasets with limited diversity.}{5}{equation.1}%
+\contentsline {subsection}{\numberline {2.2}Method}{6}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Labels Distribution}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Sample-Level Properties}{6}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Mesh Generation}{7}{subsubsection.2.2.3}%
+\contentsline {paragraph}{Cones.}{7}{subsubsection.2.2.3}%
+\contentsline {paragraph}{Superquadrics.}{7}{subsubsection.2.2.3}%
+\contentsline {paragraph}{$K$-tori.}{7}{figure.caption.5}%
+\contentsline {subsubsection}{\numberline {2.2.4}Topological Consistency and Diversity}{8}{subsubsection.2.2.4}%
+\contentsline {paragraph}{Consistency.}{8}{subsubsection.2.2.4}%
+\contentsline {paragraph}{Variability.}{8}{subsubsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.3}Analysis}{9}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}General Properties}{9}{subsubsection.2.3.1}%
+\contentsline {paragraph}{Dataset statistics.}{9}{subsubsection.2.3.1}%
+\contentsline {paragraph}{Distributions and scalability.}{9}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Baselines and Transferability}{10}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Saliency Analysis}{10}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Limitations and Further Improvements}{11}{subsection.2.4}%
+\contentsline {paragraph}{Topological Variety.}{11}{subsection.2.4}%
+\contentsline {paragraph}{Geometric Complexity.}{11}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Used Models}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Baselines Models}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Transformer-based models}{11}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Point-BERT: Discrete Tokenization and Masked Modeling}{12}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Point-MAE: Continuous Tokens and Masked Autoencoding}{12}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Hierarchical Extensions: Multi-Scale Representations}{12}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Further Improvements}{13}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Comparative View}{13}{subsubsection.3.2.5}%
+\contentsline {section}{\numberline {4}Persistent Homology}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Persistence Diagrams}{13}{subsection.4.1}%
+\contentsline {paragraph}{Filtrations.}{13}{subsection.4.1}%
+\contentsline {paragraph}{Homology and persistent maps.}{14}{subsection.4.1}%
+\contentsline {paragraph}{Persistence modules, barcodes and diagrams.}{14}{equation.6}%
+\contentsline {paragraph}{Why a persistence diagram is not a Euclidean vector object.}{14}{equation.6}%
+\contentsline {paragraph}{Distances between diagrams.}{14}{equation.6}%
+\contentsline {paragraph}{Stability theorems.}{14}{equation.8}%
+\contentsline {paragraph}{Extended persistence.}{14}{figure.caption.10}%
+\contentsline {subsection}{\numberline {4.2}Vectorization of Persistence Diagrams}{15}{subsection.4.2}%
+\contentsline {section}{\numberline {A}Supplementary Material for DONUT}{17}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}EuLearn Dataset Analysis}{17}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Sampling Labels}{17}{subsection.A.2}%
+\contentsline {paragraph}{Role of $k$.}{18}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Choosing Components Shapes}{18}{subsection.A.3}%
+\contentsline {paragraph}{Algorithmic Details.}{19}{subsection.A.3}%
+\contentsline {paragraph}{Complexity.}{19}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Baselines Training Details}{20}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}Additional Results}{21}{subsection.A.5}%
+\contentsline {section}{\numberline {B}Supplementary Definitions}{21}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Metrics}{21}{subsection.B.1}%
+\contentsline {paragraph}{Balanced accuracy}{21}{subsection.B.1}%

@@ -1,0 +1,2060 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global/global}
+  \entry{persistence_images}{misc}{}{}
+    \name{author}{10}{}{%
+      {{hash=AH}{%
+         family={Adams},
+         familyi={A\bibinitperiod},
+         given={Henry},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Chepushtanova},
+         familyi={C\bibinitperiod},
+         given={Sofya},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=ET}{%
+         family={Emerson},
+         familyi={E\bibinitperiod},
+         given={Tegan},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HE}{%
+         family={Hanson},
+         familyi={H\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kirby},
+         familyi={K\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MF}{%
+         family={Motta},
+         familyi={M\bibinitperiod},
+         given={Francis},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=NR}{%
+         family={Neville},
+         familyi={N\bibinitperiod},
+         given={Rachel},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={Peterson},
+         familyi={P\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Shipman},
+         familyi={S\bibinitperiod},
+         given={Patrick},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=ZL}{%
+         family={Ziegelmeier},
+         familyi={Z\bibinitperiod},
+         given={Lori},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AH+1}
+    \strng{fullhash}{AHCSETHEKMMFNRPCSPZL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{eprint}
+    \verb 1507.06217
+    \endverb
+    \field{title}{Persistence Images: A Stable Vector Representation of Persistent Homology}
+    \verb{url}
+    \verb https://arxiv.org/abs/1507.06217
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CG}
+    \field{year}{2016}
+  \endentry
+
+  \entry{mantra}{misc}{}{}
+    \name{author}{7}{}{%
+      {{hash=BR}{%
+         family={Ballester},
+         familyi={B\bibinitperiod},
+         given={Rubén},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=RE}{%
+         family={Röell},
+         familyi={R\bibinitperiod},
+         given={Ernst},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SDB}{%
+         family={Schmid},
+         familyi={S\bibinitperiod},
+         given={Daniel\bibnamedelima Bīn},
+         giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Alain},
+         familyi={A\bibinitperiod},
+         given={Mathieu},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ES}{%
+         family={Escalera},
+         familyi={E\bibinitperiod},
+         given={Sergio},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Casacuberta},
+         familyi={C\bibinitperiod},
+         given={Carles},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=RB}{%
+         family={Rieck},
+         familyi={R\bibinitperiod},
+         given={Bastian},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BR+1}
+    \strng{fullhash}{BRRESDBAMESCCRB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{eprint}
+    \verb 2410.02392
+    \endverb
+    \field{title}{MANTRA: The Manifold Triangulations Assemblage}
+    \verb{url}
+    \verb https://arxiv.org/abs/2410.02392
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2025}
+  \endentry
+
+  \entry{superquadrics}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=BAH}{%
+         family={Barr},
+         familyi={B\bibinitperiod},
+         given={Alan\bibnamedelima H.},
+         giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BAH1}
+    \strng{fullhash}{BAH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1109/MCG.1981.1673799
+    \endverb
+    \field{number}{1}
+    \field{pages}{11\bibrangedash 23}
+    \field{title}{Superquadrics and Angle-Preserving Transformations}
+    \field{volume}{1}
+    \field{journaltitle}{IEEE Computer Graphics and Applications}
+    \field{year}{1981}
+  \endentry
+
+  \entry{persistence_landscapes}{misc}{}{}
+    \name{author}{1}{}{%
+      {{hash=BP}{%
+         family={Bubenik},
+         familyi={B\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BP1}
+    \strng{fullhash}{BP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{eprint}
+    \verb 1207.6437
+    \endverb
+    \field{title}{Statistical topological data analysis using persistence landscapes}
+    \verb{url}
+    \verb https://arxiv.org/abs/1207.6437
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AT}
+    \field{year}{2015}
+  \endentry
+
+  \entry{perslay}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=CM}{%
+         family={Carrière},
+         familyi={C\bibinitperiod},
+         given={Mathieu},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Chazal},
+         familyi={C\bibinitperiod},
+         given={Frédéric},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=IY}{%
+         family={Ike},
+         familyi={I\bibinitperiod},
+         given={Yuichi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LT}{%
+         family={Lacombe},
+         familyi={L\bibinitperiod},
+         given={Théo},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Royer},
+         familyi={R\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=UY}{%
+         family={Umeda},
+         familyi={U\bibinitperiod},
+         given={Yuhei},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CM+1}
+    \strng{fullhash}{CMCFIYLTRMUY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{eprint}
+    \verb 1904.09378
+    \endverb
+    \field{title}{PersLay: A Neural Network Layer for Persistence Diagrams and New Graph Topological Signatures}
+    \verb{url}
+    \verb https://arxiv.org/abs/1904.09378
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{stat.ML}
+    \field{year}{2020}
+  \endentry
+
+  \entry{shapenet}{misc}{}{}
+    \name{author}{13}{}{%
+      {{hash=CAX}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Angel\bibnamedelima X.},
+         giveni={A\bibinitperiod\bibinitdelim X\bibinitperiod},
+      }}%
+      {{hash=FT}{%
+         family={Funkhouser},
+         familyi={F\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Guibas},
+         familyi={G\bibinitperiod},
+         given={Leonidas},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Hanrahan},
+         familyi={H\bibinitperiod},
+         given={Pat},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HQ}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Qixing},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=LZ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Zimo},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Savarese},
+         familyi={S\bibinitperiod},
+         given={Silvio},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Savva},
+         familyi={S\bibinitperiod},
+         given={Manolis},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Song},
+         familyi={S\bibinitperiod},
+         given={Shuran},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Su},
+         familyi={S\bibinitperiod},
+         given={Hao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=XJ}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Jianxiong},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yi},
+         familyi={Y\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=YF}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Fisher},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CAX+1}
+    \strng{fullhash}{CAXFTGLHPHQLZSSSMSSSHXJYLYF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{eprint}
+    \verb 1512.03012
+    \endverb
+    \field{title}{ShapeNet: An Information-Rich 3D Model Repository}
+    \verb{url}
+    \verb https://arxiv.org/abs/1512.03012
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.GR}
+    \field{year}{2015}
+  \endentry
+
+  \entry{pmaezero}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=CX}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Xuweiyi},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=CZ}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Zezhou},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CXCZ1}
+    \strng{fullhash}{CXCZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{eprint}
+    \verb 2411.17467
+    \endverb
+    \field{title}{Learning 3D Representations from Procedural 3D Programs}
+    \verb{url}
+    \verb https://arxiv.org/abs/2411.17467
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2025}
+  \endentry
+
+  \entry{extended_persistence}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=CSD}{%
+         family={Cohen-Steiner},
+         familyi={C\bibinithyphendelim S\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=EH}{%
+         family={Edelsbrunner},
+         familyi={E\bibinitperiod},
+         given={Herbert},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Harer},
+         familyi={H\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CSDEHHJ1}
+    \strng{fullhash}{CSDEHHJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1007/s10208-008-9027-z
+    \endverb
+    \field{number}{1}
+    \field{pages}{79\bibrangedash 103}
+    \field{title}{Extending Persistence Using Poincaré and Lefschetz Duality}
+    \field{volume}{9}
+    \field{journaltitle}{Foundations of Computational Mathematics}
+    \field{year}{2009}
+  \endentry
+
+  \entry{objaverse}{misc}{}{}
+    \name{author}{10}{}{%
+      {{hash=DM}{%
+         family={Deitke},
+         familyi={D\bibinitperiod},
+         given={Matt},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Schwenk},
+         familyi={S\bibinitperiod},
+         given={Dustin},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Salvador},
+         familyi={S\bibinitperiod},
+         given={Jordi},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WL}{%
+         family={Weihs},
+         familyi={W\bibinitperiod},
+         given={Luca},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MO}{%
+         family={Michel},
+         familyi={M\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=VE}{%
+         family={VanderBilt},
+         familyi={V\bibinitperiod},
+         given={Eli},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Schmidt},
+         familyi={S\bibinitperiod},
+         given={Ludwig},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=EK}{%
+         family={Ehsani},
+         familyi={E\bibinitperiod},
+         given={Kiana},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kembhavi},
+         familyi={K\bibinitperiod},
+         given={Aniruddha},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Farhadi},
+         familyi={F\bibinitperiod},
+         given={Ali},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DM+1}
+    \strng{fullhash}{DMSDSJWLMOVESLEKKAFA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{eprint}
+    \verb 2212.08051
+    \endverb
+    \field{title}{Objaverse: A Universe of Annotated 3D Objects}
+    \verb{url}
+    \verb https://arxiv.org/abs/2212.08051
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2022}
+  \endentry
+
+  \entry{objaverse_xl}{misc}{}{}
+    \name{author}{17}{}{%
+      {{hash=DM}{%
+         family={Deitke},
+         familyi={D\bibinitperiod},
+         given={Matt},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LR}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Ruoshi},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wallingford},
+         familyi={W\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=NH}{%
+         family={Ngo},
+         familyi={N\bibinitperiod},
+         given={Huong},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MO}{%
+         family={Michel},
+         familyi={M\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kusupati},
+         familyi={K\bibinitperiod},
+         given={Aditya},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Fan},
+         familyi={F\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LC}{%
+         family={Laforte},
+         familyi={L\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Voleti},
+         familyi={V\bibinitperiod},
+         given={Vikram},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=GSY}{%
+         family={Gadre},
+         familyi={G\bibinitperiod},
+         given={Samir\bibnamedelima Yitzhak},
+         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+      {{hash=VE}{%
+         family={VanderBilt},
+         familyi={V\bibinitperiod},
+         given={Eli},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kembhavi},
+         familyi={K\bibinitperiod},
+         given={Aniruddha},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=VC}{%
+         family={Vondrick},
+         familyi={V\bibinitperiod},
+         given={Carl},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Gkioxari},
+         familyi={G\bibinitperiod},
+         given={Georgia},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=EK}{%
+         family={Ehsani},
+         familyi={E\bibinitperiod},
+         given={Kiana},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Schmidt},
+         familyi={S\bibinitperiod},
+         given={Ludwig},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Farhadi},
+         familyi={F\bibinitperiod},
+         given={Ali},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DM+1}
+    \strng{fullhash}{DMLRWMNHMOKAFALCVVGSYVEKAVCGGEKSLFA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{eprint}
+    \verb 2307.05663
+    \endverb
+    \field{title}{Objaverse-XL: A Universe of 10M+ 3D Objects}
+    \verb{url}
+    \verb https://arxiv.org/abs/2307.05663
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2023}
+  \endentry
+
+  \entry{superdec}{misc}{}{}
+    \name{author}{5}{}{%
+      {{hash=FE}{%
+         family={Fedele},
+         familyi={F\bibinitperiod},
+         given={Elisabetta},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Boyang},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Guibas},
+         familyi={G\bibinitperiod},
+         given={Leonidas},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Pollefeys},
+         familyi={P\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=EF}{%
+         family={Engelmann},
+         familyi={E\bibinitperiod},
+         given={Francis},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FE+1}
+    \strng{fullhash}{FESBGLPMEF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{eprint}
+    \verb 2504.00992
+    \endverb
+    \field{title}{SuperDec: 3D Scene Decomposition with Superquadric Primitives}
+    \verb{url}
+    \verb https://arxiv.org/abs/2504.00992
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2025}
+  \endentry
+
+  \entry{eulearn}{misc}{}{}
+    \name{author}{5}{}{%
+      {{hash=FR}{%
+         family={Fritz},
+         familyi={F\bibinitperiod},
+         given={Rodrigo},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SSP}{%
+         family={Suárez-Serrato},
+         familyi={S\bibinithyphendelim S\bibinitperiod},
+         given={Pablo},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MV}{%
+         family={Mijangos},
+         familyi={M\bibinitperiod},
+         given={Victor},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=MHAD}{%
+         family={Martinez-Hernandez},
+         familyi={M\bibinithyphendelim H\bibinitperiod},
+         given={Anayanzi\bibnamedelima D.},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=REIV}{%
+         family={Richards},
+         familyi={R\bibinitperiod},
+         given={Eduardo Ivan\bibnamedelima Velazquez},
+         giveni={E\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FR+1}
+    \strng{fullhash}{FRSSPMVMHADREIV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{eprint}
+    \verb 2505.13539
+    \endverb
+    \field{title}{EuLearn: A 3D database for learning Euler characteristics}
+    \verb{url}
+    \verb https://arxiv.org/abs/2505.13539
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CG}
+    \field{year}{2025}
+  \endentry
+
+  \entry{superformula}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=GJ}{%
+         family={Gielis},
+         familyi={G\bibinitperiod},
+         given={Johan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GJ1}
+    \strng{fullhash}{GJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.3732/ajb.90.3.333
+    \endverb
+    \field{number}{3}
+    \field{pages}{333\bibrangedash 338}
+    \field{title}{A generic geometric transformation that unifies a wide range of natural and abstract shapes}
+    \field{volume}{90}
+    \field{journaltitle}{American Journal of Botany}
+    \field{year}{2003}
+  \endentry
+
+  \entry{betti_curves}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=GC}{%
+         family={Giusti},
+         familyi={G\bibinitperiod},
+         given={Chad},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PE}{%
+         family={Pastalkova},
+         familyi={P\bibinitperiod},
+         given={Eva},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Curto},
+         familyi={C\bibinitperiod},
+         given={Carina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=IV}{%
+         family={Itskov},
+         familyi={I\bibinitperiod},
+         given={Vladimir},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Proceedings of the National Academy of Sciences}%
+    }
+    \strng{namehash}{GC+1}
+    \strng{fullhash}{GCPECCIV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1073/pnas.1506407112
+    \endverb
+    \field{issn}{1091-6490}
+    \field{number}{44}
+    \field{pages}{13455–13460}
+    \field{title}{Clique topology reveals intrinsic geometric structure in neural correlations}
+    \verb{url}
+    \verb http://dx.doi.org/10.1073/pnas.1506407112
+    \endverb
+    \field{volume}{112}
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{month}{10}
+    \field{year}{2015}
+  \endentry
+
+  \entry{topological_signature}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=HC}{%
+         family={Hofer},
+         familyi={H\bibinitperiod},
+         given={Christoph},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Kwitt},
+         familyi={K\bibinitperiod},
+         given={Roland},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Niethammer},
+         familyi={N\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=UA}{%
+         family={Uhl},
+         familyi={U\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HC+1}
+    \strng{fullhash}{HCKRNMUA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{eprint}
+    \verb 1707.04041
+    \endverb
+    \field{title}{Deep Learning with Topological Signatures}
+    \verb{url}
+    \verb https://arxiv.org/abs/1707.04041
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2018}
+  \endentry
+
+  \entry{topology_aware_latent_diffusion}{misc}{}{}
+    \name{author}{9}{}{%
+      {{hash=HJ}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Jiangbei},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=FB}{%
+         family={Fei},
+         familyi={F\bibinitperiod},
+         given={Ben},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=XB}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Baixin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=HF}{%
+         family={Hou},
+         familyi={H\bibinitperiod},
+         given={Fei},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=YW}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Weidong},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Shengfa},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LN}{%
+         family={Lei},
+         familyi={L\bibinitperiod},
+         given={Na},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=QC}{%
+         family={Qian},
+         familyi={Q\bibinitperiod},
+         given={Chen},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HY}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Ying},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJ+1}
+    \strng{fullhash}{HJFBXBHFYWWSLNQCHY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{eprint}
+    \verb 2401.17603
+    \endverb
+    \field{title}{Topology-Aware Latent Diffusion for 3D Shape Generation}
+    \verb{url}
+    \verb https://arxiv.org/abs/2401.17603
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2024}
+  \endentry
+
+  \entry{manifold}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=HJ}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Jingwei},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Su},
+         familyi={S\bibinitperiod},
+         given={Hao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Guibas},
+         familyi={G\bibinitperiod},
+         given={Leonidas},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJSHGL1}
+    \strng{fullhash}{HJSHGL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{eprint}
+    \verb 1802.01698
+    \endverb
+    \field{title}{Robust Watertight Manifold Surface Generation Method for ShapeNet Models}
+    \verb{url}
+    \verb https://arxiv.org/abs/1802.01698
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CG}
+    \field{year}{2018}
+  \endentry
+
+  \entry{manifoldplus}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=HJ}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Jingwei},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Yichao},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Guibas},
+         familyi={G\bibinitperiod},
+         given={Leonidas},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJZYGL1}
+    \strng{fullhash}{HJZYGL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{eprint}
+    \verb 2005.11621
+    \endverb
+    \field{title}{ManifoldPlus: A Robust and Scalable Watertight Manifold Surface Generation Method for Triangle Soups}
+    \verb{url}
+    \verb https://arxiv.org/abs/2005.11621
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.GR}
+    \field{year}{2020}
+  \endentry
+
+  \entry{pllay}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=KK}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Kwangho},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Jisu},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zaheer},
+         familyi={Z\bibinitperiod},
+         given={Manzil},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KJS}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Joon\bibnamedelima Sik},
+         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Chazal},
+         familyi={C\bibinitperiod},
+         given={Frederic},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=WL}{%
+         family={Wasserman},
+         familyi={W\bibinitperiod},
+         given={Larry},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KK+1}
+    \strng{fullhash}{KKKJZMKJSCFWL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{eprint}
+    \verb 2002.02778
+    \endverb
+    \field{title}{PLLay: Efficient Topological Layer based on Persistence Landscapes}
+    \verb{url}
+    \verb https://arxiv.org/abs/2002.02778
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2021}
+  \endentry
+
+  \entry{xpert}{misc}{}{}
+    \name{author}{1}{}{%
+      {{hash=KS}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Sehun},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KS1}
+    \strng{fullhash}{KS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{eprint}
+    \verb 2410.14193
+    \endverb
+    \field{title}{xPerT: Extended Persistence Transformer}
+    \verb{url}
+    \verb https://arxiv.org/abs/2410.14193
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2024}
+  \endentry
+
+  \entry{abc}{misc}{}{}
+    \name{author}{9}{}{%
+      {{hash=KS}{%
+         family={Koch},
+         familyi={K\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Matveev},
+         familyi={M\bibinitperiod},
+         given={Albert},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=JZ}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={Zhongshi},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=WF}{%
+         family={Williams},
+         familyi={W\bibinitperiod},
+         given={Francis},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Artemov},
+         familyi={A\bibinitperiod},
+         given={Alexey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BE}{%
+         family={Burnaev},
+         familyi={B\bibinitperiod},
+         given={Evgeny},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Alexa},
+         familyi={A\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zorin},
+         familyi={Z\bibinitperiod},
+         given={Denis},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PD}{%
+         family={Panozzo},
+         familyi={P\bibinitperiod},
+         given={Daniele},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KS+1}
+    \strng{fullhash}{KSMAJZWFAABEAMZDPD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{eprint}
+    \verb 1812.06216
+    \endverb
+    \field{title}{ABC: A Big CAD Model Dataset For Geometric Deep Learning}
+    \verb{url}
+    \verb https://arxiv.org/abs/1812.06216
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.GR}
+    \field{year}{2019}
+  \endentry
+
+  \entry{prae}{inproceedings}{}{}
+    \name{author}{5}{}{%
+      {{hash=LY}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Chen},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Can},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=KX}{%
+         family={King},
+         familyi={K\bibinitperiod},
+         given={Xulin},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Mengyuan},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{LY+1}
+    \strng{fullhash}{LYCCWCKXLM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{booktitle}{Proceedings of the 31st ACM International Conference on Multimedia}
+    \verb{doi}
+    \verb 10.1145/3581783.3612106
+    \endverb
+    \field{pages}{1738–1749}
+    \field{series}{MM ’23}
+    \field{title}{Regress Before Construct: Regress Autoencoder for Point Cloud Self-supervised Learning}
+    \verb{url}
+    \verb http://dx.doi.org/10.1145/3581783.3612106
+    \endverb
+    \field{month}{10}
+    \field{year}{2023}
+  \endentry
+
+  \entry{adaptive_topological_feature}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=NN}{%
+         family={Nishikawa},
+         familyi={N\bibinitperiod},
+         given={Naoki},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=IY}{%
+         family={Ike},
+         familyi={I\bibinitperiod},
+         given={Yuichi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YK}{%
+         family={Yamanishi},
+         familyi={Y\bibinitperiod},
+         given={Kenji},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NNIYYK1}
+    \strng{fullhash}{NNIYYK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \verb{eprint}
+    \verb 2307.09259
+    \endverb
+    \field{title}{Adaptive Topological Feature via Persistent Homology: Filtration Learning for Point Clouds}
+    \verb{url}
+    \verb https://arxiv.org/abs/2307.09259
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2023}
+  \endentry
+
+  \entry{pmae}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=PY}{%
+         family={Pang},
+         familyi={P\bibinitperiod},
+         given={Yatian},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WW}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Wenxiao},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=TFEH}{%
+         family={Tay},
+         familyi={T\bibinitperiod},
+         given={Francis E.\bibnamedelima H.},
+         giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=LW}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=TY}{%
+         family={Tian},
+         familyi={T\bibinitperiod},
+         given={Yonghong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PY+1}
+    \strng{fullhash}{PYWWTFEHLWTYYL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{eprint}
+    \verb 2203.06604
+    \endverb
+    \field{title}{Masked Autoencoders for Point Cloud Self-supervised Learning}
+    \verb{url}
+    \verb https://arxiv.org/abs/2203.06604
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2022}
+  \endentry
+
+  \entry{pointnet++}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=QCR}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Charles\bibnamedelima R.},
+         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yi},
+         familyi={Y\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Su},
+         familyi={S\bibinitperiod},
+         given={Hao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=GLJ}{%
+         family={Guibas},
+         familyi={G\bibinitperiod},
+         given={Leonidas\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QCR+1}
+    \strng{fullhash}{QCRYLSHGLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \verb{eprint}
+    \verb 1706.02413
+    \endverb
+    \field{title}{PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space}
+    \verb{url}
+    \verb https://arxiv.org/abs/1706.02413
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2017}
+  \endentry
+
+  \entry{pointnet}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=QCR}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Charles\bibnamedelima R.},
+         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Su},
+         familyi={S\bibinitperiod},
+         given={Hao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Mo},
+         familyi={M\bibinitperiod},
+         given={Kaichun},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GLJ}{%
+         family={Guibas},
+         familyi={G\bibinitperiod},
+         given={Leonidas\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QCR+1}
+    \strng{fullhash}{QCRSHMKGLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \verb{eprint}
+    \verb 1612.00593
+    \endverb
+    \field{title}{PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation}
+    \verb{url}
+    \verb https://arxiv.org/abs/1612.00593
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2017}
+  \endentry
+
+  \entry{persformer}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=RR}{%
+         family={Reinauer},
+         familyi={R\bibinitperiod},
+         given={Raphael},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Caorsi},
+         familyi={C\bibinitperiod},
+         given={Matteo},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BN}{%
+         family={Berkouk},
+         familyi={B\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RRCMBN1}
+    \strng{fullhash}{RRCMBN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{eprint}
+    \verb 2112.15210
+    \endverb
+    \field{title}{Persformer: A Transformer Architecture for Topological Machine Learning}
+    \verb{url}
+    \verb https://arxiv.org/abs/2112.15210
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2022}
+  \endentry
+
+  \entry{atol}{misc}{}{}
+    \name{author}{5}{}{%
+      {{hash=RM}{%
+         family={Royer},
+         familyi={R\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Chazal},
+         familyi={C\bibinitperiod},
+         given={Frédéric},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=LC}{%
+         family={Levrard},
+         familyi={L\bibinitperiod},
+         given={Clément},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=YU}{%
+         family={Yuhei},
+         familyi={Y\bibinitperiod},
+         given={Umeda},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=YI}{%
+         family={Yuichi},
+         familyi={Y\bibinitperiod},
+         given={Ike},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RM+1}
+    \strng{fullhash}{RMCFLCYUYI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{eprint}
+    \verb 1909.13472
+    \endverb
+    \field{title}{ATOL: Measure Vectorization for Automatic Topologically-Oriented Learning}
+    \verb{url}
+    \verb https://arxiv.org/abs/1909.13472
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CG}
+    \field{year}{2020}
+  \endentry
+
+  \entry{counting}{book}{}{}
+    \name{author}{1}{}{%
+      {{hash=SBE}{%
+         family={Sagan},
+         familyi={S\bibinitperiod},
+         given={Bruce\bibnamedelima E.},
+         giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Mathematical Society}%
+    }
+    \strng{namehash}{SBE1}
+    \strng{fullhash}{SBE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{isbn}{978-1-4704-6032-7}
+    \field{pages}{304}
+    \field{series}{Graduate Studies in Mathematics}
+    \field{title}{Combinatorics: The Art of Counting}
+    \field{volume}{210}
+    \field{year}{2020}
+  \endentry
+
+  \entry{multiset_transformer}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=WM}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Minghua},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HZ}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Ziyun},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=XJ}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Jinhui},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WMHZXJ1}
+    \strng{fullhash}{WMHZXJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{eprint}
+    \verb 2411.14662
+    \endverb
+    \field{title}{Multiset Transformer: Advancing Representation Learning in Persistence Diagrams}
+    \verb{url}
+    \verb https://arxiv.org/abs/2411.14662
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2024}
+  \endentry
+
+  \entry{dogn}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=WPS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Peng-Shuai},
+         giveni={P\bibinithyphendelim S\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=TX}{%
+         family={Tong},
+         familyi={T\bibinitperiod},
+         given={Xin},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WPSLYTX1}
+    \strng{fullhash}{WPSLYTX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{number}{4}
+    \field{title}{Dual Octree Graph Networks for Learning Adaptive Volumetric Shape Representations}
+    \field{volume}{41}
+    \field{journaltitle}{ACM Transactions on Graphics (SIGGRAPH)}
+    \field{year}{2022}
+  \endentry
+
+  \entry{dgcnn}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yue},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Yongbin},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LZ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Ziwei},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=SSE}{%
+         family={Sarma},
+         familyi={S\bibinitperiod},
+         given={Sanjay\bibnamedelima E.},
+         giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=BMM}{%
+         family={Bronstein},
+         familyi={B\bibinitperiod},
+         given={Michael\bibnamedelima M.},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=SJM}{%
+         family={Solomon},
+         familyi={S\bibinitperiod},
+         given={Justin\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WY+1}
+    \strng{fullhash}{WYSYLZSSEBMMSJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{eprint}
+    \verb 1801.07829
+    \endverb
+    \field{title}{Dynamic Graph CNN for Learning on Point Clouds}
+    \verb{url}
+    \verb https://arxiv.org/abs/1801.07829
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2019}
+  \endentry
+
+  \entry{hfbrimae}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=YX}{%
+         family={Yin},
+         familyi={Y\bibinitperiod},
+         given={Xuanhua},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Dingxin},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=YJ}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Jianhui},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CW}{%
+         family={Cai},
+         familyi={C\bibinitperiod},
+         given={Weidong},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YX+1}
+    \strng{fullhash}{YXZDYJCW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \verb{eprint}
+    \verb 2504.14132
+    \endverb
+    \field{title}{HFBRI-MAE: Handcrafted Feature Based Rotation-Invariant Masked Autoencoder for 3D Point Cloud Analysis}
+    \verb{url}
+    \verb https://arxiv.org/abs/2504.14132
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2025}
+  \endentry
+
+  \entry{pbert}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=YX}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Xumin},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=TL}{%
+         family={Tang},
+         familyi={T\bibinitperiod},
+         given={Lulu},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=RY}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={Yongming},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HT}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Tiejun},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Jie},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Jiwen},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YX+2}
+    \strng{fullhash}{YXTLRYHTZJLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \verb{eprint}
+    \verb 2111.14819
+    \endverb
+    \field{title}{Point-BERT: Pre-training 3D Point Cloud Transformers with Masked Point Modeling}
+    \verb{url}
+    \verb https://arxiv.org/abs/2111.14819
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2022}
+  \endentry
+
+  \entry{mae}{misc}{}{}
+    \name{author}{8}{}{%
+      {{hash=ZY}{%
+         family={Zha},
+         familyi={Z\bibinitperiod},
+         given={Yaohua},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=JH}{%
+         family={Ji},
+         familyi={J\bibinitperiod},
+         given={Huizhen},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Jinmin},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LR}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Rongsheng},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=DT}{%
+         family={Dai},
+         familyi={D\bibinitperiod},
+         given={Tao},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Bin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Zhi},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=XST}{%
+         family={Xia},
+         familyi={X\bibinitperiod},
+         given={Shu-Tao},
+         giveni={S\bibinithyphendelim T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZY+1}
+    \strng{fullhash}{ZYJHLJLRDTCBWZXST1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{eprint}
+    \verb 2312.10726
+    \endverb
+    \field{title}{Towards Compact 3D Representations via Point Feature Enhancement Masked Autoencoders}
+    \verb{url}
+    \verb https://arxiv.org/abs/2312.10726
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2023}
+  \endentry
+
+  \entry{clay}{misc}{}{}
+    \name{author}{9}{}{%
+      {{hash=ZL}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Longwen},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Ziyu},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=ZQ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Qixuan},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=QQ}{%
+         family={Qiu},
+         familyi={Q\bibinitperiod},
+         given={Qiwei},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Pang},
+         familyi={P\bibinitperiod},
+         given={Anqi},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=JH}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={Haoran},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YW}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=XL}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Lan},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=YJ}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Jingyi},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZL+1}
+    \strng{fullhash}{ZLWZZQQQPAJHYWXLYJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{eprint}
+    \verb 2406.13897
+    \endverb
+    \field{title}{CLAY: A Controllable Large-scale Generative Model for Creating High-quality 3D Assets}
+    \verb{url}
+    \verb https://arxiv.org/abs/2406.13897
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2024}
+  \endentry
+
+  \entry{pm2ae}{misc}{}{}
+    \name{author}{8}{}{%
+      {{hash=ZR}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Renrui},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=GZ}{%
+         family={Guo},
+         familyi={G\bibinitperiod},
+         given={Ziyu},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=FR}{%
+         family={Fang},
+         familyi={F\bibinitperiod},
+         given={Rongyao},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=ZB}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Bin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=QY}{%
+         family={Qiao},
+         familyi={Q\bibinitperiod},
+         given={Yu},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Hongsheng},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Gao},
+         familyi={G\bibinitperiod},
+         given={Peng},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZR+1}
+    \strng{fullhash}{ZRGZFRZBWDQYLHGP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{eprint}
+    \verb 2205.14401
+    \endverb
+    \field{title}{Point-M2AE: Multi-scale Masked Autoencoders for Hierarchical Point Cloud Pre-training}
+    \verb{url}
+    \verb https://arxiv.org/abs/2205.14401
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2022}
+  \endentry
+
+  \entry{pcpmae}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xiangdong},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Shaofeng},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=YJ}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Junchi},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZXZSYJ1}
+    \strng{fullhash}{ZXZSYJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{eprint}
+    \verb 2408.08753
+    \endverb
+    \field{title}{PCP-MAE: Learning to Predict Centers for Point Masked Autoencoders}
+    \verb{url}
+    \verb https://arxiv.org/abs/2408.08753
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2024}
+  \endentry
+
+  \entry{thingi}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=ZQ}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Qingnan},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Jacobson},
+         familyi={J\bibinitperiod},
+         given={Alec},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZQJA1}
+    \strng{fullhash}{ZQJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{eprint}
+    \verb 1605.04797
+    \endverb
+    \field{title}{Thingi10K: A Dataset of 10,000 3D-Printing Models}
+    \verb{url}
+    \verb https://arxiv.org/abs/1605.04797
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.GR}
+    \field{year}{2016}
+  \endentry
+\enddatalist
+\endinput

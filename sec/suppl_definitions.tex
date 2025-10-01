@@ -1,0 +1,13 @@
+\section{Supplementary Definitions}
+\label{sec:suppl-definitions}
+
+
+
+\subsection{Metrics}
+
+\paragraph{Balanced accuracy} For a classification task with $K$ classes, the balanced accuracy is defined as:
+\begin{equation}\label{eq:balanced-accuracy}
+\text{Balanced Accuracy} = \frac{1}{K} \sum_{i=1}^{K} \frac{TP_i}{TP_i + FN_i}
+\end{equation}
+
+where $TP_i$ and $FN_i$ are the number of true positives and false negatives for class $i$, respectively. This metric is particularly useful for imbalanced datasets, as each class is reweighted according to its importance.

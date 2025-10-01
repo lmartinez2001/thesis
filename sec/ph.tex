@@ -1,0 +1,102 @@
+\section{Persistent Homology}
+\label{sec:ph}
+
+In this section we investigate the relationship between representations learned by 3D shape encoders and those derived from persistent homology. Our goal is to evaluate the degree of correlation between features extracted from point cloud encoders and features obtained through persistence diagrams. By doing so, we aim to understand under what circumstances both types of representations capture similar structural information. This analysis provides insight into whether learned embeddings and topological summaries align, and highlights the conditions where persistent homology can serve as a complementary tool for interpreting or validating encoder features.
+
+\subsection{Persistence Diagrams}
+\label{ssec:persistence_diagrams}
+
+
+\paragraph{Filtrations.}
+Let $(X, \leq)$ be a topological space equipped with a real index. A (real) filtration is a family of subspaces $(X_a)_{a\in\mathbb{R}}$ with $X_a \subseteq X_b$ whenever $a \leq b$ and $\bigcup_a X_a = X$. Typical examples are sublevel sets of a function $f:X\to\mathbb{R}$, namely $X_a = f^{-1}((-\infty,a])$.
+
+\paragraph{Homology and persistent maps.}
+Fix a field $\Bbbk$ and compute singular or simplicial homology with coefficients in $\Bbbk$. For $k\ge 0$ and $a\le b$, the inclusion $X_a \hookrightarrow X_b$ induces a linear map
+\begin{equation}
+i_{a}^{b}: H_k(X_a;\Bbbk) \longrightarrow H_k(X_b;\Bbbk).
+\end{equation}
+A $k$-dimensional class $\alpha\in H_k(X_b)$ is \emph{born} at the smallest $a$ for which it has a representative in $H_k(X_a)$, and it \emph{dies} at the smallest $d>b$ where it maps to zero in $H_k(X_d)$ under $i_{b}^{d}$. Classes that never die are called \emph{essential}.
+
+\paragraph{Persistence modules, barcodes and diagrams.}
+The collection $\{H_k(X_a), i_{a}^{b}\}_{a\le b}$ is a persistence module. Under standard finiteness conditions (e.g. $f$ tame, or finite type filtrations), it decomposes into interval modules. This gives a multiset of intervals (the barcode) or equivalently a multiset of points $(b_i,d_i)$ in the open half plane $\{(x,y)\in\mathbb{R}^2: x<y\}$ together with the diagonal $\{(t,t)\}$ available for matching with infinite multiplicity. This multiset is the $k$-th persistence diagram $\mathrm{Dgm}_k(X)$.
+
+\paragraph{Why a persistence diagram is not a Euclidean vector object.}
+A persistence diagram is a locally finite \emph{multiset} in $\mathbb{R}^2$ with a special diagonal of infinite multiplicity. There is no canonical addition or scalar multiplication that preserves the intended topology. Barycenters can be non unique. Diagrams can have countably many off diagonal points if tameness fails. Hence one treats diagrams as elements of a metric space rather than a linear space.
+
+\paragraph{Distances between diagrams.}
+Let $D$ and $E$ be diagrams. We allow matchings to the diagonal. The \emph{bottleneck distance} is
+\begin{equation}
+d_B(D,E) \;=\; \inf_{\gamma:D\to E} \; \sup_{x\in D} \, \lVert x - \gamma(x) \rVert_{\infty}.
+\end{equation}
+For $1\le p<\infty$, the $p$-\emph{Wasserstein distance} is
+\begin{equation}
+d_{W,p}(D,E) \;=\; \left( \inf_{\gamma:D\to E} \; \sum_{x\in D} \lVert x - \gamma(x) \rVert_{\infty}^{\,p} \right)^{1/p}.
+\end{equation}
+These are the standard and stable distances on persistence diagrams. The plain Hausdorff distance between the underlying point sets does not account for multiplicities and diagonal matchings and is not used in modern stability theory.
+
+\paragraph{Stability theorems.}
+For sublevel set filtrations of functions $f,g:X\to\mathbb{R}$ on a common triangulable space, the diagrams are stable under perturbations of $f$:
+\begin{equation}
+d_B\big(\mathrm{Dgm}_k(f), \mathrm{Dgm}_k(g)\big) \;\le\; \lVert f-g \rVert_{\infty}.
+\end{equation}
+Related bounds hold for $d_{W,p}$. In the algebraic language of persistence modules, the Isometry Theorem states that for $q$-tame modules $M,N$,
+\begin{equation}
+d_B\big(\mathrm{Dgm}(M), \mathrm{Dgm}(N)\big) \;=\; d_I(M,N),
+\end{equation}
+where $d_I$ is the interleaving distance.
+
+% \begin{figure}[t]
+%   \centering
+%   \includegraphics[width=\linewidth]{figs/ph/expers_v2.pdf}
+%   \caption{\textbf{Sub- (resp. super-) level set filtrations on a graph.} (Figure adapted from \cite{perslay}) Each node of the graph is assigned its height. Persistence intervals are shown under the sequence. Figure ... highlights key differences between ordinary and extended persistence.}
+%   \label{fig:filtrations}
+% \end{figure}
+
+\begin{figure}[t]
+  \centering
+  % Top full-width subfigure
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figs/ph/expers_v2.pdf}
+    \caption{\textbf{Sub- (resp. super-) level set filtrations on a graph.} (Figure adapted from PersLay~\cite{perslay}) Each node of the graph is assigned its height. Persistence intervals are shown under the sequence. Figure ... highlights key differences between ordinary and extended persistence.}
+    \label{fig:filtrations_top}
+  \end{subfigure}
+
+  \vspace{0.5em} % space between top and bottom row
+
+  % Bottom two subfigures
+  \begin{subfigure}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figs/ph/expers2_ord_v2.pdf}
+    \caption{Left panel explanation.}
+    \label{fig:filtrations_left}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figs/ph/expers2_v2.pdf}
+    \caption{Right panel explanation.}
+    \label{fig:filtrations_right}
+  \end{subfigure}
+
+  \caption{Overall caption describing how the panels relate. 
+  (Figure adapted from \cite{perslay}).}
+  \label{fig:filtrations}
+\end{figure}
+
+
+\paragraph{Extended persistence.}
+Essential classes can lead to pairs with infinite lifetime. Extended persistence remedies this by combining sublevel and superlevel filtrations and using relative homology. For a function $f:X\to\mathbb{R}$ on a compact space, consider the sublevel filtration $(X_a)$ and the superlevel filtration $(X^a = f^{-1}([a,\infty)))$. One constructs a zigzag that passes from absolute to relative homology so that every class is paired at a finite parameter value. The resulting \emph{extended persistence diagram} has only finite pairs and encodes essential features as finite points.
+
+
+\subsection{Vectorization of Persistence Diagrams}
+\label{ssec:vectorization_persistence_diagrams}
+
+Vectorizing persistence diagrams is crucial for incorporating topological signals in standard learning pipelines. A persistence diagram is a multiset of points in the plane. It does not live in a vector space and is usually compared with bottleneck or Wasserstein distances rather than inner products. Most learning algorithms expect fixed size vectors or a Hilbert space structure, so raw diagrams are not a natural input. Diagrams also have variable size and are permutation invariant, which complicates batching and optimization. These issues motivate stable feature maps and kernels that embed diagrams into Euclidean 
+
+\textbf{Prescribed Vectorization.} Handcrafted summaries have long been the dominant strategy for vectorizing persistence diagrams in machine learning. The most common approaches include persistence landscapes \cite{persistence_landscapes}, Betti curves \cite{betti_curves}, and persistence images \cite{persistence_images}. Landscapes embed diagrams in a Banach or Hilbert space and enable classical statistics, but they still require design choices such as the number of landscape levels and sampling resolution. Betti curves collapse a diagram to simple counting functions over the filtration. Persistence images rasterize diagrams with a kernel on a fixed grid. These methods are stable in theory but depend on key hyperparameters such as grid resolution and kernel width. These choices must be tuned per task and can limit expressiveness and generalization. Finally, ATOL \cite{atol} proposes an unsupervised alternative. It vectorizes measures, including sets of persistence points, by first clustering with K-means and then summarizing cluster statistics in a fixed length descriptor. The pipeline is simple and fast but remains sensitive to the chosen number of clusters and to the distribution shift between training and test diagrams.
+
+\textbf{Learned Vectorization.} Recent work has moved from handcrafted features to learning based approaches \cite{adaptive_topological_feature},\cite{topological_signature} that act on persistence diagrams more directly, often through extended persistence \cite{extended_persistence} (see Section ...). PersLay \cite{perslay} introduces a neural layer that learns stable weights and pooling functions over points in a diagram. It was developed for graph tasks and relies on extended persistence to encode informative signatures before the learned aggregation. PLLay \cite{pllay} follows a hybrid route. It first computes persistence landscapes and then applies a differentiable neural layer that learns how to weight and combine landscape coordinates. This reduces manual feature design while keeping the stability benefits of landscapes. Transformer based designs have also appeared. Persformer \cite{persformer} treats each persistence point as a token and applies standard self attention. This is flexible but scales poorly as the number of points grows. To address scalability, the Multiset Transformer \cite{multiset_transformer} clusters points and modifies attention to account for multiplicities, so that a cluster can be handled as a single item with weight greater than one. This change reduces memory and time while preserving permutation invariance at the multiset level. xPerT \cite{xpert} goes further by leveraging sparsity with a \textit{pixelized diagram} representation. It is close in spirit to persistence images but does not require a smoothing kernel. The pixeliaation allows efficient tokenization and improves scalability compared with Persformer. xPerT also works with extended persistence; details are deferred to the dedicated section.
+
+Across these learning based methods, a common trait is that the diagram is manipulated explicitly rather than replaced by coarse handcrafted summaries. Most results to date are on graph benchmarks rather than 3D shape understanding. This gap limits conclusions for point cloud encoders trained in a self supervised way, where task independent evaluation is required.
+
+Finally, recent topology aware 3D generation pipelines \cite{topology_aware_latent_diffusion} directly encode persistence pairs. More precisely they feed the top k most persistent pairs as $\{g_i=(b_i, d_i-b_i)\}_{i \in \llbracket 1,k\rrbracket}$ where $b_i$ is the birth time and $d_i$ is the death time of the i-th pair. These papers report increased diversity or topology control but are typically demonstrated on a few ShapeNet categories or related datasets. A representative example conditions a latent diffusion model on topological features computed from persistence diagrams and validates on ShapeNet and ABC.

@@ -1,0 +1,144 @@
+% !TEX program = pdflatex
+% A4 paper, 11pt font, 2cm margins on all sides. Title page with two PDF logos.
+% Table of contents starts on page 2, page numbering (arabic) starts at the TOC.
+\documentclass[11pt,a4paper]{article}
+
+% --- Encoding & Fonts (pdflatex) ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine} % Use Libertine font
+
+% --- Page layout ---
+\usepackage[a4paper,margin=2cm]{geometry} % 2cm margins on each side
+
+% --- Graphics ---
+\usepackage{graphicx} % for \includegraphics (supports .pdf logos with pdflatex/xelatex)
+
+% --- Useful packages (optional) --- 
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage[export]{adjustbox}
+\usepackage{stmaryrd}
+\usepackage{booktabs}
+\usepackage[most]{tcolorbox}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\addbibresource{main.bib}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black}
+
+\tcbset{
+  mybox/.style={
+    colback=gray!10,   % background color
+    colframe=gray!50,  % border color
+    arc=3mm,           % rounded corners
+    boxrule=0.5pt,
+    left=2mm, right=2mm, top=1mm, bottom=1mm
+  }
+}
+
+\tcbset{
+  bluebox/.style={
+    colback=blue!10,   % light blue background
+    colframe=blue!50,  % border color
+    arc=3mm,           % rounded corners
+    boxrule=0.5pt,
+    left=2mm, right=2mm, top=1mm, bottom=1mm
+  }
+}
+
+\newcommand{\cm}{\checkmark}
+
+% --- Section formatting ---
+\usepackage{titlesec}
+% Make all sectioning commands the same font size (Large) and bold
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\Large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\Large\bfseries}{\thesubsubsection}{1em}{}
+
+% Ensure consistent numbering depth and ToC
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% --- Metadata (fill these) ---
+\newcommand{\ThesisTitle}{Data-Driven Estimation of Topological Features in 3D shapes}
+\newcommand{\AuthorName}{Louis Martinez}
+\newcommand{\AuthorAffiliation}{Télécom Paris}
+\newcommand{\SupervisorName}{Maks Ovsjanikov}
+\newcommand{\SupervisorAffiliation}{LIX, Ecole Polytechnique}
+\newcommand{\MonthYear}{October 2025}
+
+\renewenvironment{abstract}{
+  \clearpage
+  \begin{center}
+    \Large\bfseries Abstract
+  \end{center}
+  \itshape
+}{\par\clearpage}
+
+\begin{document}
+
+% ------------------
+% Custom title page
+% ------------------
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+
+    {\LARGE\bfseries \ThesisTitle\par}
+    \vspace{1.6cm}
+
+    {\large \textbf{Author:} \\ \AuthorName \\[0.2cm]
+    \AuthorAffiliation\par}
+
+    \vspace{1.0cm}
+
+    {\large \textbf{Supervisor:} \\ \SupervisorName \\[0.2cm]
+    \SupervisorAffiliation\par}
+
+    % --- Logos in the middle ---
+    \vfill
+    \begin{center}
+        % Place your PDF logos in ./logos/ as logo1.pdf and logo2.pdf, or change the file names below
+        \includegraphics[height=2.6cm]{logos/logo_mva.pdf}\hspace{1.2cm}%
+        \includegraphics[height=2.6cm]{logos/logo_tp.pdf}
+    \end{center}
+    \vfill
+
+    {\large \MonthYear\par}
+\end{titlepage}
+
+% ------------------
+% Table of contents (starts on page 2)
+% ------------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\tableofcontents
+\clearpage
+
+\input{sec/abstract}
+\clearpage
+
+% ------------------
+% Main matter (each section in its own file)
+% ------------------
+\input{sec/introduction}
+\input{sec/topogen}
+\input{sec/used_models}
+\input{sec/ph}
+
+\appendix
+\input{sec/suppl_topogen.tex}
+\input{sec/suppl_definitions.tex}
+\printbibliography
+\end{document}
+
+
+
