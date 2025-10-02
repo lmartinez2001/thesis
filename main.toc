@@ -31,7 +31,7 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Hierarchical Extensions: Multi-Scale Representations}{12}{subsubsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {3.2.4}Further Improvements}{13}{subsubsection.3.2.4}%
 \contentsline {subsubsection}{\numberline {3.2.5}Comparative View}{13}{subsubsection.3.2.5}%
-\contentsline {section}{\numberline {4}Persistent Homology}{13}{section.4}%
+\contentsline {section}{\numberline {4}Subspace Alignment with Persistent Homology}{13}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Persistence Diagrams}{13}{subsection.4.1}%
 \contentsline {paragraph}{Filtrations.}{13}{subsection.4.1}%
 \contentsline {paragraph}{Homology and persistent maps.}{14}{subsection.4.1}%
@@ -41,6 +41,7 @@
 \contentsline {paragraph}{Stability theorems.}{14}{equation.8}%
 \contentsline {paragraph}{Extended persistence.}{14}{figure.caption.10}%
 \contentsline {subsection}{\numberline {4.2}Vectorization of Persistence Diagrams}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Subspace Alignment Protocol}{16}{subsection.4.3}%
 \contentsline {section}{\numberline {A}Supplementary Material for DONUT}{17}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1}EuLearn Dataset Analysis}{17}{subsection.A.1}%
 \contentsline {subsection}{\numberline {A.2}Sampling Labels}{17}{subsection.A.2}%

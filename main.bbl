@@ -825,6 +825,75 @@
     \field{year}{2015}
   \endentry
 
+  \entry{plato}{misc}{}{}
+    \name{author}{8}{}{%
+      {{hash=HS}{%
+         family={Hadgi},
+         familyi={H\bibinitperiod},
+         given={Souhail},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=ML}{%
+         family={Moschella},
+         familyi={M\bibinitperiod},
+         given={Luca},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Santilli},
+         familyi={S\bibinitperiod},
+         given={Andrea},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GD}{%
+         family={Gomez},
+         familyi={G\bibinitperiod},
+         given={Diego},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=HQ}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Qixing},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=RE}{%
+         family={Rodolà},
+         familyi={R\bibinitperiod},
+         given={Emanuele},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Melzi},
+         familyi={M\bibinitperiod},
+         given={Simone},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=OM}{%
+         family={Ovsjanikov},
+         familyi={O\bibinitperiod},
+         given={Maks},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HS+1}
+    \strng{fullhash}{HSMLSAGDHQREMSOM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{eprint}
+    \verb 2503.05283
+    \endverb
+    \field{title}{Escaping Plato's Cave: Towards the Alignment of 3D and Text Latent Spaces}
+    \verb{url}
+    \verb https://arxiv.org/abs/2503.05283
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2025}
+  \endentry
+
   \entry{topological_signature}{misc}{}{}
     \name{author}{4}{}{%
       {{hash=HC}{%
@@ -1021,6 +1090,51 @@
     \field{eprinttype}{arXiv}
     \field{eprintclass}{cs.GR}
     \field{year}{2020}
+  \endentry
+
+  \entry{platonic}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=HM}{%
+         family={Huh},
+         familyi={H\bibinitperiod},
+         given={Minyoung},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Cheung},
+         familyi={C\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=WT}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Tongzhou},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=IP}{%
+         family={Isola},
+         familyi={I\bibinitperiod},
+         given={Phillip},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HM+1}
+    \strng{fullhash}{HMCBWTIP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{eprint}
+    \verb 2405.07987
+    \endverb
+    \field{title}{The Platonic Representation Hypothesis}
+    \verb{url}
+    \verb https://arxiv.org/abs/2405.07987
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2024}
   \endentry
 
   \entry{pllay}{misc}{}{}

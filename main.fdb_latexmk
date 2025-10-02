@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1759340262.0313 "main.aux" "main.bbl" "main" 1759340268.91685 0
-  "./main-blx.bib" 1759340268.44557 342 20d1170ef6c1d70c658d70e011e08dba ""
-  "./main.bib" 1759323608.14093 18105 d16a771a58c2e2ac174f8af730d2d790 ""
+["bibtex main"] 1759364612.83335 "main.aux" "main.bbl" "main" 1759364620.26659 0
+  "./main-blx.bib" 1759364619.74539 342 20d1170ef6c1d70c658d70e011e08dba ""
+  "./main.bib" 1759364224.95835 18877 1b9474a5f9e737ac291e9356e381ea39 ""
   "/usr/share/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1755987285 65510 b1f696b0241395385f422f67543c37fd ""
-  "main.aux" 1759340268.43857 36783 43afc21bcf3c3bee6c860aae6b386317 "pdflatex"
+  "main.aux" 1759364619.73888 39149 c7d7131e5220a9e4f06c2f17f9eb7130 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1759340262.15842 "/home/louis/my/internship/thesis/main.tex" "main.pdf" "main" 1759340268.91708 0
+["pdflatex"] 1759364612.96648 "/home/louis/my/internship/thesis/main.tex" "main.pdf" "main" 1759364620.26684 0
   "/home/louis/my/internship/thesis/main.tex" 1758932771.71679 3712 0eb7675cd0c4f5b79c4a71a811374d8d ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1755987285 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc" 1755987285 2934 a4a9158faed2e9e89c771b4e3b7fc12f ""
@@ -294,6 +294,10 @@
   "figs/eulearn/accuracy_vs_angle.pdf" 1758937730.28976 21301 f32cc275a0581116bb231f8e41c61186 ""
   "figs/eulearn/dataset_samples.pdf" 1758388974.4522 5037897 13977b0d61c4839cfe4e05dc38d4c822 ""
   "figs/eulearn/umap_comparison_original_rotated.pdf" 1758398122.86242 139820 3f958acac87bf0abcaeed7ee4e5fdfb2 ""
+  "figs/ph/examples/betti_curve_example.pdf" 1759358074.58778 8937 70a3922ae15f5f00e6253caa4e050e9c ""
+  "figs/ph/examples/landscape_example.pdf" 1759354915.40336 1532 0650f62d320c4698dec6e00a86658fe4 ""
+  "figs/ph/examples/pd_example.pdf" 1759354883.10602 7592 85d3cb4be30c21fdf597df02e5808529 ""
+  "figs/ph/examples/persistence_image_example.pdf" 1759356535.62579 45829 1c0544a2ddf0e8b3ad8aac772ece4d7f ""
   "figs/ph/expers2_ord_v2.pdf" 1759339636.089 19790 fa84927e862a831ae2c4dffe263e2e8a ""
   "figs/ph/expers2_v2.pdf" 1759338512.91276 25479 f531768865a3bf531753a1b0a0486f1b ""
   "figs/ph/expers_v2.pdf" 1759331223.2451 18907 328117756d7d3ac79de4b4a9242e31db ""
@@ -310,15 +314,15 @@
   "figs/utils/unrotated.pdf" 1758407527.96723 4219 c4c052d9e8dc211745ddbcdc0b4415f7 ""
   "logos/logo_mva.pdf" 1758725062.48297 11148 7c54c62f7f8c9e053a2d5181d0fc91c5 ""
   "logos/logo_tp.pdf" 1758725055.83874 12202 f64a7ee732ff815cedb3044478656aea ""
-  "main.aux" 1759340268.43857 36783 43afc21bcf3c3bee6c860aae6b386317 "pdflatex"
-  "main.bbl" 1759340262.15015 54063 fe8a7bddba0eb842db448f5ac5604917 "bibtex main"
-  "main.out" 1759340268.44157 5885 0e9e403b6635a025b7f954287cea30db "pdflatex"
-  "main.run.xml" 1759340268.44719 2516 ba6a34333704efe85122077493a7ee55 "pdflatex"
+  "main.aux" 1759364619.73888 39149 c7d7131e5220a9e4f06c2f17f9eb7130 "pdflatex"
+  "main.bbl" 1759364612.9588 56959 ac0759ad5d4ea82069c36791a5ee475d "bibtex main"
+  "main.out" 1759364619.74139 6213 c17526fec000665da3537f57c67b6ec7 "pdflatex"
+  "main.run.xml" 1759364619.74786 2516 ba6a34333704efe85122077493a7ee55 "pdflatex"
   "main.tex" 1758932771.71679 3712 0eb7675cd0c4f5b79c4a71a811374d8d ""
-  "main.toc" 1759340268.44719 4680 83e08a76db81e1a24f3209513a44589c "pdflatex"
+  "main.toc" 1759364619.74786 4798 ec37875b85db4a5786261d8079c5dcb4 "pdflatex"
   "sec/abstract.tex" 1758906012.97964 2392 a7e47d14a379e7b76a73c868505737bd ""
-  "sec/introduction.tex" 1758726498.82642 2522 1e3bab0aa473f31ecdf74dab2681a90e ""
-  "sec/ph.tex" 1759340255.0818 10985 bfcd073f1a69cb28d80ea7d691bc2113 ""
+  "sec/introduction.tex" 1759358416.99532 2519 97f3d3a88dd5f4c33b974cdff0e90f0e ""
+  "sec/ph.tex" 1759364605.27791 13030 ae228b403efb71d875b1c7155a0b6ad2 ""
   "sec/suppl_definitions.tex" 1758913627.37413 564 9b1fcbeb5e91098cd8144c228b4b1d51 ""
   "sec/suppl_topogen.tex" 1759323926.72499 14644 af96709a8c5fea2e54d015065b97e7db ""
   "sec/topogen.tex" 1759329544.92821 36306 fde395f3886481d96fab6c4a7de76a16 ""

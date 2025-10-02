@@ -1,7 +1,10 @@
-\section{Persistent Homology}
+\section{Subspace Alignment with Persistent Homology}
 \label{sec:ph}
 
-In this section we investigate the relationship between representations learned by 3D shape encoders and those derived from persistent homology. Our goal is to evaluate the degree of correlation between features extracted from point cloud encoders and features obtained through persistence diagrams. By doing so, we aim to understand under what circumstances both types of representations capture similar structural information. This analysis provides insight into whether learned embeddings and topological summaries align, and highlights the conditions where persistent homology can serve as a complementary tool for interpreting or validating encoder features.
+We study the relationship between representations learned by 3D shape encoders and those derived from persistent homology. Following the perspective of the Platonic Representation Hypothesis~\cite{plato,platonic}, we view learned embeddings as potentially containing subspaces that capture intrinsic structural information. Information captured by persistent homology can also be treated as a complementary modality. Assuming there's a way to encode topological features into a vector space, we can then ask whether the learned and topological subspaces align. It's worth noticing that the analogy with \cite{platonic} is not perfect: while it's assumed that representations tend to converge at scale, topological features, even learned ones, aren't the result of large scale training.
+
+We first review background on persistent homology and its vectorization. We then describe our alignment protocol and present results across encoders and datasets.
+
 
 \subsection{Persistence Diagrams}
 \label{ssec:persistence_diagrams}
@@ -58,7 +61,7 @@ where $d_I$ is the interleaving distance.
   \begin{subfigure}{\linewidth}
     \centering
     \includegraphics[width=\linewidth]{figs/ph/expers_v2.pdf}
-    \caption{\textbf{Sub- (resp. super-) level set filtrations on a graph.} (Figure adapted from PersLay~\cite{perslay}) Each node of the graph is assigned its height. Persistence intervals are shown under the sequence. Figure ... highlights key differences between ordinary and extended persistence.}
+    \caption{Sub- (resp. super-) level set filtration.}
     \label{fig:filtrations_top}
   \end{subfigure}
 
@@ -78,8 +81,7 @@ where $d_I$ is the interleaving distance.
     \label{fig:filtrations_right}
   \end{subfigure}
 
-  \caption{Overall caption describing how the panels relate. 
-  (Figure adapted from \cite{perslay}).}
+  \caption{\textbf{Ordinary vs extended persistence.} (Figures adapted from \cite{perslay}). In \ref{fig:filtrations_top}, each node of the graph is assigned its height. Persistence intervals are shown under the sequence. In \ref{fig:filtrations_left}, ordinary persistence captures connected components and loops, but essential classes lead to infinite intervals (black and green markers) and the upward branch (blue) isn't captured. In \ref{fig:filtrations_right}, extended persistence pairs all classes at finite values by combining sublevel and superlevel filtrations with relative homology.}
   \label{fig:filtrations}
 \end{figure}
 
@@ -91,12 +93,38 @@ Essential classes can lead to pairs with infinite lifetime. Extended persistence
 \subsection{Vectorization of Persistence Diagrams}
 \label{ssec:vectorization_persistence_diagrams}
 
+\begin{figure}[t]
+    \centering
+    \begin{subfigure}[b]{0.23\textwidth}
+        \includegraphics[width=\textwidth]{figs/ph/examples/pd_example.pdf}
+        \caption{Persistence Diagram}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.23\textwidth}
+        \includegraphics[width=\textwidth]{figs/ph/examples/landscape_example.pdf}
+        \caption{Persistence Landscape}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.23\textwidth}
+        \includegraphics[width=\textwidth]{figs/ph/examples/persistence_image_example.pdf}
+        \caption{Persistence Image}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.23\textwidth}
+        \includegraphics[width=\textwidth]{figs/ph/examples/betti_curve_example.pdf}
+        \caption{Betti Curve}
+    \end{subfigure}
+    \caption{\textbf{Common prescribed vectorizations of a persistence diagram.} From left to right: (a) A sample persistence diagram with points representing topological features; (b) Persistence landscape capturing the prominence of features across scales; (c) Persistence image providing a smoothed, grid-based representation; \textit{Note:} Instead of considering persistence pairs as a \textit{(birth,death)} tuple, persistence image is fitted on $(birth, death-birth)$ pairs. (d) Betti curve showing the count of features over filtration values.}
+    \label{fig:ph-vectorizations}
+\end{figure}
+
 Vectorizing persistence diagrams is crucial for incorporating topological signals in standard learning pipelines. A persistence diagram is a multiset of points in the plane. It does not live in a vector space and is usually compared with bottleneck or Wasserstein distances rather than inner products. Most learning algorithms expect fixed size vectors or a Hilbert space structure, so raw diagrams are not a natural input. Diagrams also have variable size and are permutation invariant, which complicates batching and optimization. These issues motivate stable feature maps and kernels that embed diagrams into Euclidean 
 
-\textbf{Prescribed Vectorization.} Handcrafted summaries have long been the dominant strategy for vectorizing persistence diagrams in machine learning. The most common approaches include persistence landscapes \cite{persistence_landscapes}, Betti curves \cite{betti_curves}, and persistence images \cite{persistence_images}. Landscapes embed diagrams in a Banach or Hilbert space and enable classical statistics, but they still require design choices such as the number of landscape levels and sampling resolution. Betti curves collapse a diagram to simple counting functions over the filtration. Persistence images rasterize diagrams with a kernel on a fixed grid. These methods are stable in theory but depend on key hyperparameters such as grid resolution and kernel width. These choices must be tuned per task and can limit expressiveness and generalization. Finally, ATOL \cite{atol} proposes an unsupervised alternative. It vectorizes measures, including sets of persistence points, by first clustering with K-means and then summarizing cluster statistics in a fixed length descriptor. The pipeline is simple and fast but remains sensitive to the chosen number of clusters and to the distribution shift between training and test diagrams.
+\textbf{Prescribed Vectorization.} Handcrafted summaries have long been the dominant strategy for vectorizing persistence diagrams in machine learning. The most common approaches include persistence landscapes \cite{persistence_landscapes}, Betti curves \cite{betti_curves}, and persistence images \cite{persistence_images} (Figure~\ref{fig:ph-vectorizations}). Landscapes embed diagrams in a Hilbert space and enable classical statistics, but they still require design choices such as the number of landscape levels and sampling resolution. Betti curves collapse a diagram to simple counting functions over the filtration. Persistence images rasterize diagrams with a kernel on a fixed grid. These methods are stable in theory but depend on key hyperparameters such as grid resolution and kernel width. These choices must be tuned per task and can limit expressiveness and generalization. Finally, ATOL \cite{atol} proposes an unsupervised alternative. It vectorizes measures, including sets of persistence points, by first clustering with K-means and then summarizing cluster statistics in a fixed length descriptor. The pipeline is simple and fast but remains sensitive to the chosen number of clusters and to the distribution shift between training and test diagrams.
 
 \textbf{Learned Vectorization.} Recent work has moved from handcrafted features to learning based approaches \cite{adaptive_topological_feature},\cite{topological_signature} that act on persistence diagrams more directly, often through extended persistence \cite{extended_persistence} (see Section ...). PersLay \cite{perslay} introduces a neural layer that learns stable weights and pooling functions over points in a diagram. It was developed for graph tasks and relies on extended persistence to encode informative signatures before the learned aggregation. PLLay \cite{pllay} follows a hybrid route. It first computes persistence landscapes and then applies a differentiable neural layer that learns how to weight and combine landscape coordinates. This reduces manual feature design while keeping the stability benefits of landscapes. Transformer based designs have also appeared. Persformer \cite{persformer} treats each persistence point as a token and applies standard self attention. This is flexible but scales poorly as the number of points grows. To address scalability, the Multiset Transformer \cite{multiset_transformer} clusters points and modifies attention to account for multiplicities, so that a cluster can be handled as a single item with weight greater than one. This change reduces memory and time while preserving permutation invariance at the multiset level. xPerT \cite{xpert} goes further by leveraging sparsity with a \textit{pixelized diagram} representation. It is close in spirit to persistence images but does not require a smoothing kernel. The pixeliaation allows efficient tokenization and improves scalability compared with Persformer. xPerT also works with extended persistence; details are deferred to the dedicated section.
 
 Across these learning based methods, a common trait is that the diagram is manipulated explicitly rather than replaced by coarse handcrafted summaries. Most results to date are on graph benchmarks rather than 3D shape understanding. This gap limits conclusions for point cloud encoders trained in a self supervised way, where task independent evaluation is required.
 
 Finally, recent topology aware 3D generation pipelines \cite{topology_aware_latent_diffusion} directly encode persistence pairs. More precisely they feed the top k most persistent pairs as $\{g_i=(b_i, d_i-b_i)\}_{i \in \llbracket 1,k\rrbracket}$ where $b_i$ is the birth time and $d_i$ is the death time of the i-th pair. These papers report increased diversity or topology control but are typically demonstrated on a few ShapeNet categories or related datasets. A representative example conditions a latent diffusion model on topological features computed from persistence diagrams and validates on ShapeNet and ABC.
+
+\subsection{Subspace Alignment Protocol}
+\label{ssec:subspace_alignment_protocol}
+
