@@ -52,3 +52,36 @@ Despite their differences, Point-BERT, Point-MAE, and their hierarchical success
 An important consequence of these differences is that evaluation protocols vary across models. Point-BERT pretraining relies on predicting discrete token IDs, while Point-MAE and M2AE use reconstruction losses such as Chamfer distance. The role of the CLS token also differs, being central during pretraining in Point-BERT but absent in MAE-style approaches. As a result, downstream fine-tuning and linear probing must be carefully adapted to each architecture. The precise evaluation settings for each method will be detailed in the following experimental section.
 
 
+\begin{table}
+% \renewcommand\arraystretch{1.2}
+\begin{center}
+\begin{tabular}{l|cccc|cccc}
+    
+\toprule
+& \multicolumn{4}{c|}{\textbf{ModelNet}} & \multicolumn{4}{c}{\textbf{DONUT}} \\
+% \cmidrule(lr){2-5} \cmidrule(lr){6-9}
+& \multicolumn{2}{c}{5-way} & \multicolumn{2}{c|}{10-way} & \multicolumn{2}{c}{5-way} & \multicolumn{2}{c}{10-way} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+Methods & 10-shot & 20-shot & 10-shot & 20-shot & 10-shot & 20-shot & 10-shot & 20-shot \\
+\midrule
+
+Point-BERT~\cite{pbert} & $94.6_{\pm 3.1}$ & $96.3_{\pm 2.7}$ & $91.0_{\pm 5.4}$ & $92.7_{\pm 5.1}$ & -- & -- & -- & --\\
+Point-BERT (ABC) & \cellcolor{green!25}$95.9_{\pm 2.1}$ & \cellcolor{green!25}$98.1_{\pm 1.8}$ & \cellcolor{green!25}$91.7_{\pm 4.5}$ & \cellcolor{green!25}$94.2_{\pm 3.4}$ & -- & -- & -- & --\\
+\midrule
+Point-MAE~\cite{pmae} & $96.3_{\pm 2.5}$ & $97.8_{\pm 1.8}$ & $92.6_{\pm 4.1}$ & $95.0_{\pm 3.0}$ & $32.9_{\pm 3.5}$ & $38.1_{\pm 3.9}$ & $20.4_{\pm 2.1}$ & $23.8_{\pm 1.7}$ \\
+Point-MAE (ABC) & \cellcolor{orange!25}$96.2_{\pm 2.7}$ & \cellcolor{orange!25}$97.6_{\pm 1.9}$ & \cellcolor{orange!25}$92.3_{\pm 4.4}$ & \cellcolor{green!25}$95.2_{\pm 2.9}$ & \cellcolor{green!25}$35.1_{\pm 6.0}$ & \cellcolor{green!25}$40.1_{\pm 4.9}$ & \cellcolor{green!25}$21.4_{\pm 2.7}$ & \cellcolor{green!25}$22.8_{\pm 2.4}$\\
+\midrule
+PCP-MAE~\cite{pcpmae} & $97.4_{\pm 2.3}$ & $99.1_{\pm 0.8}$ & $93.5_{\pm 3.7}$ & $95.9_{\pm 2.7}$ & -- & -- & -- & --\\
+PCP-MAE (ABC) & \cellcolor{orange!25}$96.1_{\pm 3.1}$ & \cellcolor{orange!25}$98.3_{\pm 4.3}$ & \cellcolor{orange!25}$91.7_{\pm 4.3}$ & \cellcolor{orange!25}$94.9_{\pm 2.9}$ & -- & -- & -- & --\\
+\midrule
+PM2AE~\cite{pm2ae} & $97.4_{\pm 2.3}$ & $99.1_{\pm 0.8}$ & $93.5_{\pm 3.7}$ & $95.9_{\pm 2.7}$ & -- & -- & -- & --\\
+PM2AE (ABC) & \cellcolor{orange!25}$96.1_{\pm 3.1}$ & \cellcolor{orange!25}$98.3_{\pm 4.3}$ & \cellcolor{orange!25}$91.7_{\pm 4.3}$ & \cellcolor{orange!25}$94.9_{\pm 2.9}$ & -- & -- & -- & --\\
+
+\bottomrule
+\end{tabular}
+\caption{{\bf Few-shot object classification on ModelNet40.} We conduct 10 independent experiments for each setting and report mean accuracy (\%) with standard deviation.}
+\setlength\tabcolsep{2pt}
+\label{tb:few}
+\end{center}
+
+\end{table}

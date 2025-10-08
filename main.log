@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.20)  2 OCT 2025 02:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.20)  8 OCT 2025 04:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1348,22 +1348,22 @@ Package pdftex.def Info: figs/topogen/twisted_comparison.png  used on input line
 
 [9 <./figs/topogen/ktori_overview.png> <./figs/topogen/twisted_comparison.png>]
 
-LaTeX Warning: Reference `fig:dgcnn-saliency' on page 10 undefined on input line 274.
+LaTeX Warning: Reference `fig:dgcnn-saliency' on page 10 undefined on input line 276.
 
 <figs/topogen/umaps_overview.pdf, id=398, 2876.3461pt x 636.05507pt>
 File: figs/topogen/umaps_overview.pdf Graphic file (type pdf)
 <use figs/topogen/umaps_overview.pdf>
-Package pdftex.def Info: figs/topogen/umaps_overview.pdf  used on input line 278.
+Package pdftex.def Info: figs/topogen/umaps_overview.pdf  used on input line 280.
 (pdftex.def)             Requested size: 483.69687pt x 106.95357pt.
 <figs/topogen/components_genus_hist.pdf, id=399, 1423.47643pt x 483.79025pt>
 File: figs/topogen/components_genus_hist.pdf Graphic file (type pdf)
 <use figs/topogen/components_genus_hist.pdf>
-Package pdftex.def Info: figs/topogen/components_genus_hist.pdf  used on input line 287.
+Package pdftex.def Info: figs/topogen/components_genus_hist.pdf  used on input line 289.
 (pdftex.def)             Requested size: 319.2417pt x 108.49376pt.
 <figs/topogen/generation_time.pdf, id=400, 651.59862pt x 329.46213pt>
 File: figs/topogen/generation_time.pdf Graphic file (type pdf)
 <use figs/topogen/generation_time.pdf>
-Package pdftex.def Info: figs/topogen/generation_time.pdf  used on input line 294.
+Package pdftex.def Info: figs/topogen/generation_time.pdf  used on input line 296.
 (pdftex.def)             Requested size: 159.62085pt x 80.70634pt.
 
 
@@ -1376,47 +1376,52 @@ Overfull \hbox (2.99895pt too wide) in paragraph at lines 23--24
 
 
 
-[12]) (./sec/ph.tex
+[12]
+Overfull \hbox (7.74867pt too wide) in paragraph at lines 58--82
+ [] 
+ []
+
+) (./sec/ph.tex
 
 [13]
-<figs/ph/expers_v2.pdf, id=565, 580.1675pt x 187.70125pt>
+
+[14]
+<figs/ph/expers_v2.pdf, id=577, 580.1675pt x 187.70125pt>
 File: figs/ph/expers_v2.pdf Graphic file (type pdf)
 <use figs/ph/expers_v2.pdf>
 Package pdftex.def Info: figs/ph/expers_v2.pdf  used on input line 63.
 (pdftex.def)             Requested size: 483.69687pt x 156.49083pt.
-<figs/ph/expers2_ord_v2.pdf, id=566, 530.98375pt x 251.94125pt>
+<figs/ph/expers2_ord_v2.pdf, id=578, 530.98375pt x 251.94125pt>
 File: figs/ph/expers2_ord_v2.pdf Graphic file (type pdf)
 <use figs/ph/expers2_ord_v2.pdf>
 Package pdftex.def Info: figs/ph/expers2_ord_v2.pdf  used on input line 73.
 (pdftex.def)             Requested size: 232.17242pt x 110.1625pt.
-<figs/ph/expers2_v2.pdf, id=567, 530.98375pt x 251.94125pt>
+<figs/ph/expers2_v2.pdf, id=579, 530.98375pt x 251.94125pt>
 File: figs/ph/expers2_v2.pdf Graphic file (type pdf)
 <use figs/ph/expers2_v2.pdf>
 Package pdftex.def Info: figs/ph/expers2_v2.pdf  used on input line 79.
 (pdftex.def)             Requested size: 232.17242pt x 110.1625pt.
-<figs/ph/examples/pd_example.pdf, id=576, 562.1pt x 558.085pt>
+<figs/ph/examples/pd_example.pdf, id=588, 562.1pt x 558.085pt>
 File: figs/ph/examples/pd_example.pdf Graphic file (type pdf)
 <use figs/ph/examples/pd_example.pdf>
 Package pdftex.def Info: figs/ph/examples/pd_example.pdf  used on input line 99.
 (pdftex.def)             Requested size: 111.2482pt x 110.44836pt.
-<figs/ph/examples/landscape_example.pdf, id=577, 280.04625pt x 278.23952pt>
+<figs/ph/examples/landscape_example.pdf, id=589, 280.04625pt x 278.23952pt>
 File: figs/ph/examples/landscape_example.pdf Graphic file (type pdf)
 <use figs/ph/examples/landscape_example.pdf>
 Package pdftex.def Info: figs/ph/examples/landscape_example.pdf  used on input line 103.
 (pdftex.def)             Requested size: 111.2482pt x 110.52962pt.
-<figs/ph/examples/persistence_image_example.pdf, id=578, 278.23952pt x 278.23952pt>
+<figs/ph/examples/persistence_image_example.pdf, id=590, 278.23952pt x 278.23952pt>
 File: figs/ph/examples/persistence_image_example.pdf Graphic file (type pdf)
 <use figs/ph/examples/persistence_image_example.pdf>
 Package pdftex.def Info: figs/ph/examples/persistence_image_example.pdf  used on input line 107.
 (pdftex.def)             Requested size: 111.2482pt x 111.24713pt.
-<figs/ph/examples/betti_curve_example.pdf, id=579, 338.32085pt x 338.97389pt>
+<figs/ph/examples/betti_curve_example.pdf, id=591, 338.32085pt x 338.97389pt>
 File: figs/ph/examples/betti_curve_example.pdf Graphic file (type pdf)
 <use figs/ph/examples/betti_curve_example.pdf>
 Package pdftex.def Info: figs/ph/examples/betti_curve_example.pdf  used on input line 111.
 (pdftex.def)             Requested size: 111.2482pt x 111.46346pt.
 
-
-[14]
 
 [15 <./figs/ph/expers_v2.pdf> <./figs/ph/expers2_ord_v2.pdf
 
@@ -1424,15 +1429,17 @@ pdfTeX warning: pdflatex (file ./figs/ph/expers2_ord_v2.pdf): PDF inclusion: mul
 > <./figs/ph/expers2_v2.pdf
 
 pdfTeX warning: pdflatex (file ./figs/ph/expers2_v2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) (./sec/suppl_topogen.tex
+>]
 
-[16 <./figs/ph/examples/pd_example.pdf> <./figs/ph/examples/landscape_example.pdf> <./figs/ph/examples/persistence_image_example.pdf> <./figs/ph/examples/betti_curve_example.pdf>]
-<figs/eulearn/umap_comparison_original_rotated.pdf, id=942, 1207.96925pt x 653.57616pt>
+[16 <./figs/ph/examples/pd_example.pdf> <./figs/ph/examples/landscape_example.pdf> <./figs/ph/examples/persistence_image_example.pdf> <./figs/ph/examples/betti_curve_example.pdf>]) (./sec/suppl_topogen.tex
+
+[17]
+<figs/eulearn/umap_comparison_original_rotated.pdf, id=951, 1207.96925pt x 653.57616pt>
 File: figs/eulearn/umap_comparison_original_rotated.pdf Graphic file (type pdf)
 <use figs/eulearn/umap_comparison_original_rotated.pdf>
 Package pdftex.def Info: figs/eulearn/umap_comparison_original_rotated.pdf  used on input line 18.
 (pdftex.def)             Requested size: 338.58632pt x 183.18954pt.
-<figs/eulearn/accuracy_vs_angle.pdf, id=944, 555.24155pt x 338.30838pt>
+<figs/eulearn/accuracy_vs_angle.pdf, id=953, 555.24155pt x 338.30838pt>
 File: figs/eulearn/accuracy_vs_angle.pdf Graphic file (type pdf)
 <use figs/eulearn/accuracy_vs_angle.pdf>
 Package pdftex.def Info: figs/eulearn/accuracy_vs_angle.pdf  used on input line 29.
@@ -1442,7 +1449,7 @@ Underfull \hbox (badness 1354) in paragraph at lines 30--30
 []\T1/LinuxLibertineT-TLF/m/n/10.95 Figure 11: |\T1/LinuxLibertineT-TLF/b/n/10.95 Clas-si-fi-ca-tion ac-cu-racy of a $\OML/cmm/m/it/10.95 k$\T1/LinuxLibertineT-TLF/b/n/10.95 -
  []
 
-<figs/utils/unrotated.pdf, id=945, 1081.03876pt x 1081.03876pt>
+<figs/utils/unrotated.pdf, id=954, 1081.03876pt x 1081.03876pt>
 File: figs/utils/unrotated.pdf Graphic file (type pdf)
 <use figs/utils/unrotated.pdf>
 Package pdftex.def Info: figs/utils/unrotated.pdf  used on input line 39.
@@ -1451,7 +1458,7 @@ File: figs/utils/unrotated.pdf Graphic file (type pdf)
 <use figs/utils/unrotated.pdf>
 Package pdftex.def Info: figs/utils/unrotated.pdf  used on input line 40.
 (pdftex.def)             Requested size: 10.93637pt x 10.95pt.
-<figs/utils/rotated.pdf, id=946, 602.25pt x 602.25pt>
+<figs/utils/rotated.pdf, id=955, 602.25pt x 602.25pt>
 File: figs/utils/rotated.pdf Graphic file (type pdf)
 <use figs/utils/rotated.pdf>
 Package pdftex.def Info: figs/utils/rotated.pdf  used on input line 42.
@@ -1499,7 +1506,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[17
+[18
 
  <./figs/eulearn/umap_comparison_original_rotated.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 70.
@@ -1508,17 +1515,17 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 73.
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
-[18 <./figs/eulearn/accuracy_vs_angle.pdf> <./figs/utils/unrotated.pdf> <./figs/utils/rotated.pdf
+[19 <./figs/eulearn/accuracy_vs_angle.pdf> <./figs/utils/unrotated.pdf> <./figs/utils/rotated.pdf
 
 pdfTeX warning: pdflatex (file ./figs/utils/rotated.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
-[19]
+[20]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 152.
 ) (./sec/suppl_definitions.tex
 
-[20{/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}])
+[21{/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}])
 LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineMonoT-TLF on input line 140.
  (/usr/share/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-TLF.fd
 File: T1LinuxLibertineMonoT-TLF.fd 2019/05/20 (autoinst) Font definitions for T1/LinuxLibertineMonoT-TLF.
@@ -1534,7 +1541,7 @@ Overfull \hbox (0.12944pt too wide) in paragraph at lines 141--141
 
 
 
-[21{/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}]
+[22{/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}]
 Overfull \hbox (4.94946pt too wide) in paragraph at lines 141--141
 []\T1/LinuxLibertineT-TLF/m/n/10.95 Christoph Hofer et al. \T1/LinuxLibertineT-TLF/m/it/10.95 Deep Learn-ing with Topo-log-i-cal Sig-na-tures\T1/LinuxLibertineT-TLF/m/n/10.95 . 2018. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 1707 . 04041$ [cs.CV][][]\T1/LinuxLibertineT-TLF/m/n/10.95 .
  []
@@ -1546,9 +1553,9 @@ Overfull \hbox (10.30511pt too wide) in paragraph at lines 141--141
 
 
 
-[22]
+[23]
 
-[23] (./main.aux)
+[24] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1564,18 +1571,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40529 strings out of 473190
- 808843 string characters out of 5722593
- 1587831 words of memory out of 5000000
- 62987 multiletter control sequences out of 15000+600000
+ 40534 strings out of 473190
+ 808905 string characters out of 5722593
+ 1590018 words of memory out of 5000000
+ 62990 multiletter control sequences out of 15000+600000
  648822 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,18n,131p,1991b,1568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb></usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb>
-Output written on main.pdf (24 pages, 17958178 bytes).
+Output written on main.pdf (25 pages, 17960971 bytes).
 PDF statistics:
- 1308 PDF objects out of 1440 (max. 8388607)
- 872 compressed objects within 9 object streams
- 130 named destinations out of 1000 (max. 500000)
+ 1318 PDF objects out of 1440 (max. 8388607)
+ 881 compressed objects within 9 object streams
+ 132 named destinations out of 1000 (max. 500000)
  536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
