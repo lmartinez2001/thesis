@@ -1,13 +1,20 @@
-\section{Subspace Alignment with Persistent Homology}
-\label{sec:ph}
+\section{Experiments}
+\label{sec:experiments}
+
+\subsection{Model Probing}
+\label{ssec:model_probing}
+
+
+\subsection{Subspace Alignment with Persistent Homology}
+\label{ssec:ph}
 
 We study the relationship between representations learned by 3D shape encoders and those derived from persistent homology. Following the perspective of the Platonic Representation Hypothesis~\cite{plato,platonic}, we view learned embeddings as potentially containing subspaces that capture intrinsic structural information. Information captured by persistent homology can also be treated as a complementary modality. Assuming there's a way to encode topological features into a vector space, we can then ask whether the learned and topological subspaces align. It's worth noticing that the analogy with \cite{platonic} is not perfect: while it's assumed that representations tend to converge at scale, topological features, even learned ones, aren't the result of large scale training.
 
-We first review background on persistent homology and its vectorization. We then describe our alignment protocol and present results across encoders and datasets.
+We first review background on persistent homology and its vectorization. We then formally define the metrics used to quantify alignment. Finally, we describe our alignment protocol and present results across encoders and datasets.
 
 
-\subsection{Persistence Diagrams}
-\label{ssec:persistence_diagrams}
+\subsubsection{Persistence Diagrams}
+\label{sssec:persistence_diagrams}
 
 
 \paragraph{Filtrations.}
@@ -71,13 +78,13 @@ where $d_I$ is the interleaving distance.
   \begin{subfigure}{0.48\linewidth}
     \centering
     \includegraphics[width=\linewidth]{figs/ph/expers2_ord_v2.pdf}
-    \caption{Left panel explanation.}
+    \caption{Ordinary persistence diagram.}
     \label{fig:filtrations_left}
   \end{subfigure}\hfill
   \begin{subfigure}{0.48\linewidth}
     \centering
     \includegraphics[width=\linewidth]{figs/ph/expers2_v2.pdf}
-    \caption{Right panel explanation.}
+    \caption{Extended persistence diagram.}
     \label{fig:filtrations_right}
   \end{subfigure}
 
@@ -90,8 +97,8 @@ where $d_I$ is the interleaving distance.
 Essential classes can lead to pairs with infinite lifetime. Extended persistence remedies this by combining sublevel and superlevel filtrations and using relative homology. For a function $f:X\to\mathbb{R}$ on a compact space, consider the sublevel filtration $(X_a)$ and the superlevel filtration $(X^a = f^{-1}([a,\infty)))$. One constructs a zigzag that passes from absolute to relative homology so that every class is paired at a finite parameter value. The resulting \emph{extended persistence diagram} has only finite pairs and encodes essential features as finite points.
 
 
-\subsection{Vectorization of Persistence Diagrams}
-\label{ssec:vectorization_persistence_diagrams}
+\subsubsection{Vectorization of Persistence Diagrams}
+\label{sssec:vectorization_persistence_diagrams}
 
 \begin{figure}[t]
     \centering
@@ -125,6 +132,6 @@ Across these learning based methods, a common trait is that the diagram is manip
 
 Finally, recent topology aware 3D generation pipelines \cite{topology_aware_latent_diffusion} directly encode persistence pairs. More precisely they feed the top k most persistent pairs as $\{g_i=(b_i, d_i-b_i)\}_{i \in \llbracket 1,k\rrbracket}$ where $b_i$ is the birth time and $d_i$ is the death time of the i-th pair. These papers report increased diversity or topology control but are typically demonstrated on a few ShapeNet categories or related datasets. A representative example conditions a latent diffusion model on topological features computed from persistence diagrams and validates on ShapeNet and ABC.
 
-\subsection{Subspace Alignment Protocol}
-\label{ssec:subspace_alignment_protocol}
+\subsubsection{Subspace Alignment Protocol}
+\label{sssec:subspace_alignment_protocol}
 

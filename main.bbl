@@ -187,6 +187,63 @@
     \field{year}{1981}
   \endentry
 
+  \entry{top_layer}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=BGR}{%
+         family={Brüel-Gabrielsson},
+         familyi={B\bibinithyphendelim G\bibinitperiod},
+         given={Rickard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NBJ}{%
+         family={Nelson},
+         familyi={N\bibinitperiod},
+         given={Bradley\bibnamedelima J.},
+         giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dwaraknath},
+         familyi={D\bibinitperiod},
+         given={Anjan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Skraba},
+         familyi={S\bibinitperiod},
+         given={Primoz},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=GLJ}{%
+         family={Guibas},
+         familyi={G\bibinitperiod},
+         given={Leonidas\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=CG}{%
+         family={Carlsson},
+         familyi={C\bibinitperiod},
+         given={Gunnar},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BGR+1}
+    \strng{fullhash}{BGRNBJDASPGLJCG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{eprint}
+    \verb 1905.12200
+    \endverb
+    \field{title}{A Topology Layer for Machine Learning}
+    \verb{url}
+    \verb https://arxiv.org/abs/1905.12200
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2020}
+  \endentry
+
   \entry{persistence_landscapes}{misc}{}{}
     \name{author}{1}{}{%
       {{hash=BP}{%
@@ -212,6 +269,89 @@
     \field{eprinttype}{arXiv}
     \field{eprintclass}{math.AT}
     \field{year}{2015}
+  \endentry
+
+  \entry{top_signatures}{inproceedings}{}{}
+    \name{author}{3}{}{%
+      {{hash=CM}{%
+         family={Carrière},
+         familyi={C\bibinitperiod},
+         given={Mathieu},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=OSY}{%
+         family={Oudot},
+         familyi={O\bibinitperiod},
+         given={Steve\bibnamedelima Y.},
+         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+      {{hash=OM}{%
+         family={Ovsjanikov},
+         familyi={O\bibinitperiod},
+         given={Maks},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CMOSYOM1}
+    \strng{fullhash}{CMOSYOM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{Symposium on Geometry Processing}
+    \field{title}{Stable Topological Signatures for Points on 3D Shapes}
+    \field{year}{2015}
+  \endentry
+
+  \entry{optimizing_persistent_homology}{misc}{}{}
+    \name{author}{5}{}{%
+      {{hash=CM}{%
+         family={Carrière},
+         familyi={C\bibinitperiod},
+         given={Mathieu},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Chazal},
+         familyi={C\bibinitperiod},
+         given={Frédéric},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Glisse},
+         familyi={G\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=IY}{%
+         family={Ike},
+         familyi={I\bibinitperiod},
+         given={Yuichi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kannan},
+         familyi={K\bibinitperiod},
+         given={Hariprasad},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CM+1}
+    \strng{fullhash}{CMCFGMIYKH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{eprint}
+    \verb 2010.08356
+    \endverb
+    \field{title}{Optimizing persistent homology based functions}
+    \verb{url}
+    \verb https://arxiv.org/abs/2010.08356
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CG}
+    \field{year}{2021}
   \endentry
 
   \entry{perslay}{misc}{}{}
@@ -745,6 +885,45 @@
     \field{eprinttype}{arXiv}
     \field{eprintclass}{cs.CG}
     \field{year}{2025}
+  \endentry
+
+  \entry{topology_activations}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=GT}{%
+         family={Gebhart},
+         familyi={G\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Schrater},
+         familyi={S\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Hylton},
+         familyi={H\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GTSPHA1}
+    \strng{fullhash}{GTSPHA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{eprint}
+    \verb 1901.09496
+    \endverb
+    \field{title}{Characterizing the Shape of Activation Space in Deep Neural Networks}
+    \verb{url}
+    \verb https://arxiv.org/abs/1901.09496
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2019}
   \endentry
 
   \entry{superformula}{article}{}{}
@@ -1296,6 +1475,63 @@
     \field{year}{2019}
   \endentry
 
+  \entry{set-transformer}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=LJ}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Juho},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Yoonho},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Jungtaek},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KAR}{%
+         family={Kosiorek},
+         familyi={K\bibinitperiod},
+         given={Adam\bibnamedelima R.},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Choi},
+         familyi={C\bibinitperiod},
+         given={Seungjin},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=TYW}{%
+         family={Teh},
+         familyi={T\bibinitperiod},
+         given={Yee\bibnamedelima Whye},
+         giveni={Y\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LJ+1}
+    \strng{fullhash}{LJLYKJKARCSTYW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{eprint}
+    \verb 1810.00825
+    \endverb
+    \field{title}{Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks}
+    \verb{url}
+    \verb https://arxiv.org/abs/1810.00825
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2019}
+  \endentry
+
   \entry{prae}{inproceedings}{}{}
     \name{author}{5}{}{%
       {{hash=LY}{%
@@ -1350,6 +1586,51 @@
     \endverb
     \field{month}{10}
     \field{year}{2023}
+  \endentry
+
+  \entry{topological_autoencoders}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=MM}{%
+         family={Moor},
+         familyi={M\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Horn},
+         familyi={H\bibinitperiod},
+         given={Max},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RB}{%
+         family={Rieck},
+         familyi={R\bibinitperiod},
+         given={Bastian},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Borgwardt},
+         familyi={B\bibinitperiod},
+         given={Karsten},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MM+1}
+    \strng{fullhash}{MMHMRBBK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{eprint}
+    \verb 1906.00722
+    \endverb
+    \field{title}{Topological Autoencoders}
+    \verb{url}
+    \verb https://arxiv.org/abs/1906.00722
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2021}
   \endentry
 
   \entry{adaptive_topological_feature}{misc}{}{}
@@ -1654,6 +1935,57 @@
     \field{year}{2020}
   \endentry
 
+  \entry{top_reg}{misc}{}{}
+    \name{author}{5}{}{%
+      {{hash=VR}{%
+         family={Vandaele},
+         familyi={V\bibinitperiod},
+         given={Robin},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=KB}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Bo},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lijffijt},
+         familyi={L\bibinitperiod},
+         given={Jefrey},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BTD}{%
+         family={Bie},
+         familyi={B\bibinitperiod},
+         given={Tijl\bibnamedelima De},
+         giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Saeys},
+         familyi={S\bibinitperiod},
+         given={Yvan},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VR+1}
+    \strng{fullhash}{VRKBLJBTDSY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{eprint}
+    \verb 2110.09193
+    \endverb
+    \field{title}{Topologically Regularized Data Embeddings}
+    \verb{url}
+    \verb https://arxiv.org/abs/2110.09193
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2022}
+  \endentry
+
   \entry{multiset_transformer}{misc}{}{}
     \name{author}{3}{}{%
       {{hash=WM}{%
@@ -1782,6 +2114,94 @@
     \field{eprinttype}{arXiv}
     \field{eprintclass}{cs.CV}
     \field{year}{2019}
+  \endentry
+
+  \entry{persistent_homology_seg}{inproceedings}{}{}
+    \name{author}{2}{}{%
+      {{hash=WCC}{%
+         family={Wong},
+         familyi={W\bibinitperiod},
+         given={Chi-Chong},
+         giveni={C\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=VCM}{%
+         family={Vong},
+         familyi={V\bibinitperiod},
+         given={Chi-Man},
+         giveni={C\bibinithyphendelim M\bibinitperiod},
+      }}%
+    }
+    \keyw{Deep learning;Point cloud compression;Solid modeling;Three-dimensional displays;Convolution;Computational modeling;Semantics;Segmentation;grouping and shape}
+    \strng{namehash}{WCCVCM1}
+    \strng{fullhash}{WCCVCM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{2021 IEEE/CVF International Conference on Computer Vision (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV48922.2021.00701
+    \endverb
+    \field{pages}{7078\bibrangedash 7087}
+    \field{title}{Persistent Homology based Graph Convolution Network for Fine-grained 3D Shape Segmentation}
+    \field{year}{2021}
+  \endentry
+
+  \entry{neural_approximation_graph_topological_features}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=YZ}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Zuoyu},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Tengfei},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gao},
+         familyi={G\bibinitperiod},
+         given={Liangcai},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=TZ}{%
+         family={Tang},
+         familyi={T\bibinitperiod},
+         given={Zhi},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yusu},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Chao},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YZ+1}
+    \strng{fullhash}{YZMTGLTZWYCC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \verb{eprint}
+    \verb 2201.12032
+    \endverb
+    \field{title}{Neural Approximation of Graph Topological Features}
+    \verb{url}
+    \verb https://arxiv.org/abs/2201.12032
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2022}
   \endentry
 
   \entry{hfbrimae}{misc}{}{}

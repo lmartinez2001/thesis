@@ -11,9 +11,9 @@
 \end{figure}
 
 
-Understanding how models capture topological properties of 3D shapes is a key step toward disentangling geometric representation learning from semantic categorization. Probing such capabilities requires datasets with explicit topological labels and fine-grained control over their distribution. However, existing 3D datasets, such as Objaverse~\cite{objaverse,objaverse_xl} or ShapeNet~\cite{shapenet}, focus primarily on semantic categories or low-level geometry, and do not provide systematic coverage of topological variation.
+Understanding how models capture topological properties of 3D shapes is a key step toward disentangling geometric representation learning from semantic categorization. Existing 3D datasets, such as Objaverse~\cite{objaverse,objaverse_xl} or ShapeNet~\cite{shapenet}, primarily organize data by semantic class or surface geometry, without systematic control of topology. Probing topology-aware representations therefore requires datasets that expose explicit topological labels under controlled geometric variability.
 
-We introduce DONUT, a scalable dataset of synthetic 3D shapes annotated with accurate and balanced topological labels. Unlike prior datasets, DONUT is designed specifically to isolate intrinsic topological invariants, such as the number of connected components and the genus, enabling controlled evaluation of how models represent topology. This resource provides a foundation for probing, benchmarking, and training models on tasks where topological understanding is essential.
+To address this, we introduce DONUT, a scalable dataset of synthetic 3D shapes annotated with precise and balanced topological labels. Unlike prior datasets, DONUT is built from parametric families that guarantee topological correctness while enabling high geometric diversity. This design allows principled evaluation of how models represent intrinsic topological invariants such as connected components and genus.
 
 \subsection{Existing datasets}
 \label{ssec:existing_datasets}
@@ -23,25 +23,7 @@ Existing 3D datasets provide only limited support for probing whether models cap
 \paragraph{Combinatorial benchmarks.}
 The MANTRA dataset (Manifold Triangulation Assemblage) \cite{mantra} provides combinatorial triangulations of 2D and 3D manifolds, represented as abstract simplicial complexes without embedding in $\mathbb{R}^3$. MANTRA is a valuable testbed for assessing whether graph- or simplicial complex models capture higher-order structures such as Betti numbers $(\beta_0, \beta_1, \beta_2)$. However, since it lacks any geometric realization, MANTRA is not suitable for evaluating models built on geometric 3D representations such as meshes, point clouds, or implicit fields.
 
-\begin{table}[h]
-  \begin{center}
-  \begin{tabular}{l l l l r}
-  Dataset & \#Samples & \rotatebox[origin=lB]{90}{Meshes} & \rotatebox[origin=lB]{90}{Manifold} & \rotatebox[origin=lB]{90}{Balanced annot.}\\
-  \midrule
-  \rowcolor{green!20}
-  \multicolumn{1}{l|}{DONUT}  & 30,000   & \cm & \cm & \cm \\
-  \multicolumn{1}{l|}{MANTRA \cite{mantra}} & 43,100 & -- & \cm & -- \\
-  \multicolumn{1}{l|}{ABC \cite{abc}} & 1,000,000+ & \cm & --   & -- \\
-  \multicolumn{1}{l|}{Thingi10K \cite{thingi}} & 10,000 & \cm & -- & -- \\
-  \rowcolor{green!20}
-  \multicolumn{1}{l|}{EuLearn  \cite{eulearn}} & 3,300 & \cm & \cm & \cm \\
-  \midrule
-  \end{tabular}
-  \end{center}
-  \vspace{-2mm}
-  \caption{\textbf{Overview of existing datasets and their capabilities.} We summarize here the main characteristics of existing datasets with topological annotations. Besides EuLearn, all existing datasets with topological annotations come with downsides, discussed in Section~\ref{ssec:existing_datasets}. However, since EuLearn seems to be the most promising dataset, we carried out an extensive analysis to (1) highlight limitations that make it unreliable for further experiments and (2) motivate the use of DONUT (see Appendix~\ref{ssec:suppl_eulearn_analysis}). \textit{Note:} The number of samples for MANTRA only takes into account 2-manifolds.}
-  \label{tab:datasets}
-\end{table}
+\input{tables/dataset-compare.tex}
 
 \paragraph{Geometric datasets with noisy topology.}
 Large mesh datasets such as Thingi10K~\cite{thingi}, Objaverse~\cite{objaverse} and ABC~\cite{abc} contain CAD models and artistic objects, and include coarse topological annotations (number of components, genus). However, these annotations are unreliable for several reasons:
@@ -80,18 +62,25 @@ The EuLearn dataset~\cite{eulearn} addresses class imbalance by generating surfa
 \subsection{Method}
 \label{ssec:topogen-method}
 
-Since DONUT is made of synthetic shapes, two critical challenges must be addressed to ensure that the results obtained from this dataset are relevant. 1) Foundation models are pretrained on real shapes. Therefore, learned features reflect the distribution of real world geometry and semantics. Synthetic data, however, introduce patterns and biases that don't exist in real data, making them fall out-of-distribution. 2) Another common pitfall of synthetic datasets (cf. EuLearn) is the lack of variability, making evluation tasks such as probing, trivial. In practice, the first challenge is overcome by the fact that foundation models are pre-trained on datasets (e.g ShapeNet, Objaverse, etc.) that are large enough for synthetic shapes not to fall out-of-distribution. This is experimentaly validated in Figure (+ figure with umaps). To adress the second challenge, we developed a set of rules and augmentation techniques to ensure that the generated shapes are both diverse and topologically accurate.
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=1.0\linewidth]{figs/topogen/topogen_gen.pdf}
+   \caption{\textbf{Generation Process Overview.} (1) For each sample, we pick a target genus and number of connected components. (Section~\ref{sssec:labels-distribution}) (2) We then distribute these values across a set of template shapes (Section~\ref{sssec:sample-level-properties}). (3) Each mesh is instantiated by sampling parameters from its parametric expression, and individually warped to bring more geometric diversity. (4) Finally, we apply a series of topology-preserving augmentations to increase geometric diversity while maintaining the original topological labels, and compose the final sample by merging all meshes. (Section~\ref{sssec:mesh-generation})}
+   \label{fig:topogen-overview}
+\end{figure}
 
-Below we derive these rules used to generate DONUT, and more importantly, how the latter allow to maintain this variability across samples while scaling their number up to $10^5$ shapes.
+Since DONUT is made of synthetic shapes, two critical challenges must be addressed to ensure that the results obtained from this dataset are relevant. 1) Foundation models are pretrained on real shapes. Therefore, learned features reflect the distribution of real world geometry and semantics. Synthetic data, however, introduce patterns and biases that don't exist in real data, making them fall out-of-distribution. 2) Another common pitfall of synthetic datasets (cf. EuLearn) is the lack of variability, making evluation tasks such as probing, trivial. The first challenge is mitigated because pretrained foundation models (e.g., on ShapeNet or Objaverse) already encompass a wide range of synthetic geometries, keeping DONUT samples within their learned data distribution. This is experimentally validated in Figure (+ figure with umaps). To address the second challenge, we developed a set of rules and augmentation techniques to ensure that the generated shapes are both diverse and topologically accurate.
 
-\subsubsection{Labels Distribution}
+The generation process was designed to jointly satisfy three criteria: (i) exact control of topology, (ii) high geometric diversity, and (iii) scalability to tens of thousands of shapes. Figure \ref{fig:topogen-overview} provides an overview of the generation pipeline, which we now describe in detail.
+
+\subsubsection{Topological Control}
 \label{sssec:labels-distribution}
 
 A central design choice in DONUT is to ensure balanced topological supervision across the dataset. To this end, both the genus and the number of connected components are sampled such that their marginal distributions are approximately uniform. This prevents any single topological class from dominating and guarantees that models trained on the dataset are exposed to the full spectrum of topological structures. We bring this guarantee over marginal distributions by first sampling the labels before actually generating any mesh. \ref{sec:topogen-complements} formally describes how the labels are sampled and further details the properties of the dataset we used for all our experiments
 
 Each sample is further composed of multiple meshes selected from a predefined family of template shapes. This choice introduces large geometric variability while maintaining strict control over label balance. As a result, the dataset couples statistical uniformity in labels with broad diversity in shape realizations. Nevertheless, by limiting ourselves to certain families of geometric shapes, we avoided falling into the pitfall of geometric complexity mentioned earlier. 
 
-\subsubsection{Sample-Level Properties}
+\subsubsection{Geometric Diversity}
 \label{sssec:sample-level-properties}
 
 At the level of individual samples, the generation process begins by selecting the global genus and number of connected components. These values are then distributed across the meshes composing the sample. For example, a sample may include one mesh of genus one, several genus-zero meshes, or even higher-genus meshes, depending on the chosen configuration.
@@ -114,10 +103,10 @@ Each mesh is then instantiated from a specific parametric family of shapes:
 
 where $(s_x, s_y, s_z) > 0$ are scale factors along the $x, y, z$ axes respectively, and $(\epsilon_1, \epsilon_2) > 0$ are shape exponents that modulate the surface's roundness (resp. sharpness). Sampling these parameters within predefined ranges allows to efficiently sample a variety of shapes while maintaining control over their topological properties.
 
-\subsubsection{Mesh Generation}
+\subsubsection{Scalability}
 \label{sssec:mesh-generation}
 
-One key challenge is to be able to generate a large amount of samples (up to $10^5$) in a reasonable amount of time. This order of magnitude is motivated the results of Point-MAE-Zero \cite{pmaezero}. Accurate representations were obtained with a pretraining set containing around 150K samples. While we further use DONUT essentially for evaluation/probing tasks, we want to preserve the possibility of scaling to pretraining regimes where data requirements are significantly higher. We therefore restrict as much as possible the use of computation intensive operations. k-tori aside, every mesh is generated either with its parametric expression when available, or with simple rules.
+One key challenge is to be able to generate a large amount of samples (up to $10^5$) in a reasonable amount of time. This order of magnitude is motivated the results of Point-MAE-Zero \cite{pmaezero}. Accurate representations were obtained with a pretraining set containing around 150K samples. While we further use DONUT essentially for evaluation/probing tasks, we want to preserve the possibility of scaling to pretraining regimes where data requirements are significantly higher. We therefore minimize computationally intensive operations. k-tori aside, every mesh is generated either with its parametric expression when available, or with simple rules.
 
 \paragraph{Cones.} \dots
 
@@ -188,7 +177,7 @@ Where $(s_1, s_2, \dots, s_n) \in \mathbb{R}^{(N^3)}$ are the SDF of individual 
 \subsubsection{Topological Consistency and Diversity}
 \label{sssec:top-consistency}
 
-We still have two challenges addressing. First, when placing components within a sample, we must ensure they don't overlap. At the same time, they need to be close enough to make the samples both topologically consistent and challenging enough for models to correctly identify the number of connected components. In early experiments, we observed that if components are too far apart, the task can be trivially solved using a simple KNN classifier with Chamfer distance. Second, even with careful placement, models tend to overfit, sometimes even when using simple linear heads on top of learned features, showing that this alone is insufficient to evaluate their true topological understanding. To increase variability while preserving topological labels, we apply transformations both at the sample level and the individual component level.
+Two challenges remain to be addressed. First, when placing components within a sample, we must ensure they don't overlap. At the same time, they need to be close enough to make the samples both topologically consistent and challenging enough for models to correctly identify the number of connected components. In early experiments, we observed that if components are too far apart, the task can be trivially solved using a simple KNN classifier with Chamfer distance. Second, even with careful placement, models tend to overfit, sometimes even when using simple linear heads on top of learned features, showing that this alone is insufficient to evaluate their true topological understanding. To increase variability while preserving topological labels, we apply transformations both at the sample level and the individual component level.
 
 \paragraph{Consistency.} 
 To address the first challenge, we developed a two-stage placement procedure. Suppose there are already some components correctly placed within a sample. To add a new component, we first place it randomly in the sample and then check for intersections with the existing components. Experimentally, we observed that a randomly placed mesh overlaps with at most two other components. If the new component overlaps with only one existing component, we identify the point on the new mesh that is most deeply inside the other component and push the new component along the opposite direction of the surface normal at that point. For intricate shapes, a single adjustment may create new overlaps, so we repeat this step five times. If overlaps remain after five attempts, the component is discarded and a new one is generated and randomly placed. This iterative procedure improves efficiency: in practice, one or two adjustments are sufficient to resolve overlaps, making it faster than discarding and regenerating components immediately.
@@ -243,31 +232,7 @@ We trained several classical point-cloud models (PointNet, PointNet++, DGCNN) an
 
 Transferability provides a natural probe. To test this, we evaluated models on a curated subset of ABC. This set contains shapes whose geometry differs significantly from the training distribution, but whose topology is well characterized and within the label space. If models have learned topology, they should retain reasonable performance on ABC despite geometric differences. Table~\ref{tab:topogen-results} shows that DGCNN and specialized topological models maintain strong transfer, supporting the idea that DONUT encourages models to focus on topology. We note that weak transfer can also reflect limitations of current architectures rather than flaws in the dataset itself.
 
-\begin{table}[h]
-\centering
-\begin{tabular}{l|ccc|ccc}
-\toprule
- & \multicolumn{3}{c|}{\textbf{Genus}} & \multicolumn{3}{c}{\textbf{Connected Components}} \\
-Model & MSE$\downarrow$ & Acc.$\uparrow$ & F1$\uparrow$ & MSE$\downarrow$ & Acc.$\uparrow$ & F1$\uparrow$ \\
-\midrule
-\multicolumn{1}{l}{} & \multicolumn{6}{c}{\textit{Point-based models}} \\
-\midrule
-PointNet~\cite{pointnet}   & -- & -- & -- & -- & -- & -- \\
-PointNet++~\cite{pointnet++} &  -- & -- & -- & -- & -- & -- \\
-Transformer (scratch) & -- & -- & -- & -- & -- & -- \\
-Transformer (pretrained) & -- & -- & -- & -- & -- & -- \\
-DGCNN~\cite{dgcnn}      & 1.05/11.7 & 51.5/18.1 & 51.3/15.2 & 0.11/1.04 & 89.1/27.7 & 89.1/25.4 \\
-\midrule
-\multicolumn{1}{l}{} & \multicolumn{6}{c}{\textit{Persistence-based models}} \\
-\midrule
-PersFormer~\cite{persformer} & -- & -- & -- & -- & -- & -- \\
-xPerT~\cite{xpert}      & -- & -- & -- & -- & -- & -- \\
-PersLay~\cite{perslay}    & -- & -- & -- & -- & -- & -- \\
-\bottomrule
-\end{tabular}
-\caption{\textbf{Performance of baseline models trained on DONUT and evaluated both in-distribution and on ABC.} Values are reported as \textit{DONUT/ABC}. We report mean squared error (MSE), balanced accuracy (Acc.), and balanced F1-score (F1). MSE is reported to capture how far off predictions are from the ground-truth on average, which is particularly relevant given the natural hierarchy of the labels (genus and connected components): misclassifying by a larger margin is more severe than a closer miss. }
-\label{tab:topogen-results}
-\end{table}
+\input{tables/donut-baselines.tex}
 
 
 \subsubsection{Saliency Analysis}
@@ -275,114 +240,39 @@ PersLay~\cite{perslay}    & -- & -- & -- & -- & -- & -- \\
 
 To further understand model behavior, we visualize saliency maps on toy shapes. These maps highlight which regions contribute most to predictions. When trained to predict genus, models tend to focus on cycles, while for connected components they concentrate around contact points between shapes (Figure~\ref{fig:dgcnn-saliency}). Such results suggest that models attend to meaningful topological structures rather than exploiting geometric shortcuts.
 
-\begin{figure*}[t!]
+\begin{figure*}[t]
   \centering
   \includegraphics[width=\linewidth]{figs/topogen/umaps_overview.pdf}
   \caption{\textbf{UMAP embeddings of features learned by 3D encoders.} DONUT samples project into the same space as the original training data, indicating that they are not out-of-distribution.}
   \label{fig:topogen-umaps-overview}
 \end{figure*}
 
-\begin{figure}[t]
+
+\begin{figure}[t!]
   \centering
-  \begin{subfigure}[t]{0.66\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{figs/topogen/components_genus_hist.pdf}
-    \caption{Label distributions for genus and connected components.}
-    \label{fig:topogen-gen-comp-hist}
-  \end{subfigure}%
-  \hfill
-  \begin{subfigure}[t]{0.33\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{figs/topogen/generation_time.pdf}
-    \caption{Scalability of dataset generation.}
-    \label{fig:topogen-gen-time}
-  \end{subfigure}
-  \caption{\textbf{General properties of DONUT.} \textit{(a),(b)} The marginal distributions of genus and connected components are approximately uniform, ensuring balanced supervision across topological classes. \textit{(c)} The time required to generate datasets of varying sizes demonstrates that even large-scale variants remain practical.}
+  \includegraphics[width=\linewidth]{figs/topogen/label_distribution.pdf}
+  \caption{\textbf{Label distributions for genus and connected components.} The marginal distributions of genus and connected components (left and middle histograms) are approximately uniform, ensuring balanced supervision across topological classes. The right plot shows the joint distribution. The absence of samples with one connected component and genus greater than 5 stems from the constraints of our generation process, which limits individual components to a maximum genus of 5. The only way to achieve a genus greater than 5 is by combining multiple components.}
   \label{fig:topogen-properties}
 \end{figure}
 
 % \begin{figure}[t]
 %   \centering
-%   \includegraphics[width=\linewidth]{figs/topogen/saliency_dgcnn.pdf}
-%   \caption{Saliency maps for DGCNN. For genus prediction, saliency is concentrated around cycles. For connected components, saliency appears around contact points.}
-%   \label{fig:dgcnn-saliency}
-% \end{figure}
-
-
-% \subsection{Analysis}
-
-% \begin{figure*}[t!]
-%   \centering
-%   \includegraphics[width=\linewidth]{figs/topogen/umaps_overview.pdf}
-%   \caption{\textbf{UMAP visualization of the feature space learned by the encoders.} To assess whether samples from DONUT fall within the representation space of models trained on large 3D datasets, we first extracted final features from the training set of each model and fit a two-dimensional UMAP embedding on these features. Both input and output sampling resolutions match the training configuration of each model. We then projected the features extracted from DONUT into this same embedding space. The resulting visualization shows that the synthetic samples occupy the same space as the original training data, indicating that the representations of DONUT occupy regions of the learned space rather than falling out-of-distribution. Interestingly, we observed that the structure of the UMAP fitted on ZeroVerse (composed only of synthetic samples) is extremely regular, and that DONUT representations are uniformly spread throughout the same range.}
-%   \label{fig:topogen-umaps-overview}
-% \end{figure*}
-
-% \begin{table}
-% \centering
-% \begin{tabular}{l|ccc|ccc}
-% \toprule
-%  & \multicolumn{3}{c|}{\textbf{Genus}} & \multicolumn{3}{c}{\textbf{Connected Components}} \\
-% Model & MSE$\downarrow$ & Acc.$\uparrow$ & F1$\uparrow$ & MSE$\downarrow$ & Acc.$\uparrow$ & F1$\uparrow$ \\
-% \midrule
-% PointNet~\cite{pointnet}   & -- & -- & -- & -- & -- & -- \\
-% PointNet++~\cite{pointnet++} &  -- & -- & -- & -- & -- & -- \\
-% DGCNN~\cite{dgcnn}      & 1.05/11.7 & 51.5/18.1 & 51.3/15.2 & 0.11/1.04 & 89.1/27.7 & 89.1/25.4 \\
-% \midrule
-% PersFormer~\cite{persformer} & -- & -- & -- & -- & -- & -- \\
-% xPerT~\cite{xpert}      & -- & -- & -- & -- & -- & -- \\
-% PersLay~\cite{perslay}    & -- & -- & -- & -- & -- & -- \\
-% \bottomrule
-% \end{tabular}
-% \caption{\textbf{Classification accuracy of different models trained on TopoGen.} Values are reported as \textit{TopoGen/ABC}. All models have been trained on DONUT point-clouds with 4096 points. We then evaluated them on both the TopGen test set and on a curated subset of ABC. Since the latter contains imbalanced labels we only report top-k balanced accuracy (Equation~\ref{eq:balanced-accuracy}) with $k=1,2,3$ for genus and $k=1,2$ for the number of connected components.}
-% \label{tab:topogen-results}
-% \end{table}
-
-
-% This section provides a detailed characterization of DONUT. We report the number of samples, examine the distribution of labels, and assess the relationship between the synthetic data and pretrained models used in our experiments. The goal is to establish a clear understanding of the dataset’s composition and ensure that it provides a meaningful and reliable basis for evaluation.
-
-% \subsubsection{General Properties}
-% \label{sssec:topogen-general-properties}
-
-% \paragraph{Dataset statistics.} 
-% All experiments (besides cross-validations) were conducted using the same training, validation, and test sets. DONUT contains 29517 samples in total, divided into splits of 80\%, 10\%, and 10\%, respectively. The dataset size was chosen as a trade-off: smaller datasets led to overfitting of the evaluated models, while larger datasets made even simple experiments computationally demanding. The goal was to construct a unified dataset that is both practical for experimentation and reliable for evaluation. Each sample contains between 1 and 6 connected components, with the total genus per sample ranging from 0 to 10. A single component has genus at most 5 (corresponding to a 5-torus). We also report the marginal distributions of the genus and the number of connected components (Figure~\ref{fig:topogen-gen-comp-hist}).
-
-% \paragraph{Distributions and Scalability.} 
-% Figure~\ref{fig:topogen-umaps-overview} highlights that DONUT lies within the distribution learned by the pretrained models we further evaluate.  To demonstrate the scalability  of the generation process, we also report the time taken to generate different versions of the dataset (Figure \ref{fig:topogen-gen-time}).
-
-% \subsubsection{Transferability}
-% \label{sssec:topogen-transferability}
-
-% A central question in assessing models trained on our dataset is whether they truly capture topological information or merely exploit geometric shortcuts. Transferability provides a natural test: if a model encodes topology rather than incidental geometry, it should generalize to 3D shapes with the same topological labels but drawn from a distinct geometric distribution. To this end, we constructed a curated evaluation set from ABC, comprising several hundred shapes whose geometry lies outside the training distribution, yet whose topology is well-characterized and within the range of the label space. Successful performance on this set indicates that the learned representation is aligned with topology rather than geometry. A natural concern is that poor model performance might reflect limitations of current architectures rather than flaws in the dataset itself. Importantly, Table~\ref{tab:topogen-results} demonstrates that at both DGCNN and models tailored for topological features extraction demonstrate strong transferability. Training details for all models are provided in the Appendix~\ref{suppl:topogen-baseline-training}.
-
-
-
-
-% \begin{figure}[t]
-%   \centering
-%   % First subfigure (2/3 width)
 %   \begin{subfigure}[t]{0.66\linewidth}
 %     \centering
 %     \includegraphics[width=\linewidth]{figs/topogen/components_genus_hist.pdf}
-%     \caption{\textbf{Labels distribution of TopoGen.} Samples are generated in such a way that the marginal distributions of genera and number of connected components are nearly uniform. More specifically, the number of components is exactly uniform by design (Algorithm~\ref{alg:topogen-labels-sampling}). However, one can show that the distribution of genera is a decreasing step function depending on both the maximum genus per component and the maximum genus per sample (see demonstration in Appendix). Even though this makes DONUT imbalanced for the genus label, effects on results are minimal since (i) the ratio between the most and least represented categories is close to 1, and (ii) DONUT contains enough samples for simple models to ``see'' the least represented categories enough times to make accurate predictions and not overfit on the training set. \textit{Note:} One can notice that the distribution of the number of components is not perfectly uniform, because some degenerate samples were discarded.}
+%     \caption{Label distributions for genus and connected components.}
 %     \label{fig:topogen-gen-comp-hist}
 %   \end{subfigure}%
 %   \hfill
-%   % Second subfigure (1/3 width)
 %   \begin{subfigure}[t]{0.33\linewidth}
 %     \centering
 %     \includegraphics[width=\linewidth]{figs/topogen/generation_time.pdf}
-%     \caption{\textbf{Generation time.} This log-log plot shows the time taken to generate different versions of DONUT with increasing number of samples. The generation is performed in parallel on 124 AMD Epyc CPU cores. Given all the constraints imposed on the samples and the high mesh quality, generating $6 \cdot 10^5$ samples is performed in a reasonable amount of time ($\sim 21$ hours). As a reference, the dataset used for \textit{Point-MAE-Zero}~\cite{pmaezero}, made of 150K samples, was generated in 600 CPU hours. For the same number of samples, the generation process used for DONUT would require $\sim 650$ CPU hours ($21 \,\text{hours} \times 124 \,\text{cores} \,/\, ((6.0 \cdot 10^5)/(1.5 \cdot 10^5))$). This further motivates the choice of using only $10^4$ samples for the experiments, as it takes around 2.5 hours to generate the dataset (dotted red lines).}
+%     \caption{Scalability of dataset generation.}
 %     \label{fig:topogen-gen-time}
 %   \end{subfigure}
-
-%   \caption{General properties of DONUT.}
+%   \caption{\textbf{General properties of DONUT.} \textit{(a),(b)} The marginal distributions of genus and connected components are approximately uniform, ensuring balanced supervision across topological classes. \textit{(c)} The time required to generate datasets of varying sizes demonstrates that even large-scale variants remain practical.}
 %   \label{fig:topogen-properties}
 % \end{figure}
-
-
-
-
 
 
 \subsection{Limitations and Further Improvements}
@@ -392,3 +282,5 @@ The current dataset has limited topological variety. It only encodes two charact
 
 
 \paragraph{Geometric Complexity.} The geometric diversity is also limited. It could be extended by adding parametric families that introduce richer geometric structures. For example, the Superformula introduced by Gielis (2003) \cite{superformula} generalizes superellipses and provides a broad range of shapes. Although we did not add such families here, since the dataset is mainly used for evaluation and no overfitting issues were observed with the current configuration, this would be valuable in other settings. In particular, if the dataset is used for pretraining, as in Point-MAE-Zero, introducing more geometric complexity would improve its utility.
+
+

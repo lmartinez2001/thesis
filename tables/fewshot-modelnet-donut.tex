@@ -1,0 +1,36 @@
+\begin{table}
+% \renewcommand\arraystretch{1.2}
+\begin{center}
+\begin{tabular}{l|cccc|cccc}
+    
+\toprule
+& \multicolumn{4}{c|}{\textbf{ModelNet}} & \multicolumn{4}{c}{\textbf{DONUT (genus)}} \\
+% \cmidrule(lr){2-5} \cmidrule(lr){6-9}
+& \multicolumn{2}{c}{5-way} & \multicolumn{2}{c|}{10-way} & \multicolumn{2}{c}{5-way} & \multicolumn{2}{c}{10-way} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+Methods & 10-shot & 20-shot & 10-shot & 20-shot & 10-shot & 20-shot & 10-shot & 20-shot \\
+\midrule
+
+Point-BERT~\cite{pbert} & $94.6_{\pm 3.1}$ & $96.3_{\pm 2.7}$ & $91.0_{\pm 5.4}$ & $92.7_{\pm 5.1}$ & -- & -- & -- & --\\
+Point-BERT (ABC) & $95.9_{\pm 2.1}$ & $98.1_{\pm 1.8}$ & $91.7_{\pm 4.5}$ & $94.2_{\pm 3.4}$ & -- & -- & -- & --\\
+\midrule
+Point-MAE~\cite{pmae} & $96.3_{\pm 2.5}$ & $97.8_{\pm 1.8}$ & $92.6_{\pm 4.1}$ & $95.0_{\pm 3.0}$ & $32.9_{\pm 3.5}$ & $38.1_{\pm 3.9}$ & $20.4_{\pm 2.1}$ & $23.8_{\pm 1.7}$ \\
+Point-MAE (ABC) & $96.2_{\pm 2.7}$ & $97.6_{\pm 1.9}$ & $92.3_{\pm 4.4}$ & $95.2_{\pm 2.9}$ & $35.1_{\pm 6.0}$ & $40.1_{\pm 4.9}$ & $21.4_{\pm 2.7}$ & $22.8_{\pm 2.4}$\\
+\textit{difference} & \cellcolor{orange!25}$-0.1$ & \cellcolor{orange!25}$-0.2$ & \cellcolor{green!25}$+0.3$ & \cellcolor{green!25}$+0.2$ & \cellcolor{green!25}$+2.2$ & \cellcolor{green!25}$+2.0$ & \cellcolor{green!25}$+1.0$ & \cellcolor{orange!25}$-1.0$ \\
+\midrule
+PM2AE~\cite{pm2ae} & $96.8_{\pm 1.8}$ & $98.3_{\pm 1.4}$ & $92.3_{\pm 4.5}$ & $95.0_{\pm 3.0}$ & $34.7_{\pm 4.2}$ & $41.8_{\pm 6.3}$ & $21.2_{\pm 2.2}$ & $25.0_{\pm 1.3}$\\
+PM2AE (ABC) & $95.9_{\pm 2.4}$ &$97.7_{\pm 1.8}$ & $91.1_{\pm 4.6}$ & $94.4_{\pm 3.4}$ & $37.0_{\pm 4.7}$ & $43.4_{\pm 5.3}$ & $22.8_{\pm 1.7}$ & $26.3_{\pm 2.3}$\\
+\textit{difference} & \cellcolor{orange!25}$-0.9$ & \cellcolor{orange!25}$-0.6$ & \cellcolor{orange!25}$-1.2$ & \cellcolor{orange!25}$-0.6$ & \cellcolor{green!25}$+2.3$ & \cellcolor{green!25}$+1.8$ & \cellcolor{green!25}$+1.6$ & \cellcolor{green!25}$+1.3$ \\
+\midrule
+PCP-MAE~\cite{pcpmae} & $97.4_{\pm 2.3}$ & $99.1_{\pm 0.8}$ & $93.5_{\pm 3.7}$ & $95.9_{\pm 2.7}$ & $36.6_{\pm 5.4}$ & $41.8_{\pm 4.0}$ & $21.5_{\pm 2.0}$ & $24.6_{\pm 1.7}$\\
+PCP-MAE (ABC) & $96.1_{\pm 3.1}$ & $98.3_{\pm 4.3}$ & $91.7_{\pm 4.3}$ & $94.9_{\pm 2.9}$ & $38.7_{\pm 4.2}$ & $44.5_{\pm 5.4}$ & $22.4_{\pm 1.9}$ & $26.0_{\pm 1.4}$\\
+\textit{difference} & \cellcolor{orange!25}$-1.3$ & \cellcolor{orange!25}$-0.8$ & \cellcolor{orange!25}$-1.8$ & \cellcolor{orange!25}$-1.0$ & \cellcolor{green!25}$+2.1$ & \cellcolor{green!25}$+2.7$ & \cellcolor{green!25}$+0.9$ & \cellcolor{green!25}$+1.4$ \\
+
+\bottomrule
+\end{tabular}
+\caption{{\bf Few-shot object classification on ModelNet40.} We conduct 10 independent experiments for each setting and report mean accuracy (\%) with standard deviation.}
+\setlength\tabcolsep{2pt}
+\label{tb:few}
+\end{center}
+
+\end{table}

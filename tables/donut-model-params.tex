@@ -1,0 +1,18 @@
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{l|ccc|ccc}
+  \toprule
+    & \multicolumn{3}{c|}{\textbf{Point-based models}} & \multicolumn{3}{c}{\textbf{Topology-based models}} \\
+    Hyperparameter  & PointNet & PointNet++ & DGCNN & PersFormer & xPerT & PersLay \\
+  \midrule
+  Batch size              & 32    & 32    & 32    & 64    & --    & -- \\
+  Learning rate           & 0.001 & 0.001 & 0.005 & 0.0005 & -- & -- \\
+  Optimizer               & Adam  & Adam  & Adam  & AdamW  & --  & -- \\
+  Weight decay            & 1e-4  & 1e-4  & 1e-4  & 5e-5  & --  & -- \\
+  Dropout                 & 0.3   & 0.3   & 0.5   & 0.5   & --   & -- \\
+  Training epochs         & 200   & 200   & 250   & 300   & --   & -- \\
+  \bottomrule
+  \end{tabular}
+  \caption{Comparison of typical training hyperparameters for point-based models (PointNet, PointNet++, DGCNN) and topology-based models (PersFormer, xPerT, PersLay). A vertical line separates the two families of architectures.}
+  \label{suppl:topogen-baseline-training}
+\end{table}
