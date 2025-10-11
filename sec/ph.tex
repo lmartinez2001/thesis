@@ -135,3 +135,23 @@ Finally, recent topology aware 3D generation pipelines \cite{topology_aware_late
 \subsubsection{Subspace Alignment Protocol}
 \label{sssec:subspace_alignment_protocol}
 
+\subsection{Changing the Pretraining Data Distribution}
+\label{ssec:changing_pretraining_data_distribution}
+
+Previous experiments showed that current 3D encoders have a limited understanding of topological structures. This section investigates a simple hypothesis. In data-driven approaches, models learn to extract information that is relevant to the pretraining objective. All the considered encoders are pretrained on reconstruction tasks using the Chamfer loss. These tasks rely only on geometric proximity between predicted and target point clouds, without explicitly rewarding structural consistency. Moreover, the pretraining data itself lacks topological diversity. Datasets such as ShapeNet mostly contain single, compact objects with few or no holes. As a result, encoders can achieve low reconstruction errors without learning to capture non-trivial topological properties.
+
+We hypothesize that changing the pretraining data distribution can improve the model's structural understanding. By exposing encoders to shapes with richer and more diverse topology, they may learn internal representations that better capture global structure. To test this idea, we pretrain all the previously evaluated encoders on the ABC dataset. This dataset contains CAD models with a wider range of geometric and topological configurations. For a fair comparison with models pretrained on ShapeNet, which contains 50K samples, we randomly select 55K shapes from ABC. We strictly follow the same pretraining procedure, including the reconstruction objective and optimization settings.
+
+To evaluate this hypothesis, we assess two key aspects: (1) whether the models retain their performance on standard downstream tasks, and (2) whether they show improved structural understanding. We follow the evaluation protocols introduced in the original papers of each encoder.
+
+\subsection{Object Classification}
+
+We first ensure that pretraining on the ABC dataset does not degrade general downstream performance. We follow the standard object classification setup and evaluate all models on the ScanObjectNN dataset. We also perform few-shot classification on ModelNet40 using the same protocol as in the original works. These two benchmarks test the models’ ability to generalize across different data distributions and resolutions. Comparable or improved performance on these tasks would indicate that pretraining on a more diverse dataset does not harm general 3D understanding.
+
+\input{tables/scanobject-cls.tex}
+
+\subsection{Few-Shot Structural Evaluation}
+
+To assess structural understanding, we perform few-shot classification on the DONUT dataset. This dataset includes point clouds with more complex topology, such as multiple connected components and non-trivial holes. We compare models pretrained on ShapeNet and models pretrained on ABC under the same few-shot settings. The goal is to test whether exposure to topologically diverse pretraining data helps the encoder capture global structural cues that are useful even with limited supervision. An improvement in this setting would suggest that the model benefits from a more balanced pretraining distribution, leading to representations that better reflect the underlying topology of 3D shapes.
+
+\input{tables/fewshot-modelnet-donut.tex}

@@ -1,0 +1,34 @@
+\begin{table}
+% \renewcommand\arraystretch{1.2}
+\begin{center}
+\begin{tabular}{l|ccc}
+    
+\toprule
+Method & OBJ-BG & OBJ-ONLY & PB-T50-RS \\
+% \cmidrule(lr){2-5} \cmidrule(lr){6-9}
+\midrule
+
+Point-BERT~\cite{pbert} & 87.43 & 88.12 & 83.07\\
+Point-BERT (ABC) & 88.30 & 88.47 & 83.55 \\
+\textit{difference} & \cellcolor{green!25}$+0.87$ & \cellcolor{green!25}$+0.35$ & \cellcolor{green!25}$+0.48$ \\
+\midrule
+Point-MAE~\cite{pmae} & 90.02 & 88.29 & 85.18 \\
+Point-MAE (ABC) & 88.64 & 88.47 & --\\
+\textit{difference} & \cellcolor{orange!25}$-1.38$ & \cellcolor{green!25}$+0.18$ & --\\
+\midrule
+PM2AE~\cite{pm2ae} & 91.22 & 88.81 & 86.43 \\
+PM2AE (ABC) & 90.02 & 89.67 & -- \\
+\textit{difference} & \cellcolor{orange!25}$-1.2$ & \cellcolor{green!25}$+0.86$ & -- \\
+\midrule
+PCP-MAE~\cite{pcpmae} & -- & -- & -- \\
+PCP-MAE (ABC) & -- & -- & -- \\
+\textit{difference} & -- & -- & -- \\
+
+\bottomrule
+\end{tabular}
+\caption{{\bf Classification results on ScanObjectNN.} For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC.}
+\setlength\tabcolsep{2pt}
+\label{tb:scanobject}
+\end{center}
+
+\end{table}

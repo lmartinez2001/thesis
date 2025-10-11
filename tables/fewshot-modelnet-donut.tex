@@ -11,8 +11,9 @@
 Methods & 10-shot & 20-shot & 10-shot & 20-shot & 10-shot & 20-shot & 10-shot & 20-shot \\
 \midrule
 
-Point-BERT~\cite{pbert} & $94.6_{\pm 3.1}$ & $96.3_{\pm 2.7}$ & $91.0_{\pm 5.4}$ & $92.7_{\pm 5.1}$ & -- & -- & -- & --\\
-Point-BERT (ABC) & $95.9_{\pm 2.1}$ & $98.1_{\pm 1.8}$ & $91.7_{\pm 4.5}$ & $94.2_{\pm 3.4}$ & -- & -- & -- & --\\
+Point-BERT~\cite{pbert} & $94.6_{\pm 3.1}$ & $96.3_{\pm 2.7}$ & $91.0_{\pm 5.4}$ & $92.7_{\pm 5.1}$ & $34.4_{\pm 4.4}$ & $36.5_{\pm 4.0}$ & $19.2_{\pm 2.0}$ & $21.8_{\pm 2.0}$\\
+Point-BERT (ABC) & $96.9_{\pm 2.5}$ & $98.5_{\pm 1.4}$ & $91.6_{\pm 4.6}$ & $94.3_{\pm 3.9}$ & $34.9_{\pm 5.4}$ & $37.6_{\pm 5.0}$ & $20.2_{\pm 2.3}$ & $22.4_{\pm 1.5}$\\
+\textit{difference} & \cellcolor{green!25}$+2.3$ & \cellcolor{green!25}$+2.2$ & \cellcolor{green!25}$+0.6$ & \cellcolor{green!25}$+1.6$ & \cellcolor{green!25}$+0.5$ & \cellcolor{green!25}$+1.1$ & \cellcolor{green!25}$+1.0$ & \cellcolor{green!25}$+0.6$ \\
 \midrule
 Point-MAE~\cite{pmae} & $96.3_{\pm 2.5}$ & $97.8_{\pm 1.8}$ & $92.6_{\pm 4.1}$ & $95.0_{\pm 3.0}$ & $32.9_{\pm 3.5}$ & $38.1_{\pm 3.9}$ & $20.4_{\pm 2.1}$ & $23.8_{\pm 1.7}$ \\
 Point-MAE (ABC) & $96.2_{\pm 2.7}$ & $97.6_{\pm 1.9}$ & $92.3_{\pm 4.4}$ & $95.2_{\pm 2.9}$ & $35.1_{\pm 6.0}$ & $40.1_{\pm 4.9}$ & $21.4_{\pm 2.7}$ & $22.8_{\pm 2.4}$\\
@@ -28,7 +29,7 @@ PCP-MAE (ABC) & $96.1_{\pm 3.1}$ & $98.3_{\pm 4.3}$ & $91.7_{\pm 4.3}$ & $94.9_{
 
 \bottomrule
 \end{tabular}
-\caption{{\bf Few-shot object classification on ModelNet40.} We conduct 10 independent experiments for each setting and report mean accuracy (\%) with standard deviation.}
+\caption{{\bf Few-shot object classification on ModelNet40 and DONUT (genus).} We conduct 10 independent experiments for each setting and report mean accuracy (\%) with standard deviation. For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC.}
 \setlength\tabcolsep{2pt}
 \label{tb:few}
 \end{center}

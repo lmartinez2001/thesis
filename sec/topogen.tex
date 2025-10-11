@@ -1,12 +1,12 @@
 \section{DONUT: \underline{D}ataset \underline{O}f ma\underline{N}ifold str\underline{U}c\underline{T}ures}
 \label{sec:topogen}
 
-\begin{figure}[t]
+\begin{figure}
   \centering
   \includegraphics[width=1.0\linewidth]{figs/topogen/samples_overview.png}
 
   \label{fig:topogen-samples}
-  \caption{\textbf{Random samples from the dataset.} Despite the fact that each sample is generated from a rather small family of shapes, both the topology preserving placement and augmentations allow for a rich variety of shapes, while ensuring topological consistency.}
+  \caption{\textbf{Random samples from DONUT.} Despite the fact that each sample is generated from a rather small family of shapes, both the topology preserving placement and augmentations allow for a rich variety of shapes, while ensuring topological consistency.}
   \label{fig:short}
 \end{figure}
 
@@ -44,12 +44,32 @@ Attempts to repair such meshes (e.g., Manifold~\cite{manifold}, ManifoldPlus~\ci
 \paragraph{Synthetic datasets with limited diversity.} 
 The EuLearn dataset~\cite{eulearn} addresses class imbalance by generating surfaces of varying genus from Fourier curves. While balanced across genera, EuLearn suffers from two critical issues: (i) samples within each genus class lack diversity, making them nearly indistinguishable, and (ii) strong correlations emerge between genus and canonical orientation, enabling trivial classification via nearest-neighbor with Chamfer distance. Consequently, EuLearn fails to disentangle topological structure from geometric shortcuts, limiting its usefulness for robust probing.
 
-\begin{figure}[h]
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=0.5\linewidth]{figs/topogen/thingi_genus_hist.pdf}
+%    \caption{\textbf{Genus distribution of Thingi10K.} Both axes are plotted in log scale. The genus was estimated from the Euler characteristic, provided as metadata with the dataset; however, 2,651 samples do not fulfill the requirements to directly compute the genus from the Euler characteristic (see \ref{eq:euler}). They are therefore not taken into account here. The histogram shows that a large fraction of the dataset (over 3,000 samples out of 7,344) has genera of 0 or 1, indicating that higher-genus components are significantly underrepresented, which may limit accurate classification and probing analyses for those cases.}
+%    \label{fig:thingi-genus}
+% \end{figure}
+
+\begin{figure}
   \centering
-  \includegraphics[width=0.5\linewidth]{figs/topogen/thingi_genus_hist.pdf}
-   \caption{\textbf{Genus distribution of Thingi10K.} Both axes are plotted in log scale. The genus was estimated from the Euler characteristic, provided as metadata with the dataset; however, 2,651 samples do not fulfill the requirements to directly compute the genus from the Euler characteristic (see \ref{eq:euler}). They are therefore not taken into account here. The histogram shows that a large fraction of the dataset (over 3,000 samples out of 7,344) has genera of 0 or 1, indicating that higher-genus components are significantly underrepresented, which may limit accurate classification and probing analyses for those cases.}
-   \label{fig:thingi-genus}
+  \begin{subfigure}[t]{0.40\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figs/topogen/thingi_genus_hist.pdf}
+    \caption{\textbf{Genus distribution of Thingi10K.} Both axes are in log scale. The genus, estimated from the Euler characteristic provided as metadata, could not be computed for 2,651 samples, which are excluded. The histogram shows that most meshes (over 3,000 of 7,344) have genus 0 or 1, highlighting the scarcity of higher-genus shapes.}
+    \label{fig:thingi-genus}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.58\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figs/connected_comps_thingi.pdf}
+    \caption{\textbf{Raw connected components.} The left figure shows a mesh made of 8 connected components, highlighted with different colors. However, once converted into a point cloud (right figure), we lose track of this information. Therefore, labeling this sample as having 8 connected components would be misleading for a model.}
+    \label{fig:thingi-comps}
+  \end{subfigure}
+  \caption{}
+  \label{fig:thingi-overview}
 \end{figure}
+
 
 \begin{figure}[h]
   \centering
@@ -69,7 +89,14 @@ The EuLearn dataset~\cite{eulearn} addresses class imbalance by generating surfa
    \label{fig:topogen-overview}
 \end{figure}
 
-Since DONUT is made of synthetic shapes, two critical challenges must be addressed to ensure that the results obtained from this dataset are relevant. 1) Foundation models are pretrained on real shapes. Therefore, learned features reflect the distribution of real world geometry and semantics. Synthetic data, however, introduce patterns and biases that don't exist in real data, making them fall out-of-distribution. 2) Another common pitfall of synthetic datasets (cf. EuLearn) is the lack of variability, making evluation tasks such as probing, trivial. The first challenge is mitigated because pretrained foundation models (e.g., on ShapeNet or Objaverse) already encompass a wide range of synthetic geometries, keeping DONUT samples within their learned data distribution. This is experimentally validated in Figure (+ figure with umaps). To address the second challenge, we developed a set of rules and augmentation techniques to ensure that the generated shapes are both diverse and topologically accurate.
+Since DONUT is made of synthetic shapes, two critical challenges must be addressed to ensure that the results obtained from this dataset are relevant. 1) Foundation models are pretrained on real shapes. Therefore, learned features reflect the distribution of real world geometry and semantics. Synthetic data, however, introduce patterns and biases that don't exist in real data, making them fall out-of-distribution. 2) Another common pitfall of synthetic datasets (cf. EuLearn) is the lack of variability, making evluation tasks such as probing, trivial. The first challenge is mitigated because pretrained foundation models (e.g., on ShapeNet or Objaverse) already encompass a wide range of synthetic geometries, keeping DONUT samples within their learned data distribution. This is experimentally validated in Figure~\ref{fig:topogen-umaps-overview}. To address the second challenge, we developed a set of rules and augmentation techniques to ensure that the generated shapes are both diverse and topologically accurate.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figs/topogen/umaps_overview.pdf}
+  \caption{\textbf{UMAP embeddings of features learned by 3D encoders.} DONUT samples project into the same space as the original training data, indicating that they are not out-of-distribution.}
+  \label{fig:topogen-umaps-overview}
+\end{figure}
 
 The generation process was designed to jointly satisfy three criteria: (i) exact control of topology, (ii) high geometric diversity, and (iii) scalability to tens of thousands of shapes. Figure \ref{fig:topogen-overview} provides an overview of the generation pipeline, which we now describe in detail.
 
@@ -88,7 +115,7 @@ At the level of individual samples, the generation process begins by selecting t
 Each mesh is then instantiated from a specific parametric family of shapes:
 \begin{itemize}
   \item \textit{Genus 0:} Superellipsoids and cones
-  \item \textit{Genus 1:} Supertoroids and cones
+  \item \textit{Genus 1:} Supertoroids
   \item \textit{Genus $\geq 2$:} K-tori
 \end{itemize}
 
@@ -185,7 +212,7 @@ To address the first challenge, we developed a two-stage placement procedure. Su
 \paragraph{Variability.} 
 To further increase the diversity of DONUT while preserving topological labels, we apply transformations both at the sample level and at the component level. Commonly used rigid transformations, such as rotations and scaling, are applied to both components and full samples. At the component level, we do not apply translations to avoid creating overlaps that would break the overall topology of the sample. To introduce additional geometric variability, we also apply twisting deformations (Figure \ref{fig:twisted-comparison}). Without loss of generality, we assume that a component (or a full sample) lies within the unit sphere, as global scaling can be applied afterward. First, we uniformly sample a direction on the unit sphere, which defines an axis for the twist. Next, we define a smooth scalar function along this axis that determines the rotation angle. Finally, each vertex is rotated around the axis by the angle given by the scalar function evaluated at the point where the vertex projects along the axis. This procedure introduces non-rigid variability while preserving the genus and connectivity of each component and of the overall sample.
 
-\begin{figure}[t]
+\begin{figure}
   \centering
   \begin{subfigure}[t]{0.48\linewidth}
     \centering
@@ -214,16 +241,23 @@ To further increase the diversity of DONUT while preserving topological labels, 
 
 \subsection{Analysis}
 
-This section provides a detailed characterization of DONUT. We first present dataset statistics, label distributions, and its relation to pretrained models. We then discuss baseline performance and introduce two complementary protocols designed to verify that models trained on DONUT actually capture topological features.
+This section provides a detailed characterization of DONUT. We first present dataset statistics (Section~\ref{sssec:topogen-general-properties}) and label distributions. We then assess baseline performance and introduce two complementary analyses to ensure models trained on DONUT truly learn the intended topological signal rather than relying on shortcuts. The first (Section~\ref{sssec:topogen-transferability}) measures performance drop when models trained on DONUT are evaluated on a distinct dataset. The second (Section~\ref{sssec:topogen-saliency}), visualizes model attention on template shapes to reveal which regions influence predictions.
 
 \subsubsection{General Properties}
 \label{sssec:topogen-general-properties}
 
 \paragraph{Dataset statistics.}
-DONUT contains 29,517 samples divided into training, validation, and test splits of 80\%, 10\%, and 10\%. Each sample has between 1 and 6 connected components, with the total genus ranging from 0 to 10. A single component has genus at most 5 (corresponding to a 5-torus (Figure~\ref{fig:ktori-overview})). The dataset size was chosen to balance feasibility and reliability: smaller datasets led to overfitting while much larger datasets made experiments costly. Figure~\ref{fig:topogen-gen-comp-hist} reports the marginal distributions of genera and connected components.
+DONUT contains 29,517 samples divided into training, validation, and test splits of 80\%, 10\%, and 10\%. Each sample has between 1 and 6 connected components, with the total genus ranging from 0 to 10. A single component has genus at most 5 (corresponding to a 5-torus (Figure~\ref{fig:ktori-overview})). The dataset size was chosen to balance feasibility and reliability: smaller datasets led to overfitting while much larger datasets made experiments costly. Figure~\ref{fig:topogen-properties} reports the marginal distributions of genera and connected components.
 
 \paragraph{Distributions and scalability.}
 Figure~\ref{fig:topogen-umaps-overview} shows that synthetic samples from DONUT occupy the same representation space as training data used by common 3D encoders. This indicates that the dataset lies within the learned distribution of existing models rather than being out-of-distribution. In addition, Figure~\ref{fig:topogen-gen-time} reports the time required to generate different dataset sizes, showing that large-scale variants remain practical.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figs/topogen/label_distribution.pdf}
+  \caption{\textbf{Label distributions for genus and connected components.} The marginal distributions of genus and connected components (left and middle histograms) are approximately uniform, ensuring balanced supervision across topological classes. The right plot shows the joint distribution. The absence of samples with one connected component and genus greater than 5 stems from the constraints of our generation process, which limits individual components to a maximum genus of 5. The only way to achieve a genus greater than 5 is by combining multiple components.}
+  \label{fig:topogen-properties}
+\end{figure}
 
 \subsubsection{Baselines and Transferability}
 \label{sssec:topogen-transferability}
@@ -240,20 +274,8 @@ Transferability provides a natural probe. To test this, we evaluated models on a
 
 To further understand model behavior, we visualize saliency maps on toy shapes. These maps highlight which regions contribute most to predictions. When trained to predict genus, models tend to focus on cycles, while for connected components they concentrate around contact points between shapes (Figure~\ref{fig:dgcnn-saliency}). Such results suggest that models attend to meaningful topological structures rather than exploiting geometric shortcuts.
 
-\begin{figure*}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figs/topogen/umaps_overview.pdf}
-  \caption{\textbf{UMAP embeddings of features learned by 3D encoders.} DONUT samples project into the same space as the original training data, indicating that they are not out-of-distribution.}
-  \label{fig:topogen-umaps-overview}
-\end{figure*}
 
 
-\begin{figure}[t!]
-  \centering
-  \includegraphics[width=\linewidth]{figs/topogen/label_distribution.pdf}
-  \caption{\textbf{Label distributions for genus and connected components.} The marginal distributions of genus and connected components (left and middle histograms) are approximately uniform, ensuring balanced supervision across topological classes. The right plot shows the joint distribution. The absence of samples with one connected component and genus greater than 5 stems from the constraints of our generation process, which limits individual components to a maximum genus of 5. The only way to achieve a genus greater than 5 is by combining multiple components.}
-  \label{fig:topogen-properties}
-\end{figure}
 
 % \begin{figure}[t]
 %   \centering
