@@ -51,17 +51,17 @@
 \contentsline {subsubsection}{\numberline {4.2.2}Vectorization of Persistence Diagrams}{18}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Subspace Alignment Protocol}{19}{subsubsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.3}Changing the Pretraining Data Distribution}{19}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Object Classification}{19}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Few-Shot Structural Evaluation}{19}{subsection.4.5}%
-\contentsline {section}{\numberline {A}Supplementary Material for DONUT}{22}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}EuLearn Dataset Analysis}{22}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Sampling Labels}{22}{subsection.A.2}%
-\contentsline {paragraph}{Role of $k$.}{23}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}Choosing Components Shapes}{23}{subsection.A.3}%
-\contentsline {paragraph}{Algorithmic Details.}{24}{subsection.A.3}%
-\contentsline {paragraph}{Complexity.}{24}{subsection.A.3}%
-\contentsline {subsection}{\numberline {A.4}Baselines Training Details}{25}{subsection.A.4}%
-\contentsline {subsection}{\numberline {A.5}Additional Results}{26}{subsection.A.5}%
-\contentsline {section}{\numberline {B}Supplementary Definitions}{26}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Metrics}{26}{subsection.B.1}%
-\contentsline {paragraph}{Balanced accuracy}{26}{subsection.B.1}%
+\contentsline {paragraph}{Object Classification.}{20}{table.caption.14}%
+\contentsline {paragraph}{Few-Shot Classification.}{20}{table.caption.15}%
+\contentsline {section}{\numberline {A}Supplementary Material for DONUT}{21}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}EuLearn Dataset Analysis}{21}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Sampling Labels}{21}{subsection.A.2}%
+\contentsline {paragraph}{Role of $k$.}{22}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Choosing Components Shapes}{22}{subsection.A.3}%
+\contentsline {paragraph}{Algorithmic Details.}{23}{subsection.A.3}%
+\contentsline {paragraph}{Complexity.}{23}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Baselines Training Details}{24}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}Additional Results}{25}{subsection.A.5}%
+\contentsline {section}{\numberline {B}Supplementary Definitions}{25}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Metrics}{25}{subsection.B.1}%
+\contentsline {paragraph}{Balanced accuracy}{25}{subsection.B.1}%
