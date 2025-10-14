@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.20)  12 OCT 2025 07:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.20)  14 OCT 2025 02:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -976,33 +976,33 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 )
 \@quotelevel=\count485
 \@quotereset=\count486
-LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineT-TLF on input line 86.
+LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineT-TLF on input line 92.
  (/usr/share/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.fd
 File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 86.
+(Font)              scaled to size 10.95pt on input line 92.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 \c@mv@tabular=\count487
 \c@mv@boldtabular=\count488
 
@@ -1059,7 +1059,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 86.
+Package hyperref Info: Link coloring ON on input line 92.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1086,25 +1086,25 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 86.
-Package biblatex Info: Reference segment=0 on input line 86.
+Package biblatex Info: Reference section=0 on input line 92.
+Package biblatex Info: Reference segment=0 on input line 92.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 95.
+(Font)              scaled to size 17.28pt on input line 101.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 95.
+(Font)              scaled to size 17.28pt on input line 101.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 98.
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 98.
+(Font)              scaled to size 12.0pt on input line 104.
 <logos/logo_mva.pdf, id=211, 591.8612pt x 156.585pt>
 File: logos/logo_mva.pdf Graphic file (type pdf)
 <use logos/logo_mva.pdf>
-Package pdftex.def Info: logos/logo_mva.pdf  used on input line 110.
+Package pdftex.def Info: logos/logo_mva.pdf  used on input line 116.
 (pdftex.def)             Requested size: 279.62881pt x 73.97733pt.
 <logos/logo_tp.pdf, id=212, 164.71948pt x 259.32451pt>
 File: logos/logo_tp.pdf Graphic file (type pdf)
 <use logos/logo_tp.pdf>
-Package pdftex.def Info: logos/logo_tp.pdf  used on input line 111.
+Package pdftex.def Info: logos/logo_tp.pdf  used on input line 117.
 (pdftex.def)             Requested size: 46.98827pt x 73.97733pt.
 
 
@@ -1115,9 +1115,9 @@ Package pdftex.def Info: logos/logo_tp.pdf  used on input line 111.
 pdfTeX warning: pdflatex (file ./logos/logo_tp.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 123.
+(Font)              scaled to size 14.4pt on input line 129.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 123.
+(Font)              scaled to size 14.4pt on input line 129.
  (./main.toc
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 10.95pt on input line 1.
@@ -1140,7 +1140,7 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 2.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 \clearpage
+l.130 \clearpage
                  [1] (./sec/abstract.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 1.
@@ -1155,16 +1155,12 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF on input line 42.
+LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF on input line 44.
  (/usr/share/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
 File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 42.
-
-
-LaTeX Warning: Reference `sec:ph' on page 4 undefined on input line 43.
-
+(Font)              scaled to size 10.95pt on input line 44.
 ) (./sec/topogen.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1286,7 +1282,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-<figs/topogen/samples_overview.png, id=304, 1062.369pt x 411.2163pt>
+<figs/topogen/samples_overview.png, id=305, 1062.369pt x 411.2163pt>
 File: figs/topogen/samples_overview.png Graphic file (type png)
 <use figs/topogen/samples_overview.png>
 Package pdftex.def Info: figs/topogen/samples_overview.png  used on input line 6.
@@ -1299,188 +1295,239 @@ Package pdftex.def Info: figs/topogen/samples_overview.png  used on input line 6
 <figs/topogen/thingi_genus_hist.pdf, id=356, 822.13484pt x 556.14648pt>
 File: figs/topogen/thingi_genus_hist.pdf Graphic file (type pdf)
 <use figs/topogen/thingi_genus_hist.pdf>
-Package pdftex.def Info: figs/topogen/thingi_genus_hist.pdf  used on input line 58.
+Package pdftex.def Info: figs/topogen/thingi_genus_hist.pdf  used on input line 48.
 (pdftex.def)             Requested size: 193.47578pt x 130.87265pt.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 59.
+(Font)              scaled to size 10.0pt on input line 49.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 59.
+(Font)              scaled to size 10.0pt on input line 49.
 <figs/connected_comps_thingi.pdf, id=357, 478.78876pt x 234.8775pt>
 File: figs/connected_comps_thingi.pdf Graphic file (type pdf)
 <use figs/connected_comps_thingi.pdf>
-Package pdftex.def Info: figs/connected_comps_thingi.pdf  used on input line 65.
+Package pdftex.def Info: figs/connected_comps_thingi.pdf  used on input line 55.
 (pdftex.def)             Requested size: 280.54506pt x 137.62677pt.
-<figs/eulearn/dataset_samples.pdf, id=358, 5420.25pt x 2996.19376pt>
+<figs/eulearn/dataset_samples.pdf, id=359, 5420.25pt x 2996.19376pt>
 File: figs/eulearn/dataset_samples.pdf Graphic file (type pdf)
 <use figs/eulearn/dataset_samples.pdf>
-Package pdftex.def Info: figs/eulearn/dataset_samples.pdf  used on input line 76.
+Package pdftex.def Info: figs/eulearn/dataset_samples.pdf  used on input line 78.
 (pdftex.def)             Requested size: 241.84843pt x 133.67995pt.
-<figs/topogen/topogen_gen.pdf, id=359, 620.3175pt x 174.6525pt>
+<figs/topogen/topogen_gen.pdf, id=360, 620.3175pt x 174.6525pt>
 File: figs/topogen/topogen_gen.pdf Graphic file (type pdf)
 <use figs/topogen/topogen_gen.pdf>
-Package pdftex.def Info: figs/topogen/topogen_gen.pdf  used on input line 87.
+Package pdftex.def Info: figs/topogen/topogen_gen.pdf  used on input line 89.
 (pdftex.def)             Requested size: 483.69687pt x 136.18576pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 
 [6 <./figs/topogen/thingi_genus_hist.pdf> <./figs/connected_comps_thingi.pdf> <./figs/eulearn/dataset_samples.pdf
 
 pdfTeX warning: pdflatex (file ./figs/eulearn/dataset_samples.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figs/topogen/umaps_overview.pdf, id=437, 2876.3461pt x 636.05507pt>
+<figs/topogen/umaps_overview.pdf, id=439, 2876.3461pt x 636.05507pt>
 File: figs/topogen/umaps_overview.pdf Graphic file (type pdf)
 <use figs/topogen/umaps_overview.pdf>
-Package pdftex.def Info: figs/topogen/umaps_overview.pdf  used on input line 96.
+Package pdftex.def Info: figs/topogen/umaps_overview.pdf  used on input line 100.
 (pdftex.def)             Requested size: 483.69687pt x 106.95357pt.
-
-
-LaTeX Warning: Reference `sec:topogen-complements' on page 7 undefined on input line 106.
-
 
 
 [7 <./figs/topogen/topogen_gen.pdf> <./figs/topogen/umaps_overview.pdf>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 143.
+(Font)              scaled to size 8.0pt on input line 142.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 143.
+(Font)              scaled to size 6.0pt on input line 142.
+<figs/topogen/toroids_overview.png, id=545, 1083.3273pt x 1083.3273pt>
+File: figs/topogen/toroids_overview.png Graphic file (type png)
+<use figs/topogen/toroids_overview.png>
+Package pdftex.def Info: figs/topogen/toroids_overview.png  used on input line 175.
+(pdftex.def)             Requested size: 232.17242pt x 232.16696pt.
+<figs/topogen/ellipsoids_overview.png, id=546, 1083.3273pt x 1083.3273pt>
+File: figs/topogen/ellipsoids_overview.png Graphic file (type png)
+<use figs/topogen/ellipsoids_overview.png>
+Package pdftex.def Info: figs/topogen/ellipsoids_overview.png  used on input line 182.
+(pdftex.def)             Requested size: 232.17242pt x 232.16696pt.
+<figs/topogen/placement.pdf, id=548, 270.00874pt x 78.2925pt>
+File: figs/topogen/placement.pdf Graphic file (type pdf)
+<use figs/topogen/placement.pdf>
+Package pdftex.def Info: figs/topogen/placement.pdf  used on input line 208.
+(pdftex.def)             Requested size: 483.69687pt x 140.25737pt.
 
 
 [8]
-<figs/topogen/toroids_overview.png, id=555, 1083.3273pt x 1083.3273pt>
-File: figs/topogen/toroids_overview.png Graphic file (type png)
-<use figs/topogen/toroids_overview.png>
-Package pdftex.def Info: figs/topogen/toroids_overview.png  used on input line 176.
-(pdftex.def)             Requested size: 232.17242pt x 232.16696pt.
-<figs/topogen/ellipsoids_overview.png, id=556, 1083.3273pt x 1083.3273pt>
-File: figs/topogen/ellipsoids_overview.png Graphic file (type png)
-<use figs/topogen/ellipsoids_overview.png>
-Package pdftex.def Info: figs/topogen/ellipsoids_overview.png  used on input line 183.
-(pdftex.def)             Requested size: 232.17242pt x 232.16696pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figs/topogen/ktori_overview.png, id=567, 1445.4pt x 1445.4pt>
+File: figs/topogen/ktori_overview.png Graphic file (type png)
+<use figs/topogen/ktori_overview.png>
+Package pdftex.def Info: figs/topogen/ktori_overview.png  used on input line 222.
+(pdftex.def)             Requested size: 232.17242pt x 232.17297pt.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 229.
+<figs/topogen/twisted_comparison.png, id=568, 1422.0327pt x 1423.719pt>
+File: figs/topogen/twisted_comparison.png Graphic file (type png)
+<use figs/topogen/twisted_comparison.png>
+Package pdftex.def Info: figs/topogen/twisted_comparison.png  used on input line 235.
+(pdftex.def)             Requested size: 232.17242pt x 232.44867pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 
 [9 <./figs/topogen/toroids_overview.png> <./figs/topogen/ellipsoids_overview.png>]
-<figs/topogen/ktori_overview.png, id=569, 1445.4pt x 1445.4pt>
-File: figs/topogen/ktori_overview.png Graphic file (type png)
-<use figs/topogen/ktori_overview.png>
-Package pdftex.def Info: figs/topogen/ktori_overview.png  used on input line 219.
-(pdftex.def)             Requested size: 232.17242pt x 232.17297pt.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 226.
-<figs/topogen/twisted_comparison.png, id=570, 1422.0327pt x 1423.719pt>
-File: figs/topogen/twisted_comparison.png Graphic file (type png)
-<use figs/topogen/twisted_comparison.png>
-Package pdftex.def Info: figs/topogen/twisted_comparison.png  used on input line 232.
-(pdftex.def)             Requested size: 232.17242pt x 232.44867pt.
-
-
-LaTeX Warning: Reference `fig:topogen-gen-time' on page 10 undefined on input line 253.
-
-<figs/topogen/label_distribution.pdf, id=577, 1784.62915pt x 483.23692pt>
+<figs/topogen/label_distribution.pdf, id=581, 1784.62915pt x 483.23692pt>
 File: figs/topogen/label_distribution.pdf Graphic file (type pdf)
 <use figs/topogen/label_distribution.pdf>
 Package pdftex.def Info: figs/topogen/label_distribution.pdf  used on input line 257.
 (pdftex.def)             Requested size: 483.69687pt x 130.96974pt.
 
 
-[10]
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./figs/topogen/ktori_overview.png> <./figs/topogen/twisted_comparison.png> <./figs/topogen/label_distribution.pdf>] (./tables/donut-baselines.tex)
 
-LaTeX Warning: Reference `fig:dgcnn-saliency' on page 12 undefined on input line 275.
+LaTeX Warning: Reference `fig:topogen-gen-time' on page 10 undefined on input line 267.
 
-) (./sec/used_models.tex
 
-[12]
-<figs/transformer_overview.pdf, id=655, 406.51875pt x 121.45375pt>
+
+[10 <./figs/topogen/placement.pdf>] (./tables/donut-baselines.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+<figs/topogen/saliencies.pdf, id=623, 411.5375pt x 211.79124pt>
+File: figs/topogen/saliencies.pdf Graphic file (type pdf)
+<use figs/topogen/saliencies.pdf>
+Package pdftex.def Info: figs/topogen/saliencies.pdf  used on input line 288.
+(pdftex.def)             Requested size: 483.69687pt x 248.92908pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[11 <./figs/topogen/ktori_overview.png> <./figs/topogen/twisted_comparison.png>]
+
+[12 <./figs/topogen/label_distribution.pdf>]
+
+[13 <./figs/topogen/saliencies.pdf>]) (./sec/used_models.tex
+<figs/timeline.pdf, id=772, 384.43625pt x 111.41624pt>
+File: figs/timeline.pdf Graphic file (type pdf)
+<use figs/timeline.pdf>
+Package pdftex.def Info: figs/timeline.pdf  used on input line 6.
+(pdftex.def)             Requested size: 483.69687pt x 140.1931pt.
+
+
+[14 <./figs/timeline.pdf>]
+<figs/transformer_overview.pdf, id=803, 406.51875pt x 121.45375pt>
 File: figs/transformer_overview.pdf Graphic file (type pdf)
 <use figs/transformer_overview.pdf>
-Package pdftex.def Info: figs/transformer_overview.pdf  used on input line 29.
+Package pdftex.def Info: figs/transformer_overview.pdf  used on input line 35.
 (pdftex.def)             Requested size: 483.69687pt x 144.51689pt.
 
 
-[13]
-Overfull \hbox (2.99895pt too wide) in paragraph at lines 45--46
+[15 <./figs/transformer_overview.pdf>]
+Overfull \hbox (2.99895pt too wide) in paragraph at lines 51--52
 []\T1/LinuxLibertineT-TLF/m/n/10.95 With this vo-cab-u-lary in place, Point-BERT pre-trains the Trans-former us-ing Masked Point Mod-el-ing (MPM):
  []
 
 
 
-[14 <./figs/transformer_overview.pdf>]
+[16]) (./sec/ph.tex
 
-[15]) (./sec/ph.tex
+[17]
+<figs/probing.pdf, id=914, 1188.44pt x 732.7375pt>
+File: figs/probing.pdf Graphic file (type pdf)
+<use figs/probing.pdf>
+Package pdftex.def Info: figs/probing.pdf  used on input line 13.
+(pdftex.def)             Requested size: 483.69687pt x 298.23291pt.
 
-[16]
-<figs/ph/expers_v2.pdf, id=757, 580.1675pt x 187.70125pt>
+
+[18 <./figs/probing.pdf>]
+
+[19]
+<figs/ph/expers_v2.pdf, id=2213, 580.1675pt x 187.70125pt>
 File: figs/ph/expers_v2.pdf Graphic file (type pdf)
 <use figs/ph/expers_v2.pdf>
-Package pdftex.def Info: figs/ph/expers_v2.pdf  used on input line 70.
+Package pdftex.def Info: figs/ph/expers_v2.pdf  used on input line 89.
 (pdftex.def)             Requested size: 483.69687pt x 156.49083pt.
-<figs/ph/expers2_ord_v2.pdf, id=758, 530.98375pt x 251.94125pt>
+<figs/ph/expers2_ord_v2.pdf, id=2214, 530.98375pt x 251.94125pt>
 File: figs/ph/expers2_ord_v2.pdf Graphic file (type pdf)
 <use figs/ph/expers2_ord_v2.pdf>
-Package pdftex.def Info: figs/ph/expers2_ord_v2.pdf  used on input line 80.
+Package pdftex.def Info: figs/ph/expers2_ord_v2.pdf  used on input line 99.
 (pdftex.def)             Requested size: 232.17242pt x 110.1625pt.
-<figs/ph/expers2_v2.pdf, id=759, 530.98375pt x 251.94125pt>
+<figs/ph/expers2_v2.pdf, id=2215, 530.98375pt x 251.94125pt>
 File: figs/ph/expers2_v2.pdf Graphic file (type pdf)
 <use figs/ph/expers2_v2.pdf>
-Package pdftex.def Info: figs/ph/expers2_v2.pdf  used on input line 86.
+Package pdftex.def Info: figs/ph/expers2_v2.pdf  used on input line 105.
 (pdftex.def)             Requested size: 232.17242pt x 110.1625pt.
+<figs/ph/examples/pd_example.pdf, id=2225, 562.1pt x 558.085pt>
+File: figs/ph/examples/pd_example.pdf Graphic file (type pdf)
+<use figs/ph/examples/pd_example.pdf>
+Package pdftex.def Info: figs/ph/examples/pd_example.pdf  used on input line 125.
+(pdftex.def)             Requested size: 111.2482pt x 110.44836pt.
+<figs/ph/examples/landscape_example.pdf, id=2226, 280.04625pt x 278.23952pt>
+File: figs/ph/examples/landscape_example.pdf Graphic file (type pdf)
+<use figs/ph/examples/landscape_example.pdf>
+Package pdftex.def Info: figs/ph/examples/landscape_example.pdf  used on input line 129.
+(pdftex.def)             Requested size: 111.2482pt x 110.52962pt.
+<figs/ph/examples/persistence_image_example.pdf, id=2227, 278.23952pt x 278.23952pt>
+File: figs/ph/examples/persistence_image_example.pdf Graphic file (type pdf)
+<use figs/ph/examples/persistence_image_example.pdf>
+Package pdftex.def Info: figs/ph/examples/persistence_image_example.pdf  used on input line 133.
+(pdftex.def)             Requested size: 111.2482pt x 111.24713pt.
+<figs/ph/examples/betti_curve_example.pdf, id=2228, 338.32085pt x 338.97389pt>
+File: figs/ph/examples/betti_curve_example.pdf Graphic file (type pdf)
+<use figs/ph/examples/betti_curve_example.pdf>
+Package pdftex.def Info: figs/ph/examples/betti_curve_example.pdf  used on input line 137.
+(pdftex.def)             Requested size: 111.2482pt x 111.46346pt.
 
 
-[17 <./figs/ph/expers_v2.pdf> <./figs/ph/expers2_ord_v2.pdf
+[20]
+
+[21 <./figs/ph/expers_v2.pdf> <./figs/ph/expers2_ord_v2.pdf
 
 pdfTeX warning: pdflatex (file ./figs/ph/expers2_ord_v2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figs/ph/expers2_v2.pdf
 
 pdfTeX warning: pdflatex (file ./figs/ph/expers2_v2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figs/ph/examples/pd_example.pdf, id=1031, 562.1pt x 558.085pt>
-File: figs/ph/examples/pd_example.pdf Graphic file (type pdf)
-<use figs/ph/examples/pd_example.pdf>
-Package pdftex.def Info: figs/ph/examples/pd_example.pdf  used on input line 106.
-(pdftex.def)             Requested size: 111.2482pt x 110.44836pt.
-<figs/ph/examples/landscape_example.pdf, id=1032, 280.04625pt x 278.23952pt>
-File: figs/ph/examples/landscape_example.pdf Graphic file (type pdf)
-<use figs/ph/examples/landscape_example.pdf>
-Package pdftex.def Info: figs/ph/examples/landscape_example.pdf  used on input line 110.
-(pdftex.def)             Requested size: 111.2482pt x 110.52962pt.
-<figs/ph/examples/persistence_image_example.pdf, id=1033, 278.23952pt x 278.23952pt>
-File: figs/ph/examples/persistence_image_example.pdf Graphic file (type pdf)
-<use figs/ph/examples/persistence_image_example.pdf>
-Package pdftex.def Info: figs/ph/examples/persistence_image_example.pdf  used on input line 114.
-(pdftex.def)             Requested size: 111.2482pt x 111.24713pt.
-<figs/ph/examples/betti_curve_example.pdf, id=1034, 338.32085pt x 338.97389pt>
-File: figs/ph/examples/betti_curve_example.pdf Graphic file (type pdf)
-<use figs/ph/examples/betti_curve_example.pdf>
-Package pdftex.def Info: figs/ph/examples/betti_curve_example.pdf  used on input line 118.
-(pdftex.def)             Requested size: 111.2482pt x 111.46346pt.
 
+[22 <./figs/ph/examples/pd_example.pdf> <./figs/ph/examples/landscape_example.pdf> <./figs/ph/examples/persistence_image_example.pdf> <./figs/ph/examples/betti_curve_example.pdf>]
+<figs/reconstruction.pdf, id=2592, 509.905pt x 132.495pt>
+File: figs/reconstruction.pdf Graphic file (type pdf)
+<use figs/reconstruction.pdf>
+Package pdftex.def Info: figs/reconstruction.pdf  used on input line 187.
+(pdftex.def)             Requested size: 483.69687pt x 125.6916pt.
+ (./tables/scanobject-cls.tex)
 
-[18 <./figs/ph/examples/pd_example.pdf> <./figs/ph/examples/landscape_example.pdf> <./figs/ph/examples/persistence_image_example.pdf> <./figs/ph/examples/betti_curve_example.pdf>] (./tables/scanobject-cls.tex)
-
-[19] (./tables/fewshot-modelnet-donut.tex
+[23 <./figs/reconstruction.pdf>] (./tables/fewshot-modelnet-donut.tex
 Overfull \hbox (7.74867pt too wide) in paragraph at lines 4--32
  [] 
  []
 
-)) (./sec/suppl_topogen.tex
+)) (./sec/conclusion.tex
 
-[20]
-<figs/eulearn/umap_comparison_original_rotated.pdf, id=1148, 1207.96925pt x 653.57616pt>
+[24]) (./sec/suppl_topogen.tex
+
+[25]
+<figs/eulearn/umap_comparison_original_rotated.pdf, id=2688, 1207.96925pt x 653.57616pt>
 File: figs/eulearn/umap_comparison_original_rotated.pdf Graphic file (type pdf)
 <use figs/eulearn/umap_comparison_original_rotated.pdf>
 Package pdftex.def Info: figs/eulearn/umap_comparison_original_rotated.pdf  used on input line 18.
 (pdftex.def)             Requested size: 338.58632pt x 183.18954pt.
-<figs/eulearn/accuracy_vs_angle.pdf, id=1150, 555.24155pt x 338.30838pt>
+<figs/eulearn/accuracy_vs_angle.pdf, id=2690, 555.24155pt x 338.30838pt>
 File: figs/eulearn/accuracy_vs_angle.pdf Graphic file (type pdf)
 <use figs/eulearn/accuracy_vs_angle.pdf>
 Package pdftex.def Info: figs/eulearn/accuracy_vs_angle.pdf  used on input line 29.
 (pdftex.def)             Requested size: 217.66211pt x 132.62114pt.
 
 Underfull \hbox (badness 1354) in paragraph at lines 30--30
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 Figure 13: |\T1/LinuxLibertineT-TLF/b/n/10.95 Clas-si-fi-ca-tion ac-cu-racy of a $\OML/cmm/m/it/10.95 k$\T1/LinuxLibertineT-TLF/b/n/10.95 -
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 Figure 18: |\T1/LinuxLibertineT-TLF/b/n/10.95 Clas-si-fi-ca-tion ac-cu-racy of a $\OML/cmm/m/it/10.95 k$\T1/LinuxLibertineT-TLF/b/n/10.95 -
  []
 
-<figs/utils/unrotated.pdf, id=1151, 1081.03876pt x 1081.03876pt>
+<figs/utils/unrotated.pdf, id=2691, 1081.03876pt x 1081.03876pt>
 File: figs/utils/unrotated.pdf Graphic file (type pdf)
 <use figs/utils/unrotated.pdf>
 Package pdftex.def Info: figs/utils/unrotated.pdf  used on input line 39.
@@ -1489,7 +1536,7 @@ File: figs/utils/unrotated.pdf Graphic file (type pdf)
 <use figs/utils/unrotated.pdf>
 Package pdftex.def Info: figs/utils/unrotated.pdf  used on input line 40.
 (pdftex.def)             Requested size: 10.93637pt x 10.95pt.
-<figs/utils/rotated.pdf, id=1152, 602.25pt x 602.25pt>
+<figs/utils/rotated.pdf, id=2692, 602.25pt x 602.25pt>
 File: figs/utils/rotated.pdf Graphic file (type pdf)
 <use figs/utils/rotated.pdf>
 Package pdftex.def Info: figs/utils/rotated.pdf  used on input line 42.
@@ -1537,7 +1584,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[21
+[26
 
  <./figs/eulearn/umap_comparison_original_rotated.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 70.
@@ -1546,52 +1593,83 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 73.
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
-[22 <./figs/eulearn/accuracy_vs_angle.pdf> <./figs/utils/unrotated.pdf> <./figs/utils/rotated.pdf
+[27 <./figs/eulearn/accuracy_vs_angle.pdf> <./figs/utils/unrotated.pdf> <./figs/utils/rotated.pdf
 
 pdfTeX warning: pdflatex (file ./figs/utils/rotated.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
-[23]
+[28]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 152.
- (./tables/donut-model-params.tex)) (./sec/suppl_definitions.tex
+ (./tables/donut-model-params.tex)
 
-[24{/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}])
-LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineMonoT-TLF on input line 140.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./sec/suppl_definitions.tex)
+LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineMonoT-TLF on input line 147.
  (/usr/share/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-TLF.fd
 File: T1LinuxLibertineMonoT-TLF.fd 2019/05/20 (autoinst) Font definitions for T1/LinuxLibertineMonoT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/n' in size <10.95> not available
-(Font)              Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' tried instead on input line 140.
+(Font)              Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' tried instead on input line 147.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' will be
-(Font)              scaled to size 10.95pt on input line 140.
+(Font)              scaled to size 10.95pt on input line 147.
 
-Overfull \hbox (0.12944pt too wide) in paragraph at lines 141--141
+
+[29{/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}]
+Overfull \hbox (0.12944pt too wide) in paragraph at lines 148--148
 []\T1/LinuxLibertineT-TLF/m/n/10.95 Matt Deitke et al. \T1/LinuxLibertineT-TLF/m/it/10.95 Ob-ja-verse: A Uni-verse of An-no-tated 3D Ob-jects\T1/LinuxLibertineT-TLF/m/n/10.95 . 2022. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 2212 . 08051$ [cs.CV][][]\T1/LinuxLibertineT-TLF/m/n/10.95 .
  []
 
 
 
-[25{/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}]
-Overfull \hbox (4.94946pt too wide) in paragraph at lines 141--141
+[30]
+Overfull \hbox (4.94946pt too wide) in paragraph at lines 148--148
 []\T1/LinuxLibertineT-TLF/m/n/10.95 Christoph Hofer et al. \T1/LinuxLibertineT-TLF/m/it/10.95 Deep Learn-ing with Topo-log-i-cal Sig-na-tures\T1/LinuxLibertineT-TLF/m/n/10.95 . 2018. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 1707 . 04041$ [cs.CV][][]\T1/LinuxLibertineT-TLF/m/n/10.95 .
  []
 
 
+Overfull \hbox (13.16345pt too wide) in paragraph at lines 148--148
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 Yangyan Li et al. \T1/LinuxLibertineT-TLF/m/it/10.95 PointCNN: Con-vo-lu-tion On $\OMS/cmsy/m/n/10.95 X$\T1/LinuxLibertineT-TLF/m/it/10.95 -Transformed Points\T1/LinuxLibertineT-TLF/m/n/10.95 . 2018. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 1801 . 07791$ [cs.CV][][]\T1/LinuxLibertineT-TLF/m/n/10.95 .
+ []
 
-[26]
-Overfull \hbox (7.47116pt too wide) in paragraph at lines 141--141
+
+Overfull \hbox (0.61768pt too wide) in paragraph at lines 148--148
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 Zhijian Liu et al. \T1/LinuxLibertineT-TLF/m/it/10.95 Point-Voxel CNN for Ef-fi-cient 3D Deep Learn-ing\T1/LinuxLibertineT-TLF/m/n/10.95 . 2019. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 1907 . 03739$ [cs.CV][][]\T1/LinuxLibertineT-TLF/m/n/10.95 .
+ []
+
+
+
+[31]
+Overfull \hbox (9.13356pt too wide) in paragraph at lines 148--148
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 Daniel Smilkov et al. \T1/LinuxLibertineT-TLF/m/it/10.95 Smooth-Grad: re-mov-ing noise by adding noise\T1/LinuxLibertineT-TLF/m/n/10.95 . 2017. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 1706 . 03825$ [cs.LG][][]\T1/LinuxLibertineT-TLF/m/n/10.95 .
+ []
+
+
+Overfull \hbox (1.27905pt too wide) in paragraph at lines 148--148
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 Hugues Thomas et al. \T1/LinuxLibertineT-TLF/m/it/10.95 KP-Conv: Flex-i-ble and De-formable Con-vo-lu-tion for Point Clouds\T1/LinuxLibertineT-TLF/m/n/10.95 . 2019. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 1904 .
+ []
+
+
+Overfull \hbox (7.47116pt too wide) in paragraph at lines 148--148
 []\T1/LinuxLibertineT-TLF/m/n/10.95 Robin Van-daele et al. \T1/LinuxLibertineT-TLF/m/it/10.95 Topo-log-i-cally Reg-u-lar-ized Data Em-bed-dings\T1/LinuxLibertineT-TLF/m/n/10.95 . 2022. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 2110 . 09193$ [cs.LG][][]\T1/LinuxLibertineT-TLF/m/n/10.95 .
  []
 
 
-Overfull \hbox (10.30511pt too wide) in paragraph at lines 141--141
+Overfull \hbox (10.30511pt too wide) in paragraph at lines 148--148
 []\T1/LinuxLibertineT-TLF/m/n/10.95 Yue Wang et al. \T1/LinuxLibertineT-TLF/m/it/10.95 Dy-namic Graph CNN for Learn-ing on Point Clouds\T1/LinuxLibertineT-TLF/m/n/10.95 . 2019. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 1801 . 07829$ [cs.CV][][]\T1/LinuxLibertineT-TLF/m/n/10.95 .
  []
 
 
+Overfull \hbox (0.61111pt too wide) in paragraph at lines 148--148
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 Le Xue et al. \T1/LinuxLibertineT-TLF/m/it/10.95 ULIP-2: To-wards Scal-able Mul-ti-modal Pre-training for 3D Un-der-stand-ing\T1/LinuxLibertineT-TLF/m/n/10.95 . 2024. arXiv: [][]$\T1/LinuxLibertineMonoT-TLF/regular/n/10.95 2305 .
+ []
 
-[27] (./main.aux)
+
+
+[32]
+
+[33] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1601,24 +1679,24 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2E60BF0F86CCAE85DB0A178A5417C2F9;7581.
+(rerunfilecheck)             Checksum: A4D8D1A4CC43CF5AEF5878A974EE9074;7645.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40656 strings out of 473190
- 813202 string characters out of 5722593
- 1597316 words of memory out of 5000000
- 63072 multiletter control sequences out of 15000+600000
+ 40790 strings out of 473190
+ 817375 string characters out of 5722593
+ 1599371 words of memory out of 5000000
+ 63175 multiletter control sequences out of 15000+600000
  648822 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,18n,131p,1908b,1568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb></usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb>
-Output written on main.pdf (28 pages, 24402700 bytes).
+Output written on main.pdf (34 pages, 45810278 bytes).
 PDF statistics:
- 1540 PDF objects out of 1728 (max. 8388607)
- 1082 compressed objects within 11 object streams
- 156 named destinations out of 1000 (max. 500000)
- 618 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3125 PDF objects out of 3580 (max. 8388607)
+ 2160 compressed objects within 22 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 643 words of extra memory for PDF output out of 10000 (max. 10000000)
 

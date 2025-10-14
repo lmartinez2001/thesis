@@ -68,7 +68,8 @@
 \setcounter{tocdepth}{3}
 
 % --- Metadata (fill these) ---
-\newcommand{\ThesisTitle}{Data-Driven Estimation of Topological Features in 3D shapes}
+\newcommand{\ThesisTitle}{Topological Understanding of 3D Transformer-Based Shape Encoders}
+% \newcommand{\ThesisTitle}{Data-Driven Estimation of Topological Features in 3D shapes}
 \newcommand{\AuthorName}{Louis Martinez}
 \newcommand{\AuthorAffiliation}{Télécom Paris}
 \newcommand{\SupervisorName}{Maks Ovsjanikov}
@@ -82,6 +83,11 @@
   \end{center}
   \itshape
 }{\par\clearpage}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@starttoc}{\begingroup}{\begingroup\let\clearpage\relax}{}{}
+\makeatother
 
 \begin{document}
 
@@ -133,6 +139,7 @@
 \input{sec/topogen}
 \input{sec/used_models}
 \input{sec/ph}
+\input{sec/conclusion}
 
 \appendix
 \input{sec/suppl_topogen.tex}

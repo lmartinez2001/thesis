@@ -98,6 +98,39 @@
     \field{year}{2016}
   \endentry
 
+  \entry{intermediate_layers}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=AG}{%
+         family={Alain},
+         familyi={A\bibinitperiod},
+         given={Guillaume},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bengio},
+         familyi={B\bibinitperiod},
+         given={Yoshua},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AGBY1}
+    \strng{fullhash}{AGBY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{eprint}
+    \verb 1610.01644
+    \endverb
+    \field{title}{Understanding intermediate layers using linear classifier probes}
+    \verb{url}
+    \verb https://arxiv.org/abs/1610.01644
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{stat.ML}
+    \field{year}{2018}
+  \endentry
+
   \entry{mantra}{misc}{}{}
     \name{author}{7}{}{%
       {{hash=BR}{%
@@ -508,39 +541,6 @@
     \field{eprinttype}{arXiv}
     \field{eprintclass}{cs.GR}
     \field{year}{2015}
-  \endentry
-
-  \entry{pmaezero}{misc}{}{}
-    \name{author}{2}{}{%
-      {{hash=CX}{%
-         family={Chen},
-         familyi={C\bibinitperiod},
-         given={Xuweiyi},
-         giveni={X\bibinitperiod},
-      }}%
-      {{hash=CZ}{%
-         family={Cheng},
-         familyi={C\bibinitperiod},
-         given={Zezhou},
-         giveni={Z\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{CXCZ1}
-    \strng{fullhash}{CXCZ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \verb{eprint}
-    \verb 2411.17467
-    \endverb
-    \field{title}{Learning 3D Representations from Procedural 3D Programs}
-    \verb{url}
-    \verb https://arxiv.org/abs/2411.17467
-    \endverb
-    \field{eprinttype}{arXiv}
-    \field{eprintclass}{cs.CV}
-    \field{year}{2025}
   \endentry
 
   \entry{extended_persistence}{article}{}{}
@@ -1073,6 +1073,69 @@
     \field{year}{2025}
   \endentry
 
+  \entry{structural_probe}{inproceedings}{}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Hewitt},
+         familyi={H\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MCD}{%
+         family={Manning},
+         familyi={M\bibinitperiod},
+         given={Christopher\bibnamedelima D.},
+         giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \name{editor}{3}{}{%
+      {{hash=BJ}{%
+         family={Burstein},
+         familyi={B\bibinitperiod},
+         given={Jill},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DC}{%
+         family={Doran},
+         familyi={D\bibinitperiod},
+         given={Christy},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Solorio},
+         familyi={S\bibinitperiod},
+         given={Thamar},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computational Linguistics}%
+    }
+    \strng{namehash}{HJMCD1}
+    \strng{fullhash}{HJMCD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    Recent work has improved our ability to detect linguistic knowledge in word representations. However, current methods for detecting syntactic knowledge do not test whether syntax trees are represented in their entirety. In this work, we propose a structural probe, which evaluates whether syntax trees are embedded in a linear transformation of a neural network{'}s word representation space. The probe identifies a linear transformation under which squared L2 distance encodes the distance between words in the parse tree, and one in which squared L2 norm encodes depth in the parse tree. Using our probe, we show that such transformations exist for both ELMo and BERT but not in baselines, providing evidence that entire syntax trees are embedded implicitly in deep models' vector geometry.%
+    }
+    \field{booktitle}{Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)}
+    \verb{doi}
+    \verb 10.18653/v1/N19-1419
+    \endverb
+    \field{pages}{4129\bibrangedash 4138}
+    \field{title}{{A} Structural Probe for Finding Syntax in Word Representations}
+    \verb{url}
+    \verb https://aclanthology.org/N19-1419/
+    \endverb
+    \list{location}{1}{%
+      {Minneapolis, Minnesota}%
+    }
+    \field{month}{06}
+    \field{year}{2019}
+  \endentry
+
   \entry{topological_signature}{misc}{}{}
     \name{author}{4}{}{%
       {{hash=HC}{%
@@ -1475,6 +1538,51 @@
     \field{year}{2019}
   \endentry
 
+  \entry{cka}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=KS}{%
+         family={Kornblith},
+         familyi={K\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Norouzi},
+         familyi={N\bibinitperiod},
+         given={Mohammad},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Honglak},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HG}{%
+         family={Hinton},
+         familyi={H\bibinitperiod},
+         given={Geoffrey},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KS+2}
+    \strng{fullhash}{KSNMLHHG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{eprint}
+    \verb 1905.00414
+    \endverb
+    \field{title}{Similarity of Neural Network Representations Revisited}
+    \verb{url}
+    \verb https://arxiv.org/abs/1905.00414
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2019}
+  \endentry
+
   \entry{set-transformer}{misc}{}{}
     \name{author}{6}{}{%
       {{hash=LJ}{%
@@ -1532,6 +1640,63 @@
     \field{year}{2019}
   \endentry
 
+  \entry{pointcnn}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yangyan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bu},
+         familyi={B\bibinitperiod},
+         given={Rui},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Mingchao},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WW}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=DX}{%
+         family={Di},
+         familyi={D\bibinitperiod},
+         given={Xinhan},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Baoquan},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LY+1}
+    \strng{fullhash}{LYBRSMWWDXCB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{eprint}
+    \verb 1801.07791
+    \endverb
+    \field{title}{PointCNN: Convolution On $\mathcal{X}$-Transformed Points}
+    \verb{url}
+    \verb https://arxiv.org/abs/1801.07791
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2018}
+  \endentry
+
   \entry{prae}{inproceedings}{}{}
     \name{author}{5}{}{%
       {{hash=LY}{%
@@ -1568,7 +1733,7 @@
     \list{publisher}{1}{%
       {ACM}%
     }
-    \strng{namehash}{LY+1}
+    \strng{namehash}{LY+2}
     \strng{fullhash}{LYCCWCKXLM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
@@ -1586,6 +1751,51 @@
     \endverb
     \field{month}{10}
     \field{year}{2023}
+  \endentry
+
+  \entry{pvcnn}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=LZ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Zhijian},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=TH}{%
+         family={Tang},
+         familyi={T\bibinitperiod},
+         given={Haotian},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Yujun},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Han},
+         familyi={H\bibinitperiod},
+         given={Song},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LZ+1}
+    \strng{fullhash}{LZTHLYHS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{eprint}
+    \verb 1907.03739
+    \endverb
+    \field{title}{Point-Voxel CNN for Efficient 3D Deep Learning}
+    \verb{url}
+    \verb https://arxiv.org/abs/1907.03739
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2019}
   \endentry
 
   \entry{topological_autoencoders}{misc}{}{}
@@ -1819,6 +2029,252 @@
     \field{year}{2017}
   \endentry
 
+  \entry{recon}{misc}{}{}
+    \name{author}{7}{}{%
+      {{hash=QZ}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Zekun},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=DR}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Runpei},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=FG}{%
+         family={Fan},
+         familyi={F\bibinitperiod},
+         given={Guofan},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GZ}{%
+         family={Ge},
+         familyi={G\bibinitperiod},
+         given={Zheng},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xiangyu},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Kaisheng},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yi},
+         familyi={Y\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QZ+1}
+    \strng{fullhash}{QZDRFGGZZXMKYL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \verb{eprint}
+    \verb 2302.02318
+    \endverb
+    \field{title}{Contrast with Reconstruct: Contrastive 3D Representation Learning Guided by Generative Pretraining}
+    \verb{url}
+    \verb https://arxiv.org/abs/2302.02318
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2023}
+  \endentry
+
+  \entry{shapellm}{misc}{}{}
+    \name{author}{8}{}{%
+      {{hash=QZ}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Zekun},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=DR}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Runpei},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Shaochen},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GH}{%
+         family={Geng},
+         familyi={G\bibinitperiod},
+         given={Haoran},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Han},
+         familyi={H\bibinitperiod},
+         given={Chunrui},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GZ}{%
+         family={Ge},
+         familyi={G\bibinitperiod},
+         given={Zheng},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yi},
+         familyi={Y\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Kaisheng},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QZ+1}
+    \strng{fullhash}{QZDRZSGHHCGZYLMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \verb{eprint}
+    \verb 2402.17766
+    \endverb
+    \field{title}{ShapeLLM: Universal 3D Object Understanding for Embodied Interaction}
+    \verb{url}
+    \verb https://arxiv.org/abs/2402.17766
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2024}
+  \endentry
+
+  \entry{pointnext}{misc}{}{}
+    \name{author}{7}{}{%
+      {{hash=QG}{%
+         family={Qian},
+         familyi={Q\bibinitperiod},
+         given={Guocheng},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yuchen},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=PH}{%
+         family={Peng},
+         familyi={P\bibinitperiod},
+         given={Houwen},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Mai},
+         familyi={M\bibinitperiod},
+         given={Jinjie},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=HHAAK}{%
+         family={Hammoud},
+         familyi={H\bibinitperiod},
+         given={Hasan Abed Al\bibnamedelima Kader},
+         giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=EM}{%
+         family={Elhoseiny},
+         familyi={E\bibinitperiod},
+         given={Mohamed},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Ghanem},
+         familyi={G\bibinitperiod},
+         given={Bernard},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QG+1}
+    \strng{fullhash}{QGLYPHMJHHAAKEMGB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \verb{eprint}
+    \verb 2206.04670
+    \endverb
+    \field{title}{PointNeXt: Revisiting PointNet++ with Improved Training and Scaling Strategies}
+    \verb{url}
+    \verb https://arxiv.org/abs/2206.04670
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2022}
+  \endentry
+
+  \entry{vit_probing}{misc}{}{}
+    \name{author}{5}{}{%
+      {{hash=RM}{%
+         family={Raghu},
+         familyi={R\bibinitperiod},
+         given={Maithra},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=UT}{%
+         family={Unterthiner},
+         familyi={U\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kornblith},
+         familyi={K\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=ZC}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Chiyuan},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dosovitskiy},
+         familyi={D\bibinitperiod},
+         given={Alexey},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RM+1}
+    \strng{fullhash}{RMUTKSZCDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{eprint}
+    \verb 2108.08810
+    \endverb
+    \field{title}{Do Vision Transformers See Like Convolutional Neural Networks?}
+    \verb{url}
+    \verb https://arxiv.org/abs/2108.08810
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2022}
+  \endentry
+
   \entry{persformer}{misc}{}{}
     \name{author}{3}{}{%
       {{hash=RR}{%
@@ -1891,7 +2347,7 @@
          giveni={I\bibinitperiod},
       }}%
     }
-    \strng{namehash}{RM+1}
+    \strng{namehash}{RM+2}
     \strng{fullhash}{RMCFLCYUYI1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
@@ -1933,6 +2389,114 @@
     \field{title}{Combinatorics: The Art of Counting}
     \field{volume}{210}
     \field{year}{2020}
+  \endentry
+
+  \entry{smoothgrad}{misc}{}{}
+    \name{author}{5}{}{%
+      {{hash=SD}{%
+         family={Smilkov},
+         familyi={S\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=TN}{%
+         family={Thorat},
+         familyi={T\bibinitperiod},
+         given={Nikhil},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=KB}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Been},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=VF}{%
+         family={Viégas},
+         familyi={V\bibinitperiod},
+         given={Fernanda},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wattenberg},
+         familyi={W\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SD+1}
+    \strng{fullhash}{SDTNKBVFWM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{eprint}
+    \verb 1706.03825
+    \endverb
+    \field{title}{SmoothGrad: removing noise by adding noise}
+    \verb{url}
+    \verb https://arxiv.org/abs/1706.03825
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2017}
+  \endentry
+
+  \entry{kpconv}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=TH}{%
+         family={Thomas},
+         familyi={T\bibinitperiod},
+         given={Hugues},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=QCR}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Charles\bibnamedelima R.},
+         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=DJE}{%
+         family={Deschaud},
+         familyi={D\bibinitperiod},
+         given={Jean-Emmanuel},
+         giveni={J\bibinithyphendelim E\bibinitperiod},
+      }}%
+      {{hash=MB}{%
+         family={Marcotegui},
+         familyi={M\bibinitperiod},
+         given={Beatriz},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GF}{%
+         family={Goulette},
+         familyi={G\bibinitperiod},
+         given={François},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GLJ}{%
+         family={Guibas},
+         familyi={G\bibinitperiod},
+         given={Leonidas\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TH+1}
+    \strng{fullhash}{THQCRDJEMBGFGLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{eprint}
+    \verb 1904.08889
+    \endverb
+    \field{title}{KPConv: Flexible and Deformable Convolution for Point Clouds}
+    \verb{url}
+    \verb https://arxiv.org/abs/1904.08889
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2019}
   \endentry
 
   \entry{top_reg}{misc}{}{}
@@ -2145,6 +2709,264 @@
     \field{pages}{7078\bibrangedash 7087}
     \field{title}{Persistent Homology based Graph Convolution Network for Fine-grained 3D Shape Segmentation}
     \field{year}{2021}
+  \endentry
+
+  \entry{pointconv}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=WW}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Wenxuan},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=QZ}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Zhongang},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=FL}{%
+         family={Fuxin},
+         familyi={F\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WWQZFL1}
+    \strng{fullhash}{WWQZFL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{eprint}
+    \verb 1811.07246
+    \endverb
+    \field{title}{PointConv: Deep Convolutional Networks on 3D Point Clouds}
+    \verb{url}
+    \verb https://arxiv.org/abs/1811.07246
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2020}
+  \endentry
+
+  \entry{pointllm}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=XR}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Runsen},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=WX}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Xiaolong},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WT}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Tai},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Yilun},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Pang},
+         familyi={P\bibinitperiod},
+         given={Jiangmiao},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LD}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Dahua},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XR+1}
+    \strng{fullhash}{XRWXWTCYPJLD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \verb{eprint}
+    \verb 2308.16911
+    \endverb
+    \field{title}{PointLLM: Empowering Large Language Models to Understand Point Clouds}
+    \verb{url}
+    \verb https://arxiv.org/abs/2308.16911
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2024}
+  \endentry
+
+  \entry{ulip2}{misc}{}{}
+    \name{author}{11}{}{%
+      {{hash=XL}{%
+         family={Xue},
+         familyi={X\bibinitperiod},
+         given={Le},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=YN}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Ning},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Shu},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Panagopoulou},
+         familyi={P\bibinitperiod},
+         given={Artemis},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Junnan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MMR}{%
+         family={Martín-Martín},
+         familyi={M\bibinithyphendelim M\bibinitperiod},
+         given={Roberto},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Jiajun},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=XC}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Caiming},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=XR}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Ran},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NJC}{%
+         family={Niebles},
+         familyi={N\bibinitperiod},
+         given={Juan\bibnamedelima Carlos},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Savarese},
+         familyi={S\bibinitperiod},
+         given={Silvio},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XL+1}
+    \strng{fullhash}{XLYNZSPALJMMRWJXCXRNJCSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \verb{eprint}
+    \verb 2305.08275
+    \endverb
+    \field{title}{ULIP-2: Towards Scalable Multimodal Pre-training for 3D Understanding}
+    \verb{url}
+    \verb https://arxiv.org/abs/2305.08275
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2024}
+  \endentry
+
+  \entry{ulip}{misc}{}{}
+    \name{author}{9}{}{%
+      {{hash=XL}{%
+         family={Xue},
+         familyi={X\bibinitperiod},
+         given={Le},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gao},
+         familyi={G\bibinitperiod},
+         given={Mingfei},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=XC}{%
+         family={Xing},
+         familyi={X\bibinitperiod},
+         given={Chen},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MMR}{%
+         family={Martín-Martín},
+         familyi={M\bibinithyphendelim M\bibinitperiod},
+         given={Roberto},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Jiajun},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=XC}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Caiming},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=XR}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Ran},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NJC}{%
+         family={Niebles},
+         familyi={N\bibinitperiod},
+         given={Juan\bibnamedelima Carlos},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Savarese},
+         familyi={S\bibinitperiod},
+         given={Silvio},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XL+1}
+    \strng{fullhash}{XLGMXCMMRWJXCXRNJCSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \verb{eprint}
+    \verb 2212.05171
+    \endverb
+    \field{title}{ULIP: Learning a Unified Representation of Language, Images, and Point Clouds for 3D Understanding}
+    \verb{url}
+    \verb https://arxiv.org/abs/2212.05171
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2023}
   \endentry
 
   \entry{neural_approximation_graph_topological_features}{misc}{}{}
@@ -2556,6 +3378,63 @@
     \field{eprinttype}{arXiv}
     \field{eprintclass}{cs.CV}
     \field{year}{2024}
+  \endentry
+
+  \entry{uni3d}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=ZJ}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Junsheng},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jinsheng},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MB}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Baorui},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=LYS}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Yu-Shen},
+         giveni={Y\bibinithyphendelim S\bibinitperiod},
+      }}%
+      {{hash=HT}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Tiejun},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WX}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Xinlong},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZJ+1}
+    \strng{fullhash}{ZJWJMBLYSHTWX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{eprint}
+    \verb 2310.06773
+    \endverb
+    \field{title}{Uni3D: Exploring Unified 3D Representation at Scale}
+    \verb{url}
+    \verb https://arxiv.org/abs/2310.06773
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2023}
   \endentry
 
   \entry{thingi}{misc}{}{}

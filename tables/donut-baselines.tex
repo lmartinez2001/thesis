@@ -11,8 +11,8 @@ Model & MSE$\downarrow$ & Acc.$\uparrow$ & F1$\uparrow$ & MSE$\downarrow$ & Acc.
 PointNet~\cite{pointnet}   & 14.2/9.35 & 20.9/12.7 & 17.4/12.1 & 0.92/0.93 & 56.7/21.6 & 55.5/22.0 \\
 PointNet++~\cite{pointnet++} &  1.38/9.91 & 59.5/16.6 & 59.3/15.0 & 0.17/1.16 & 84.2/24.6 & 84.1/23.1 \\
 DGCNN~\cite{dgcnn}      & 1.05/11.7 & 51.5/18.1 & 51.3/15.2 & 0.11/1.04 & 89.1/27.7 & 89.1/25.4 \\
-Transformer (scratch) & -- & -- & -- & -- & -- & -- \\
-Transformer (pretrained) & -- & -- & -- & -- & -- & -- \\
+% Transformer (scratch) & -- & -- & -- & -- & -- & -- \\
+% Transformer (pretrained) & -- & -- & -- & -- & -- & -- \\
 \midrule
 \multicolumn{1}{l}{} & \multicolumn{6}{c}{\textit{Persistence-based models}} \\
 \midrule
@@ -21,6 +21,6 @@ xPerT~\cite{xpert}      & -- & -- & -- & -- & -- & -- \\
 PersLay~\cite{perslay}    & -- & -- & -- & -- & -- & -- \\
 \bottomrule
 \end{tabular}
-\caption{\textbf{Performance of baseline models trained on DONUT and evaluated both in-distribution and on ABC.} Values are reported as \textit{DONUT/ABC}. We report mean squared error (MSE), balanced accuracy (Acc.), and balanced F1-score (F1). MSE is reported to capture how far off predictions are from the ground-truth on average, which is particularly relevant given the natural hierarchy of the labels (genus and connected components): misclassifying by a larger margin is more severe than a closer miss. }
+\caption{\textbf{Performance of baseline models trained on DONUT and evaluated both in-distribution and on ABC.} Values are reported as \textit{DONUT/ABC}. We report mean squared error (MSE), balanced accuracy (Acc.), and balanced F1-score (F1). MSE is reported to capture how far off predictions are from the ground-truth on average, which is particularly relevant given the natural hierarchy of the labels (genus and connected components): misclassifying by a larger margin is more severe than a closer miss. Training setup is detailed in Table~\ref{suppl:topogen-baseline-training}}
 \label{tab:topogen-results}
 \end{table}

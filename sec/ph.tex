@@ -1,9 +1,34 @@
 \section{Experiments}
 \label{sec:experiments}
 
+This section presents a series of experiments designed to investigate the relationship between learned 3D representations and topology. Our goal is to understand whether and how transformer models capture topological features of shapes, when trained on standard 3D data. We progressively move from a direct evaluation of encoded topology to more indirect analyses. Throughout these experiments, we use DONUT as the main benchmark.
+
+We first conduct a probing analysis to estimate how much topological information can be linearly decoded from the representations of different layers (Section~\ref{ssec:model_probing}). This experiment provides an initial view of the presence and organization of topological cues inside the network. We then study the alignment between the learned embedding space and topological structures derived from persistent homology (Section~\ref{ssec:ph}). This second analysis gives a more geometric perspective on how representations relate to the shape topology. Finally (Section~\ref{ssec:changing_pretraining_data_distribution}), we investigate how changing the pretraining data distribution affects these findings, showing that current pretraining corpora do not explicitly encourage the capture of topological structures.
+
 \subsection{Model Probing}
 \label{ssec:model_probing}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{figs/probing.pdf}
+  \caption{\textbf{Linear probing accuracy across transformer layers for Point-BERT (left column) and Point-MAE (right column).} We report probing accuracy for connected components (top row) and genus (bottom row). For each setting, accuracy values are averaged over the validation sets from a 5-fold cross-validation procedure, with error bars representing the corresponding standard deviations. For Point-BERT, probing is applied to the CLS token, which aggregates global information throughout the network. For Point-MAE, which does not include a CLS token during pretraining, we instead use the max-pooled patch embeddings from each layer.}
+  \label{fig:probing-results}
+\end{figure}
+
+We start by probing transformer models to assess whether their internal representations encode information about shape topology. Specifically, we test if simple linear classifiers can recover the genus and number of connected components of shapes from the DONUT dataset using the representations of each intermediate layer. This approach provides a first estimate of how topological signals are distributed across the model depth.
+
+\paragraph{Motivation.}
+Linear probing is a standard approach in representation learning to evaluate how much a given factor of variation is linearly accessible from the learned embeddings. It assumes that if a linear classifier performs well, the corresponding information is already represented in a linearly separable manner. Importantly, several works have shown that the most informative representations for downstream tasks are not always located in the final layers of a model. Intermediate layers can encode more general or transferable structures before they are transformed into task-specific representations. This has been established in both vision and language transformers~\cite{intermediate_layers, structural_probe, vit_probing}. We therefore analyze not only the final layer, but the entire depth of each model, to capture where topology-related features emerge.
+
+\paragraph{Experimental setup.}
+For each evaluated model, we freeze the pretrained backbone and extract offline activations from all transformer layers on the DONUT dataset. At every layer $l$, we train two separate linear classifiers on top of the frozen representations to predict (i) the genus and (ii) the number of connected components. We perform 5-fold cross-validation and report averaged accuracy on the validation set.
+
+\paragraph{Results.}
+Overall, Figure~\ref{fig:probing-results} probing accuracy tends to increase with network depth for both models, indicating that higher transformer layers capture richer structural information. The improvement is modest for genus prediction, with an average increase of about 3\% between the first and last layers. In contrast, connected component prediction improves by roughly 8\%, suggesting that the notion of component separation becomes more explicit as features become increasingly global. This aligns with the expectation that transformers progressively aggregate local patch information into holistic shape-level representations.
+
+Interestingly, in Point-MAE, accuracy for genus prediction plateaus after layer 5. This saturation may reflect the limited capacity of shallow hierarchies to encode topological invariants that depend on multi-scale relationships between local patches. Testing deeper or hierarchical variants of Point-MAE could help determine whether such information emerges later in the network.
+
+Despite these relative improvements, absolute scores remain low: around 20\% for genus and 50\% for connected components, highlighting that both models only weakly encode topology. This supports the view that current pretraining objectives, which focus on geometric reconstruction or semantic alignment, do not drive models to capture global connectivity. While deeper layers improve aggregation and invariance, they remain sensitive to geometric details rather than structural invariants. These results reinforce that topology-aware objectives or explicit topological supervision may be required to make 3D encoders truly aware of shape structure beyond geometry.
 
 \subsection{Subspace Alignment with Persistent Homology}
 \label{ssec:ph}
@@ -55,12 +80,6 @@ d_B\big(\mathrm{Dgm}(M), \mathrm{Dgm}(N)\big) \;=\; d_I(M,N),
 \end{equation}
 where $d_I$ is the interleaving distance.
 
-% \begin{figure}[t]
-%   \centering
-%   \includegraphics[width=\linewidth]{figs/ph/expers_v2.pdf}
-%   \caption{\textbf{Sub- (resp. super-) level set filtrations on a graph.} (Figure adapted from \cite{perslay}) Each node of the graph is assigned its height. Persistence intervals are shown under the sequence. Figure ... highlights key differences between ordinary and extended persistence.}
-%   \label{fig:filtrations}
-% \end{figure}
 
 \begin{figure}[t]
   \centering
@@ -94,7 +113,7 @@ where $d_I$ is the interleaving distance.
 
 
 \paragraph{Extended persistence.}
-Essential classes can lead to pairs with infinite lifetime. Extended persistence remedies this by combining sublevel and superlevel filtrations and using relative homology. For a function $f:X\to\mathbb{R}$ on a compact space, consider the sublevel filtration $(X_a)$ and the superlevel filtration $(X^a = f^{-1}([a,\infty)))$. One constructs a zigzag that passes from absolute to relative homology so that every class is paired at a finite parameter value. The resulting \emph{extended persistence diagram} has only finite pairs and encodes essential features as finite points.
+Essential classes can lead to pairs with infinite lifetime. Extended persistence remedies this by combining sublevel and superlevel filtrations and using relative homology. For a function $f:X\to\mathbb{R}$ on a compact space, consider the sublevel filtration $(X_a)$ and the superlevel filtration $(X^a = f^{-1}([a,\infty)))$. One constructs a zigzag that passes from absolute to relative homology so that every class is paired at a finite parameter value. The resulting \emph{extended persistence diagram} has only finite pairs and encodes essential features as finite points. Figure~\ref{fig:filtrations} illustrates the filtration process as well as the difference between ordinary and extended persistence on a simple graph.
 
 
 \subsubsection{Vectorization of Persistence Diagrams}
@@ -124,7 +143,7 @@ Essential classes can lead to pairs with infinite lifetime. Extended persistence
 
 Vectorizing persistence diagrams is crucial for incorporating topological signals in standard learning pipelines. A persistence diagram is a multiset of points in the plane. It does not live in a vector space and is usually compared with bottleneck or Wasserstein distances rather than inner products. Most learning algorithms expect fixed size vectors or a Hilbert space structure, so raw diagrams are not a natural input. Diagrams also have variable size and are permutation invariant, which complicates batching and optimization. These issues motivate stable feature maps and kernels that embed diagrams into Euclidean 
 
-\textbf{Prescribed Vectorization.} Handcrafted summaries have long been the dominant strategy for vectorizing persistence diagrams in machine learning. The most common approaches include persistence landscapes \cite{persistence_landscapes}, Betti curves \cite{betti_curves}, and persistence images \cite{persistence_images} (Figure~\ref{fig:ph-vectorizations}). Landscapes embed diagrams in a Hilbert space and enable classical statistics, but they still require design choices such as the number of landscape levels and sampling resolution. Betti curves collapse a diagram to simple counting functions over the filtration. Persistence images rasterize diagrams with a kernel on a fixed grid. These methods are stable in theory but depend on key hyperparameters such as grid resolution and kernel width. These choices must be tuned per task and can limit expressiveness and generalization. Finally, ATOL \cite{atol} proposes an unsupervised alternative. It vectorizes measures, including sets of persistence points, by first clustering with K-means and then summarizing cluster statistics in a fixed length descriptor. The pipeline is simple and fast but remains sensitive to the chosen number of clusters and to the distribution shift between training and test diagrams.
+\textbf{Prescribed Vectorization.} Handcrafted summaries (Figure~\ref{fig:ph-vectorizations}) have long been the dominant strategy for vectorizing persistence diagrams in machine learning. The most common approaches include persistence landscapes \cite{persistence_landscapes}, Betti curves \cite{betti_curves}, and persistence images \cite{persistence_images} (Figure~\ref{fig:ph-vectorizations}). Landscapes embed diagrams in a Hilbert space and enable classical statistics, but they still require design choices such as the number of landscape levels and sampling resolution. Betti curves collapse a diagram to simple counting functions over the filtration. Persistence images rasterize diagrams with a kernel on a fixed grid. These methods are stable in theory but depend on key hyperparameters such as grid resolution and kernel width. These choices must be tuned per task and can limit expressiveness and generalization. Finally, ATOL \cite{atol} proposes an unsupervised alternative. It vectorizes measures, including sets of persistence points, by first clustering with K-means and then summarizing cluster statistics in a fixed length descriptor. The pipeline is simple and fast but remains sensitive to the chosen number of clusters and to the distribution shift between training and test diagrams.
 
 \textbf{Learned Vectorization.} Recent work has moved from handcrafted features to learning based approaches \cite{adaptive_topological_feature},\cite{topological_signature} that act on persistence diagrams more directly, often through extended persistence \cite{extended_persistence} (see Section ...). PersLay \cite{perslay} introduces a neural layer that learns stable weights and pooling functions over points in a diagram. It was developed for graph tasks and relies on extended persistence to encode informative signatures before the learned aggregation. PLLay \cite{pllay} follows a hybrid route. It first computes persistence landscapes and then applies a differentiable neural layer that learns how to weight and combine landscape coordinates. This reduces manual feature design while keeping the stability benefits of landscapes. Transformer based designs have also appeared. Persformer \cite{persformer} treats each persistence point as a token and applies standard self attention. This is flexible but scales poorly as the number of points grows. To address scalability, the Multiset Transformer \cite{multiset_transformer} clusters points and modifies attention to account for multiplicities, so that a cluster can be handled as a single item with weight greater than one. This change reduces memory and time while preserving permutation invariance at the multiset level. xPerT \cite{xpert} goes further by leveraging sparsity with a \textit{pixelized diagram} representation. It is close in spirit to persistence images but does not require a smoothing kernel. The pixeliaation allows efficient tokenization and improves scalability compared with Persformer. xPerT also works with extended persistence; details are deferred to the dedicated section.
 
@@ -135,10 +154,43 @@ Finally, recent topology aware 3D generation pipelines \cite{topology_aware_late
 \subsubsection{Subspace Alignment Protocol}
 \label{sssec:subspace_alignment_protocol}
 
+\paragraph{Background}
+To assess whether a learned 3D encoder’s internal representations align with topological signatures derived from persistent homology, we adopt Centered Kernel Alignment (CKA) as our similarity metric. CKA has become a standard tool in recent work for comparing internal neural representations, because it overcomes certain limitations of canonical correlation analysis (CCA) in high-dimensional settings and provides a normalized similarity score between two representational spaces \cite{cka}.
+
+Let $X\in \mathbb{R}^{n \times d_X}$ and $Y\in \mathbb{R}^{n \times d_Y}$ be two sets of centered features across $n$ examples (rows). We form Gram (kernel) matrices $K = X X^\top$ and $L = Y Y^\top$. Let $H = I_n - \frac1n \mathbf{1}\mathbf{1}^\top$ be the centering matrix. The (biased) Hilbert–Schmidt independence measure is: 
+
+\begin{equation}
+\mathrm{HSIC}(K,L) = \frac{1}{(n-1)^2} \mathrm{trace}(KHLH).
+\end{equation}
+
+The CKA similarity is then defined as:
+
+\begin{equation}
+\mathrm{CKA}(X,Y) = \frac{\mathrm{HSIC}(K,L)}{\sqrt{\mathrm{HSIC}(K,K) \mathrm{HSIC}(L,L)}}.
+\end{equation}
+
+This normalization ensures that $\mathrm{CKA}(X,Y)\in [0,1]$ and is invariant to isotropic scaling of features. An unbiased estimator of HSIC can also be used to mitigate bias induced by finite samples or mini-batching.
+
+We choose CKA for several reasons. First, its normalization makes the similarity more interpretable across different layer sizes or vectorization dimensions. Second, in empirical studies, CKA has proven effective at identifying correspondences between layers of differently initialized or architected networks (while pure CCA-type metrics sometimes fail). Third, because it works by comparing inner-product (kernel) structures, it is well suited to capture alignment between representational geometries rather than mere coordinate-wise correlation. Finally, in our context, since the topological encoding (via vectorized persistence diagrams) and the learned features live in distinct vector spaces, using a kernel-based alignment provides a flexible and robust way to detect shared structure, even if the bases or dimensions differ.
+
+Thus in our protocol, we treat a vectorization of the persistence diagram (or its learned topological embedding) as one representational matrix $Y$, and the activations extracted from a given layer or subspace of the 3D encoder as $X$. Then we compute $\mathrm{CKA}(X,Y)$ to quantify how well that encoder subspace aligns with the topological modality.
+
+\paragraph{Results}
+To be completed.
+
 \subsection{Changing the Pretraining Data Distribution}
 \label{ssec:changing_pretraining_data_distribution}
 
-Previous experiments showed that current 3D encoders have a limited understanding of topological structures. This section investigates a simple hypothesis. In data-driven approaches, models learn to extract information that is relevant to the pretraining objective. All the considered encoders are pretrained on reconstruction tasks using the Chamfer loss. These tasks rely only on geometric proximity between predicted and target point clouds, without explicitly rewarding structural consistency. Moreover, the pretraining data itself lacks topological diversity. Datasets such as ShapeNet mostly contain single, compact objects with few or no holes. As a result, encoders can achieve low reconstruction errors without learning to capture non-trivial topological properties.
+\begin{figure}[h]
+  \centering
+  
+  \includegraphics[width=\linewidth]{figs/reconstruction.pdf}
+  \caption{\textbf{Point-cloud reconstruction for different encoders.} Each pretrained model is fed with a point cloud with 2048 points. We reconstruct it with the decoder used during pretraining with a masking ratio of zero. To ensure topological structures of the input are captured, we patchify the input point cloud into overlapping local regions before encoding, and decode to a reconstructed point cloud of 4096 points. Reconstructed point-clouds don't exhibit the 3 characteristic holes of the input shape.}
+  \label{fig:reconstructions}
+\end{figure}
+
+
+Previous experiments showed that current 3D encoders have a limited understanding of topological structures. This section investigates a simple hypothesis. In data-driven approaches, models learn to extract information that is relevant to the pretraining objective. All the considered encoders are pretrained on reconstruction tasks using the Chamfer loss. These tasks rely only on geometric proximity between predicted and target point clouds, without explicitly rewarding structural consistency. Moreover, the pretraining data itself lacks topological diversity. Datasets such as ShapeNet mostly contain single, compact objects with few or no holes. As a result, encoders can achieve low reconstruction errors without learning to capture non-trivial topological properties. This experiment is further motivated by Figure~\ref{fig:reconstructions}, which shows that pretrained encoders struggle to reconstruct even simple topological structures.
 
 \input{tables/scanobject-cls.tex}
 We hypothesize that changing the pretraining data distribution can improve the model's structural understanding. By exposing encoders to shapes with richer and more diverse topology, they may learn internal representations that better capture global structure. To test this idea, we pretrain all the previously evaluated encoders on the ABC dataset. This dataset contains CAD models with a wide range of geometric and topological configurations. For a fair comparison with models pretrained on ShapeNet, which contains 51K samples, we randomly select 55K shapes from ABC. We strictly follow the same pretraining procedure, including the reconstruction objective and optimization settings.
@@ -155,4 +207,4 @@ As shown in Table~\ref{tb:scanobject}, models pretrained on ABC perform similarl
 \paragraph{Few-Shot Classification.}
 We further evaluate the learned representations under few-shot settings. Following the standard protocol, we perform few-shot classification on ModelNet40, which contains 12,311 clean CAD models from 40 categories, and on DONUT, which includes point clouds with richer topology, such as multiple connected components and non-trivial holes. Few-shot experiments are conducted with 5 or 10 ways (number of selected categories), 10 or 20 shots (number of samples per class), and tested on 20 samples per class.
 
-Results in Table~\ref{tb:few} show that performance on ModelNet40 remains close across both pretraining datasets, while models pretrained on ABC consistently achieve better results on DONUT. This improvement indicates that exposure to topologically diverse shapes enhances the encoder’s ability to extract structural cues that generalize to unseen configurations. The overall low accuracy on DONUT, however, confirms that this task remains non-trivial and highlights the current models’ limited structural understanding.
+Results in Table~\ref{tb:few} show that performance on ModelNet40 remains close across both pretraining datasets, while models pretrained on ABC consistently achieve better results on DONUT (except for the 10-way 20-shot setting on Point-MAE). The overall low accuracy on DONUT, however, confirms that this task remains non-trivial and highlights the current models’ limited structural understanding.

@@ -1,11 +1,17 @@
 \section{Used Models}
 \label{sec:used_models}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\linewidth]{figs/timeline.pdf}
+  \caption{\textbf{Timeline of models used as 3D point-cloud encoders}}
+  \label{fig:timeline}
+\end{figure}
 
-This section provides an extensive description of the models used in our experiments. We focused on three main types of models: point cloud-based models, transformer-based models, and persistence-based models. Since the latter require background on persistence homology, they're further detailed in Section~\ref{ssec:ph}. On the one hand, point cloud-based models are used as baselines for specific tasks (see Table~\ref{tab:topogen-results}). This choice stems from the widely known limitations in terms of robustness to input corruption and generalization~\cite{set-transformer} of such models. On the other hand, transformers have demonstrated state-of-the-art performance on various 3D shape understanding tasks~\cite{pbert,pmae,pm2ae,pcpmae}, and we are therefore insterested here in their ability to learn rich representations from data.
+This section provides an extensive description of the models used in our experiments. We focused on three main types of models: point cloud-based models, transformer-based models, and persistence-based models. Since the latter require background on persistence homology, they're further detailed in Section~\ref{ssec:ph}. On the one hand, point cloud-based models are used as baselines for specific tasks (see Table~\ref{tab:topogen-results}). This choice stems from the widely known limitations in terms of robustness to input corruption and generalization~\cite{set-transformer} of such models. On the other hand, transformers have demonstrated state-of-the-art performance on various 3D shape understanding tasks~\cite{pbert,pmae,pm2ae,pcpmae}, and we are therefore insterested here in their ability to learn rich representations from data. 
 
 \subsection{Baselines Models}
-\label{ssec:baselines_models}
+\label{ssec:baselines_models} 
 
 We compare results obtained with transformer-based models to several baselines widely used in the literature. These models directly act on individual points without any tokenization step. They are all invariant to point permutations and can handle varying point cloud sizes. A final feature vector is obtained through a global pooling operation, which is then used for downstream tasks.
 
@@ -19,12 +25,12 @@ PointNet++~\cite{pointnet++} extends PointNet by introducing a hierarchical feat
 
 \subsubsection{DGCNN (Dynamic Graph CNN)}
 
-DGCNN~\cite{dgcnn} further advances local structure modeling by representing the point cloud as a dynamic graph, where edges connect each point to its k-nearest neighbors in the feature space. Unlike PointNet++’s static grouping, DGCNN updates the neighborhood graph at each layer, allowing feature dependencies to evolve adaptively as the representation becomes more abstract. The model applies an edge convolution operator that learns features based on both point attributes and relative positional differences, effectively capturing local geometric relations and contextual information. This dynamic graph formulation enables DGCNN to achieve strong performance on tasks requiring fine spatial reasoning, such as segmentation and shape classification.
+DGCNN~\cite{dgcnn} further advances local structure modeling by representing the point cloud as a dynamic graph, where edges connect each point to its k-nearest neighbors in the feature space. Unlike PointNet++’s static grouping, DGCNN updates the neighborhood graph at each layer, allowing feature dependencies to evolve adaptively as the representation becomes more abstract. The model applies an edge convolution operator that learns features based on both point attributes and relative positional differences, effectively capturing local geometric relations and contextual information. This dynamic graph formulation enables DGCNN to achieve strong performance on tasks requiring fine spatial reasoning, such as segmentation and shape classification. Even though earlier but also some recent models~\cite{pointcnn, pointconv, kpconv, pvcnn} have shown competitive performance, it is admitted that performance on DGCNN account for all the other possible baselines.
 
-\subsection{Transformer-based models}
+\subsection{Transformer-based Models}
 \label{ssec:transformer_based_models}
 
-\begin{figure}[t]
+\begin{figure}[h]
   \centering
   \includegraphics[width=1.0\linewidth]{figs/transformer_overview.pdf}
    \caption{\textbf{Transformer Overview for 3D point-clouds.} A point cloud is first partitioned into local patches using farthest point sampling (FPS) and K nearest neighbors (KNN). Patches are then embedded and augmented with positional encodings. The resulting sequence of patch embeddings is processed by a Transformer encoder to produce a global shape representation.}
@@ -72,3 +78,16 @@ Most recent approaches have mainly built on top of Point-MAE, primarily for the 
 Despite their differences, Point-BERT, Point-MAE, and their hierarchical successors share a common foundation: the adaptation of the transformer paradigm from language and vision to point clouds through \textit{patchification}, embedding, and positional encoding. What distinguishes them is how tokens are defined, how the self-supervised objective is formulated, and whether hierarchical geometry is explicitly modeled. Discrete-token approaches like Point-BERT require a two-stage pretraining pipeline but tightly align with NLP pretraining paradigms. Continuous-token methods like Point-MAE are simpler and more efficient, emphasizing reconstruction over classification. Hierarchical extensions such as Point-M2AE incorporate multiscale representations, bringing additional inductive structure into the transformer.
 
 An important consequence of these differences is that evaluation protocols vary across models. Point-BERT pretraining relies on predicting discrete token IDs, while Point-MAE and M2AE use reconstruction losses such as Chamfer distance. The role of the CLS token also differs, being central during pretraining in Point-BERT but absent in MAE-style approaches. As a result, downstream fine-tuning and linear probing must be carefully adapted to each architecture. The precise evaluation settings for each method will be detailed in the following experimental section.
+
+\subsection{Multimodal approaches}
+\label{ssec:multimodal}
+
+A number of recent works couple 3D encoders with images and text. ULIP~\cite{ulip} aligns point clouds, images, and text in a shared space. In practice it uses Point-BERT as the 3D encoder, and reports results directly with that backbone. ULIP-2~\cite{ulip2} scales the same idea with generated captions and larger backbones. Its main 3D backbones are Point-BERT and PointNeXt~\cite{pointnext}, with Point-BERT remaining a primary option throughout the study.
+
+PointLLM~\cite{pointllm} connects a frozen point cloud encoder to a language model through a small projector and performs alignment then instruction tuning. The paper states that Point-BERT pretrained with ULIP-2 serves as the point encoder. ShapeLLM~\cite{shapellm} targets embodied interaction with a dedicated encoder named ReCon++. The authors build ReCon++ by multi view distillation and use it as the base 3D representation before instruction tuning, rather than Point-BERT or Point-MAE.
+
+ReCon~\cite{recon} itself is a pretraining framework that mixes generative reconstruction with contrastive learning. It supports single modality and cross modality inputs and can use cross modal teachers. It is not tied to Point-BERT or Point-MAE although comparisons to both are reported. Uni3D~\cite{uni3d} scales a ViT style backbone to 3D and aligns 3D point features to image text features with 2D initialized weights. It does not rely on Point-BERT or Point-MAE.
+
+Taken together, many multimodal systems still depend on the quality of the 3D encoder and often choose Point-BERT. ULIP and PointLLM are explicit examples. ShapeLLM and Uni3D move away from Point-BERT and Point-MAE but remain bounded by 3D encoder design choices. This observation is central to the scope of our study.
+
+\paragraph{Why we focus on unimodal encoders.} Section~\ref{ssec:ph} shows that 3D encoders remain the bottleneck for capturing non semantic structure in point clouds. Their inductive biases and pretraining objectives shape what geometry is preserved and what is discarded. When a multimodal pipeline uses these encoders as the 3D branch, its final capability is constrained by the same structural limits. Early in the project we ran small scale trials with multimodal inputs to probe zero shot behavior and open vocabulary classification. The results were unstable and did not improve over strong unimodal baselines. We therefore concentrated on understanding and improving the encoders themselves before adding extra modalities. This choice allows a cleaner analysis of how transformers parse topological and geometric structure, independent of external supervision from images or text.
