@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1760399903.2182 "main.aux" "main.bbl" "main" 1760400088.42006 0
-  "./main-blx.bib" 1760400087.83198 342 20d1170ef6c1d70c658d70e011e08dba ""
+["bibtex main"] 1760451798.3712 "main.aux" "main.bbl" "main" 1760451933.88992 0
+  "./main-blx.bib" 1760451933.22529 342 20d1170ef6c1d70c658d70e011e08dba ""
   "./main.bib" 1760391835.07506 29405 fd3462b5477b0fe6ee576565379d9eeb ""
   "/usr/share/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1755987285 65510 b1f696b0241395385f422f67543c37fd ""
-  "main.aux" 1760400087.82004 58116 f246f602da7e81c757f411a5b4a62f53 "pdflatex"
+  "main.aux" 1760451933.21029 57686 7fe98c34a1e96ddeac13d2f11c5056f0 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1760400079.50984 "/home/louis/my/internship/thesis/main.tex" "main.pdf" "main" 1760400088.42041 0
+["pdflatex"] 1760451924.01547 "/home/louis/my/internship/thesis/main.tex" "main.pdf" "main" 1760451933.89029 0
   "/home/louis/my/internship/thesis/main.tex" 1760400079.22116 3951 99d5b5f5b33c675b3a22f79d5b667591 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1755987285 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc" 1755987285 2934 a4a9158faed2e9e89c771b4e3b7fc12f ""
@@ -61,6 +61,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm" 1755987285 848 26631fcb3e4cb6757598b9cda7967b63 ""
   "/usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm" 1755987285 848 6125cdd3627e68d3db8013b98e587508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1755987285 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb" 1755987285 32166 b0c356b15f19587482a9217ce1d8fa67 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1755987285 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1755987285 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1755987285 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
@@ -69,6 +70,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1755987285 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1755987285 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1755987285 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1755987285 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1755987285 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1755987285 21098 d4aee7c0aac232caac5688b586b9363c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1755987285 31764 459c573c03a4949a528c2cc7f557e217 ""
@@ -321,12 +323,12 @@
   "figs/utils/unrotated.pdf" 1758407527.96723 4219 c4c052d9e8dc211745ddbcdc0b4415f7 ""
   "logos/logo_mva.pdf" 1758725062.48297 11148 7c54c62f7f8c9e053a2d5181d0fc91c5 ""
   "logos/logo_tp.pdf" 1758725055.83874 12202 f64a7ee732ff815cedb3044478656aea ""
-  "main.aux" 1760400087.82004 58116 f246f602da7e81c757f411a5b4a62f53 "pdflatex"
-  "main.bbl" 1760399903.3683 92162 dbeb94f7aa9158cc1cb66dab9e7ed2ed "bibtex main"
-  "main.out" 1760400087.82798 7645 a4d8d1a4cc43cf5aef5878a974ee9074 "pdflatex"
-  "main.run.xml" 1760400087.83357 2516 ba6a34333704efe85122077493a7ee55 "pdflatex"
+  "main.aux" 1760451933.21029 57686 7fe98c34a1e96ddeac13d2f11c5056f0 "pdflatex"
+  "main.bbl" 1760451798.52556 87032 c15f40beffa83dc56e658b4a9540b92a "bibtex main"
+  "main.out" 1760451933.22029 7645 a4d8d1a4cc43cf5aef5878a974ee9074 "pdflatex"
+  "main.run.xml" 1760451933.22687 2516 ba6a34333704efe85122077493a7ee55 "pdflatex"
   "main.tex" 1760400079.22116 3951 99d5b5f5b33c675b3a22f79d5b667591 ""
-  "main.toc" 1760400087.83357 6414 4e68ff8ed2e48e1e26136d07be5bd435 "pdflatex"
+  "main.toc" 1760451933.22687 6415 f6e3f77c57880d9878dafc3e774ae7f1 "pdflatex"
   "sec/abstract.tex" 1758906012.97964 2392 a7e47d14a379e7b76a73c868505737bd ""
   "sec/conclusion.tex" 1760397148.5733 1848 89325c280c0a5be485506436959d415b ""
   "sec/introduction.tex" 1760395417.24825 6461 7a557d0512bbe1dd6addb39fd52e7821 ""
@@ -334,7 +336,7 @@
   "sec/suppl_definitions.tex" 1760396743.75349 580 7f7b7dbee24653a404dba616abf7da9a ""
   "sec/suppl_topogen.tex" 1760368474.69198 14164 6319ff8facb2c09df0dbf9f10cb2aac4 ""
   "sec/topogen.tex" 1760396465.09368 30976 5a868d624753ac824f6fd7baa95e7d62 ""
-  "sec/used_models.tex" 1760393703.10764 15878 f5d3f8246c4ff4eed022f66dfb262f43 ""
+  "sec/used_models.tex" 1760451923.64801 21904 a15cddda2ed2475557eb56d2b3244296 ""
   "tables/dataset-compare.tex" 1759925120.17933 1365 fb1443983b70ba93b58735112ce18e42 ""
   "tables/donut-baselines.tex" 1760394201.53025 1749 199b3ae8b7c082c4c07e6ef361f04d52 ""
   "tables/donut-model-params.tex" 1759925040.33737 1029 3a5f1a60dd54bbcb0b03aacd623a8534 ""
