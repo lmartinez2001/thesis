@@ -622,6 +622,11 @@ INPUT ./figs/probing.pdf
 INPUT ./figs/probing.pdf
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
+INPUT ./figs/alignment.pdf
+INPUT ./figs/alignment.pdf
+INPUT ./figs/alignment.pdf
+INPUT ./figs/alignment.pdf
+INPUT ./figs/alignment.pdf
 INPUT ./figs/ph/expers_v2.pdf
 INPUT ./figs/ph/expers_v2.pdf
 INPUT ./figs/ph/expers_v2.pdf

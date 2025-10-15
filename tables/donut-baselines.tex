@@ -1,24 +1,28 @@
 \begin{table}[h]
 \centering
-\begin{tabular}{l|ccc|ccc}
+\begin{tabular}{cl|ccc|ccc}
 \toprule
- & \multicolumn{3}{c|}{\textbf{Genus}} & \multicolumn{3}{c}{\textbf{Connected Components}} \\
+ & & \multicolumn{3}{c|}{\textbf{Genus}} & \multicolumn{3}{c}{\textbf{Connected Components}} \\
 % \cmidrule{lr}{2-4} \cmidrule{lr}{5-7}
-Model & MSE$\downarrow$ & Acc.$\uparrow$ & F1$\uparrow$ & MSE$\downarrow$ & Acc.$\uparrow$ & F1$\uparrow$ \\
+Dataset & Model & MSE$\downarrow$ & Acc.$\uparrow$ & F1$\uparrow$ & MSE$\downarrow$ & Acc.$\uparrow$ & F1$\uparrow$ \\
 \midrule
-\multicolumn{1}{l}{} & \multicolumn{6}{c}{\textit{Point-based models}} \\
+& \multicolumn{1}{l}{} & \multicolumn{6}{c}{\textit{Point-based models}} \\
 \midrule
-PointNet~\cite{pointnet}   & 14.2/9.35 & 20.9/12.7 & 17.4/12.1 & 0.92/0.93 & 56.7/21.6 & 55.5/22.0 \\
-PointNet++~\cite{pointnet++} &  1.38/9.91 & 59.5/16.6 & 59.3/15.0 & 0.17/1.16 & 84.2/24.6 & 84.1/23.1 \\
-DGCNN~\cite{dgcnn}      & 1.05/11.7 & 51.5/18.1 & 51.3/15.2 & 0.11/1.04 & 89.1/27.7 & 89.1/25.4 \\
+& PointNet~\cite{pointnet}   & 14.2 & 20.9 & 17.4 & 0.92 & 56.7 & 55.5 \\
+DONUT &PointNet++~\cite{pointnet++} &  1.38 & \textbf{59.5} & 59.3 & 0.17 & 84.2 & 84.1 \\
+& DGCNN~\cite{dgcnn}      & 1.05 & 51.5 & 51.3 & 0.11 & \textbf{89.1} & 89.1 \\
+\midrule
+& PointNet~\cite{pointnet}   & 9.35 & $12.7_{-8.2}$ & $12.1_{-5.3}$ & 0.93 & $21.6_{-35.1}$ & $22.0_{-33.5}$ \\
+ABC &PointNet++~\cite{pointnet++} &  9.91 & $16.6_{-42.9}$ & $15.0_{-44.3}$ & 1.16 & $24.6_{-59.6}$ & $23.1_{-61.0}$ \\
+& DGCNN~\cite{dgcnn}      & 11.7 & $18.1_{-33.4}$ & $15.2_{-36.1}$ & 1.04 & $27.7_{-61.4}$ & $25.4_{-63.7}$ \\
 % Transformer (scratch) & -- & -- & -- & -- & -- & -- \\
 % Transformer (pretrained) & -- & -- & -- & -- & -- & -- \\
-\midrule
-\multicolumn{1}{l}{} & \multicolumn{6}{c}{\textit{Persistence-based models}} \\
-\midrule
-PersFormer~\cite{persformer} & -- & -- & -- & -- & -- & -- \\
-xPerT~\cite{xpert}      & -- & -- & -- & -- & -- & -- \\
-PersLay~\cite{perslay}    & -- & -- & -- & -- & -- & -- \\
+% \midrule
+% \multicolumn{1}{l}{} & \multicolumn{6}{c}{\textit{Persistence-based models}} \\
+% \midrule
+% PersFormer~\cite{persformer} & -- & -- & -- & -- & -- & -- \\
+% xPerT~\cite{xpert}      & -- & -- & -- & -- & -- & -- \\
+% PersLay~\cite{perslay}    & -- & -- & -- & -- & -- & -- \\
 \bottomrule
 \end{tabular}
 \caption{\textbf{Performance of baseline models trained on DONUT and evaluated both in-distribution and on ABC.} Values are reported as \textit{DONUT/ABC}. We report mean squared error (MSE), balanced accuracy (Acc.), and balanced F1-score (F1). MSE is reported to capture how far off predictions are from the ground-truth on average, which is particularly relevant given the natural hierarchy of the labels (genus and connected components): misclassifying by a larger margin is more severe than a closer miss. Training setup is detailed in Table~\ref{suppl:topogen-baseline-training}}

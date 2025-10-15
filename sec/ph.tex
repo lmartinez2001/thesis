@@ -33,6 +33,13 @@ Despite these relative improvements, absolute scores remain low: around 20\% for
 \subsection{Subspace Alignment with Persistent Homology}
 \label{ssec:ph}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{figs/alignment.pdf}
+  \caption{\textbf{Alignment procedure overview.} We extract features from a 3D point cloud with the model we seek to evaluate. We also vectorize its corresponding persistence diagram (Section~\ref{sssec:vectorization_persistence_diagrams}). We then compute the CKA similarity (Section~\ref{sssec:subspace_alignment_protocol}) between the two sets of features to quantify how well the learned representation aligns with topological signatures.}
+  \label{fig:alignment}
+\end{figure}
+
 We study the relationship between representations learned by 3D shape encoders and those derived from persistent homology. Following the perspective of the Platonic Representation Hypothesis~\cite{plato,platonic}, we view learned embeddings as potentially containing subspaces that capture intrinsic structural information. Information captured by persistent homology can also be treated as a complementary modality. Assuming there's a way to encode topological features into a vector space, we can then ask whether the learned and topological subspaces align. It's worth noticing that the analogy with \cite{platonic} is not perfect: while it's assumed that representations tend to converge at scale, topological features, even learned ones, aren't the result of large scale training.
 
 We first review background on persistent homology and its vectorization. We then formally define the metrics used to quantify alignment. Finally, we describe our alignment protocol and present results across encoders and datasets.
@@ -56,7 +63,7 @@ A $k$-dimensional class $\alpha\in H_k(X_b)$ is \emph{born} at the smallest $a$ 
 The collection $\{H_k(X_a), i_{a}^{b}\}_{a\le b}$ is a persistence module. Under standard finiteness conditions (e.g. $f$ tame, or finite type filtrations), it decomposes into interval modules. This gives a multiset of intervals (the barcode) or equivalently a multiset of points $(b_i,d_i)$ in the open half plane $\{(x,y)\in\mathbb{R}^2: x<y\}$ together with the diagonal $\{(t,t)\}$ available for matching with infinite multiplicity. This multiset is the $k$-th persistence diagram $\mathrm{Dgm}_k(X)$.
 
 \paragraph{Why a persistence diagram is not a Euclidean vector object.}
-A persistence diagram is a locally finite \emph{multiset} in $\mathbb{R}^2$ with a special diagonal of infinite multiplicity. There is no canonical addition or scalar multiplication that preserves the intended topology. Barycenters can be non unique. Diagrams can have countably many off diagonal points if tameness fails. Hence one treats diagrams as elements of a metric space rather than a linear space.
+A persistence diagram is a collection of points in the plane, where each point $(b,d)$ records the birth and death of a topological feature during a filtration. Points on the diagonal $(b=d)$ correspond to features that disappear immediately, and we assume there are infinitely many of them so that every feature in one diagram can be matched to a trivial one in another when comparing diagrams. Unlike vectors in Euclidean space, persistence diagrams cannot be naturally added or scaled, since such operations would destroy their topological meaning. Even computing an average of several diagrams can give multiple different results. In some cases, a diagram may even have infinitely many points away from the diagonal if the underlying space behaves badly. Therefore, persistence diagrams are treated as elements of a metric space, with distances defined by measures such as the bottleneck or Wasserstein metric, rather than as vectors in a linear space.
 
 \paragraph{Distances between diagrams.}
 Let $D$ and $E$ be diagrams. We allow matchings to the diagonal. The \emph{bottleneck distance} is
@@ -107,7 +114,7 @@ where $d_I$ is the interleaving distance.
     \label{fig:filtrations_right}
   \end{subfigure}
 
-  \caption{\textbf{Ordinary vs extended persistence.} (Figures adapted from \cite{perslay}). In \ref{fig:filtrations_top}, each node of the graph is assigned its height. Persistence intervals are shown under the sequence. In \ref{fig:filtrations_left}, ordinary persistence captures connected components and loops, but essential classes lead to infinite intervals (black and green markers) and the upward branch (blue) isn't captured. In \ref{fig:filtrations_right}, extended persistence pairs all classes at finite values by combining sublevel and superlevel filtrations with relative homology.}
+  \caption{\textbf{Ordinary vs extended persistence.} (Figures adapted from \cite{perslay}). In \ref{fig:filtrations_top}, each node of the graph is assigned its height. Persistence intervals are shown under the sequence. In \ref{fig:filtrations_left}, ordinary persistence captures connected components and loops, but essential classes lead to infinite intervals (black and green markers) and the upward branch (blue) isn't captured. In \ref{fig:filtrations_right}, extended persistence pairs all classes at finite values by combining sublevel and superlevel filtrations with relative homology. Finally, $\text{Ext}_0^+$, $\text{Ext}_1^-$, $\text{Ord}_0$ and $\text{Ord}_1$ denote the different types of pairs in extended persistence.}
   \label{fig:filtrations}
 \end{figure}
 
@@ -173,7 +180,11 @@ This normalization ensures that $\mathrm{CKA}(X,Y)\in [0,1]$ and is invariant to
 
 We choose CKA for several reasons. First, its normalization makes the similarity more interpretable across different layer sizes or vectorization dimensions. Second, in empirical studies, CKA has proven effective at identifying correspondences between layers of differently initialized or architected networks (while pure CCA-type metrics sometimes fail). Third, because it works by comparing inner-product (kernel) structures, it is well suited to capture alignment between representational geometries rather than mere coordinate-wise correlation. Finally, in our context, since the topological encoding (via vectorized persistence diagrams) and the learned features live in distinct vector spaces, using a kernel-based alignment provides a flexible and robust way to detect shared structure, even if the bases or dimensions differ.
 
-Thus in our protocol, we treat a vectorization of the persistence diagram (or its learned topological embedding) as one representational matrix $Y$, and the activations extracted from a given layer or subspace of the 3D encoder as $X$. Then we compute $\mathrm{CKA}(X,Y)$ to quantify how well that encoder subspace aligns with the topological modality.
+Thus in our protocol, we treat a vectorization of the persistence diagram as one representational matrix $Y$, and the activations extracted from a given layer of the 3D encoder as $X$. Then we compute $\mathrm{CKA}(X,Y)$ to quantify how well that encoder subspace aligns with the topological modality.
+
+\paragraph{Experimental setting.}
+
+
 
 \paragraph{Results}
 To be completed.

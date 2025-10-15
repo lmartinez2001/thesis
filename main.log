@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.20)  14 OCT 2025 16:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.20)  16 OCT 2025 00:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1412,7 +1412,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [12 <./figs/topogen/label_distribution.pdf>]
 
 [13 <./figs/topogen/saliencies.pdf>]) (./sec/used_models.tex
-<figs/timeline.pdf, id=772, 384.43625pt x 111.41624pt>
+<figs/timeline.pdf, id=769, 384.43625pt x 111.41624pt>
 File: figs/timeline.pdf Graphic file (type pdf)
 <use figs/timeline.pdf>
 Package pdftex.def Info: figs/timeline.pdf  used on input line 6.
@@ -1420,7 +1420,7 @@ Package pdftex.def Info: figs/timeline.pdf  used on input line 6.
 
 
 [14 <./figs/timeline.pdf>]
-<figs/transformer_overview.pdf, id=803, 406.51875pt x 121.45375pt>
+<figs/transformer_overview.pdf, id=800, 406.51875pt x 121.45375pt>
 File: figs/transformer_overview.pdf Graphic file (type pdf)
 <use figs/transformer_overview.pdf>
 Package pdftex.def Info: figs/transformer_overview.pdf  used on input line 35.
@@ -1432,11 +1432,11 @@ Package pdftex.def Info: figs/transformer_overview.pdf  used on input line 35.
 [16]
 
 [17]) (./sec/ph.tex
-<figs/probing.pdf, id=920, 1188.44pt x 732.7375pt>
+<figs/probing.pdf, id=917, 1788.6825pt x 733.74126pt>
 File: figs/probing.pdf Graphic file (type pdf)
 <use figs/probing.pdf>
 Package pdftex.def Info: figs/probing.pdf  used on input line 13.
-(pdftex.def)             Requested size: 483.69687pt x 298.23291pt.
+(pdftex.def)             Requested size: 483.69687pt x 198.41507pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1446,67 +1446,68 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [18]
 
 [19 <./figs/probing.pdf>]
+<figs/alignment.pdf, id=2850, 286.06876pt x 106.3975pt>
+File: figs/alignment.pdf Graphic file (type pdf)
+<use figs/alignment.pdf>
+Package pdftex.def Info: figs/alignment.pdf  used on input line 38.
+(pdftex.def)             Requested size: 483.69687pt x 179.90411pt.
 
-[20]
-<figs/ph/expers_v2.pdf, id=2232, 580.1675pt x 187.70125pt>
+
+[20 <./figs/alignment.pdf>]
+<figs/ph/expers_v2.pdf, id=2953, 580.1675pt x 187.70125pt>
 File: figs/ph/expers_v2.pdf Graphic file (type pdf)
 <use figs/ph/expers_v2.pdf>
-Package pdftex.def Info: figs/ph/expers_v2.pdf  used on input line 89.
+Package pdftex.def Info: figs/ph/expers_v2.pdf  used on input line 96.
 (pdftex.def)             Requested size: 483.69687pt x 156.49083pt.
-<figs/ph/expers2_ord_v2.pdf, id=2233, 530.98375pt x 251.94125pt>
+<figs/ph/expers2_ord_v2.pdf, id=2954, 530.98375pt x 251.94125pt>
 File: figs/ph/expers2_ord_v2.pdf Graphic file (type pdf)
 <use figs/ph/expers2_ord_v2.pdf>
-Package pdftex.def Info: figs/ph/expers2_ord_v2.pdf  used on input line 99.
+Package pdftex.def Info: figs/ph/expers2_ord_v2.pdf  used on input line 106.
 (pdftex.def)             Requested size: 232.17242pt x 110.1625pt.
-<figs/ph/expers2_v2.pdf, id=2234, 530.98375pt x 251.94125pt>
+<figs/ph/expers2_v2.pdf, id=2955, 530.98375pt x 251.94125pt>
 File: figs/ph/expers2_v2.pdf Graphic file (type pdf)
 <use figs/ph/expers2_v2.pdf>
-Package pdftex.def Info: figs/ph/expers2_v2.pdf  used on input line 105.
+Package pdftex.def Info: figs/ph/expers2_v2.pdf  used on input line 112.
 (pdftex.def)             Requested size: 232.17242pt x 110.1625pt.
+<figs/ph/examples/pd_example.pdf, id=2965, 562.1pt x 558.085pt>
+File: figs/ph/examples/pd_example.pdf Graphic file (type pdf)
+<use figs/ph/examples/pd_example.pdf>
+Package pdftex.def Info: figs/ph/examples/pd_example.pdf  used on input line 132.
+(pdftex.def)             Requested size: 111.2482pt x 110.44836pt.
+<figs/ph/examples/landscape_example.pdf, id=2966, 280.04625pt x 278.23952pt>
+File: figs/ph/examples/landscape_example.pdf Graphic file (type pdf)
+<use figs/ph/examples/landscape_example.pdf>
+Package pdftex.def Info: figs/ph/examples/landscape_example.pdf  used on input line 136.
+(pdftex.def)             Requested size: 111.2482pt x 110.52962pt.
+<figs/ph/examples/persistence_image_example.pdf, id=2967, 278.23952pt x 278.23952pt>
+File: figs/ph/examples/persistence_image_example.pdf Graphic file (type pdf)
+<use figs/ph/examples/persistence_image_example.pdf>
+Package pdftex.def Info: figs/ph/examples/persistence_image_example.pdf  used on input line 140.
+(pdftex.def)             Requested size: 111.2482pt x 111.24713pt.
+<figs/ph/examples/betti_curve_example.pdf, id=2968, 338.32085pt x 338.97389pt>
+File: figs/ph/examples/betti_curve_example.pdf Graphic file (type pdf)
+<use figs/ph/examples/betti_curve_example.pdf>
+Package pdftex.def Info: figs/ph/examples/betti_curve_example.pdf  used on input line 144.
+(pdftex.def)             Requested size: 111.2482pt x 111.46346pt.
 
 
-[21 <./figs/ph/expers_v2.pdf> <./figs/ph/expers2_ord_v2.pdf
+[21]
+
+[22 <./figs/ph/expers_v2.pdf> <./figs/ph/expers2_ord_v2.pdf
 
 pdfTeX warning: pdflatex (file ./figs/ph/expers2_ord_v2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figs/ph/expers2_v2.pdf
 
 pdfTeX warning: pdflatex (file ./figs/ph/expers2_v2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figs/ph/examples/pd_example.pdf, id=2506, 562.1pt x 558.085pt>
-File: figs/ph/examples/pd_example.pdf Graphic file (type pdf)
-<use figs/ph/examples/pd_example.pdf>
-Package pdftex.def Info: figs/ph/examples/pd_example.pdf  used on input line 125.
-(pdftex.def)             Requested size: 111.2482pt x 110.44836pt.
-<figs/ph/examples/landscape_example.pdf, id=2507, 280.04625pt x 278.23952pt>
-File: figs/ph/examples/landscape_example.pdf Graphic file (type pdf)
-<use figs/ph/examples/landscape_example.pdf>
-Package pdftex.def Info: figs/ph/examples/landscape_example.pdf  used on input line 129.
-(pdftex.def)             Requested size: 111.2482pt x 110.52962pt.
-<figs/ph/examples/persistence_image_example.pdf, id=2508, 278.23952pt x 278.23952pt>
-File: figs/ph/examples/persistence_image_example.pdf Graphic file (type pdf)
-<use figs/ph/examples/persistence_image_example.pdf>
-Package pdftex.def Info: figs/ph/examples/persistence_image_example.pdf  used on input line 133.
-(pdftex.def)             Requested size: 111.2482pt x 111.24713pt.
-<figs/ph/examples/betti_curve_example.pdf, id=2509, 338.32085pt x 338.97389pt>
-File: figs/ph/examples/betti_curve_example.pdf Graphic file (type pdf)
-<use figs/ph/examples/betti_curve_example.pdf>
-Package pdftex.def Info: figs/ph/examples/betti_curve_example.pdf  used on input line 137.
-(pdftex.def)             Requested size: 111.2482pt x 111.46346pt.
 
-
-[22 <./figs/ph/examples/pd_example.pdf> <./figs/ph/examples/landscape_example.pdf> <./figs/ph/examples/persistence_image_example.pdf> <./figs/ph/examples/betti_curve_example.pdf>]
-<figs/reconstruction.pdf, id=2600, 509.905pt x 132.495pt>
+[23 <./figs/ph/examples/pd_example.pdf> <./figs/ph/examples/landscape_example.pdf> <./figs/ph/examples/persistence_image_example.pdf> <./figs/ph/examples/betti_curve_example.pdf>]
+<figs/reconstruction.pdf, id=3334, 509.905pt x 132.495pt>
 File: figs/reconstruction.pdf Graphic file (type pdf)
 <use figs/reconstruction.pdf>
-Package pdftex.def Info: figs/reconstruction.pdf  used on input line 187.
+Package pdftex.def Info: figs/reconstruction.pdf  used on input line 198.
 (pdftex.def)             Requested size: 483.69687pt x 125.6916pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[23] (./tables/scanobject-cls.tex)
+ (./tables/scanobject-cls.tex)
 
 [24 <./figs/reconstruction.pdf>] (./tables/fewshot-modelnet-donut.tex
 Overfull \hbox (7.74867pt too wide) in paragraph at lines 4--32
@@ -1518,22 +1519,22 @@ Overfull \hbox (7.74867pt too wide) in paragraph at lines 4--32
 [25]) (./sec/suppl_topogen.tex
 
 [26]
-<figs/eulearn/umap_comparison_original_rotated.pdf, id=2704, 1207.96925pt x 653.57616pt>
+<figs/eulearn/umap_comparison_original_rotated.pdf, id=3429, 1207.96925pt x 653.57616pt>
 File: figs/eulearn/umap_comparison_original_rotated.pdf Graphic file (type pdf)
 <use figs/eulearn/umap_comparison_original_rotated.pdf>
 Package pdftex.def Info: figs/eulearn/umap_comparison_original_rotated.pdf  used on input line 18.
 (pdftex.def)             Requested size: 338.58632pt x 183.18954pt.
-<figs/eulearn/accuracy_vs_angle.pdf, id=2706, 555.24155pt x 338.30838pt>
+<figs/eulearn/accuracy_vs_angle.pdf, id=3431, 554.07pt x 344.28625pt>
 File: figs/eulearn/accuracy_vs_angle.pdf Graphic file (type pdf)
 <use figs/eulearn/accuracy_vs_angle.pdf>
 Package pdftex.def Info: figs/eulearn/accuracy_vs_angle.pdf  used on input line 29.
-(pdftex.def)             Requested size: 217.66211pt x 132.62114pt.
+(pdftex.def)             Requested size: 217.66211pt x 135.24821pt.
 
 Underfull \hbox (badness 1354) in paragraph at lines 30--30
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 Figure 18: |\T1/LinuxLibertineT-TLF/b/n/10.95 Clas-si-fi-ca-tion ac-cu-racy of a $\OML/cmm/m/it/10.95 k$\T1/LinuxLibertineT-TLF/b/n/10.95 -
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 Figure 19: |\T1/LinuxLibertineT-TLF/b/n/10.95 Clas-si-fi-ca-tion ac-cu-racy of a $\OML/cmm/m/it/10.95 k$\T1/LinuxLibertineT-TLF/b/n/10.95 -
  []
 
-<figs/utils/unrotated.pdf, id=2707, 1081.03876pt x 1081.03876pt>
+<figs/utils/unrotated.pdf, id=3432, 1081.03876pt x 1081.03876pt>
 File: figs/utils/unrotated.pdf Graphic file (type pdf)
 <use figs/utils/unrotated.pdf>
 Package pdftex.def Info: figs/utils/unrotated.pdf  used on input line 39.
@@ -1542,7 +1543,7 @@ File: figs/utils/unrotated.pdf Graphic file (type pdf)
 <use figs/utils/unrotated.pdf>
 Package pdftex.def Info: figs/utils/unrotated.pdf  used on input line 40.
 (pdftex.def)             Requested size: 10.93637pt x 10.95pt.
-<figs/utils/rotated.pdf, id=2708, 602.25pt x 602.25pt>
+<figs/utils/rotated.pdf, id=3433, 602.25pt x 602.25pt>
 File: figs/utils/rotated.pdf Graphic file (type pdf)
 <use figs/utils/rotated.pdf>
 Package pdftex.def Info: figs/utils/rotated.pdf  used on input line 42.
@@ -1599,7 +1600,10 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 73.
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
-[28 <./figs/eulearn/accuracy_vs_angle.pdf> <./figs/utils/unrotated.pdf> <./figs/utils/rotated.pdf
+[28 <./figs/eulearn/accuracy_vs_angle.pdf> <./figs/utils/unrotated.pdf
+
+pdfTeX warning: pdflatex (file ./figs/utils/unrotated.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figs/utils/rotated.pdf
 
 pdfTeX warning: pdflatex (file ./figs/utils/rotated.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
@@ -1691,18 +1695,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40793 strings out of 473190
- 817093 string characters out of 5722593
- 1600314 words of memory out of 5000000
- 63164 multiletter control sequences out of 15000+600000
+ 40802 strings out of 473190
+ 817323 string characters out of 5722593
+ 1599889 words of memory out of 5000000
+ 63172 multiletter control sequences out of 15000+600000
  649233 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,18n,131p,1908b,1568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb></usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/share/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb>
-Output written on main.pdf (35 pages, 45836089 bytes).
+Output written on main.pdf (35 pages, 46590578 bytes).
 PDF statistics:
- 3143 PDF objects out of 3580 (max. 8388607)
- 2173 compressed objects within 22 object streams
- 197 named destinations out of 1000 (max. 500000)
- 643 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4013 PDF objects out of 4296 (max. 8388607)
+ 2767 compressed objects within 28 object streams
+ 198 named destinations out of 1000 (max. 500000)
+ 648 words of extra memory for PDF output out of 10000 (max. 10000000)
 

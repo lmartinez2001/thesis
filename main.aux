@@ -165,15 +165,15 @@
 \citation{dgcnn}
 \abx@aux@cite{0}{dgcnn}
 \abx@aux@segm{0}{0}{dgcnn}
-\citation{persformer}
-\abx@aux@cite{0}{persformer}
-\abx@aux@segm{0}{0}{persformer}
-\citation{xpert}
-\abx@aux@cite{0}{xpert}
-\abx@aux@segm{0}{0}{xpert}
-\citation{perslay}
-\abx@aux@cite{0}{perslay}
-\abx@aux@segm{0}{0}{perslay}
+\citation{pointnet}
+\abx@aux@cite{0}{pointnet}
+\abx@aux@segm{0}{0}{pointnet}
+\citation{pointnet++}
+\abx@aux@cite{0}{pointnet++}
+\abx@aux@segm{0}{0}{pointnet++}
+\citation{dgcnn}
+\abx@aux@cite{0}{dgcnn}
+\abx@aux@segm{0}{0}{dgcnn}
 \newlabel{fig:ktori-overview}{{8a}{11}{\textbf {Degrees of freedom allowed on $k$-tori.} Prior to the sequence of transformations applied to each individual component (e.g. rotation, twisting) we allow some variability during the generation. The x-axis represents the ratio \textit {major radius / minor radius}. The y-axis shows how the template shape is modified as we increase the value of $k$ (i.e. the genus). \textit {Note:} In the actual dataset, $1$-tori are generated with the parametric representation of supertoroids, since a regular torus is a particular case of supertoroid. However, for $k \geq 2$, using a composition of $1$-tori is more reliable. Some parameter sets can lead to undesirable holes in the final shape}{figure.caption.9}{}}
 \newlabel{sub@fig:ktori-overview}{{a}{11}{\textbf {Degrees of freedom allowed on $k$-tori.} Prior to the sequence of transformations applied to each individual component (e.g. rotation, twisting) we allow some variability during the generation. The x-axis represents the ratio \textit {major radius / minor radius}. The y-axis shows how the template shape is modified as we increase the value of $k$ (i.e. the genus). \textit {Note:} In the actual dataset, $1$-tori are generated with the parametric representation of supertoroids, since a regular torus is a particular case of supertoroid. However, for $k \geq 2$, using a composition of $1$-tori is more reliable. Some parameter sets can lead to undesirable holes in the final shape}{figure.caption.9}{}}
 \newlabel{fig:twisted-comparison}{{8b}{11}{\textbf {Effect of twisting.} Original template shapes (left) are twisted along the purple axis (right). Twisting deformations introduce non-rigid variability while preserving the genus and connectivity of each component. Here the scalar function defined along the axis is affine between $-\pi /6$ and $\pi /3$. We apply this augmentation at the component and sample level}{figure.caption.9}{}}
@@ -324,28 +324,25 @@
 \abx@aux@segm{0}{0}{platonic}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Subspace Alignment with Persistent Homology}{20}{subsection.4.2}\protected@file@percent }
 \newlabel{ssec:ph}{{4.2}{20}{Subspace Alignment with Persistent Homology}{subsection.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces \textbf  {Alignment procedure overview.} We extract features from a 3D point cloud with the model we seek to evaluate. We also vectorize its corresponding persistence diagram (Section~\ref {sssec:vectorization_persistence_diagrams}). We then compute the CKA similarity (Section~\ref {sssec:subspace_alignment_protocol}) between the two sets of features to quantify how well the learned representation aligns with topological signatures.}}{20}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:alignment}{{14}{20}{\textbf {Alignment procedure overview.} We extract features from a 3D point cloud with the model we seek to evaluate. We also vectorize its corresponding persistence diagram (Section~\ref {sssec:vectorization_persistence_diagrams}). We then compute the CKA similarity (Section~\ref {sssec:subspace_alignment_protocol}) between the two sets of features to quantify how well the learned representation aligns with topological signatures}{figure.caption.16}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Persistence Diagrams}{20}{subsubsection.4.2.1}\protected@file@percent }
 \newlabel{sssec:persistence_diagrams}{{4.2.1}{20}{Persistence Diagrams}{subsubsection.4.2.1}{}}
 \@writefile{toc}{\contentsline {paragraph}{Filtrations.}{20}{subsubsection.4.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Homology and persistent maps.}{20}{subsubsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Persistence modules, barcodes and diagrams.}{20}{equation.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Why a persistence diagram is not a Euclidean vector object.}{20}{equation.22}\protected@file@percent }
 \citation{perslay}
 \abx@aux@cite{0}{perslay}
 \abx@aux@segm{0}{0}{perslay}
 \citation{perslay}
 \abx@aux@cite{0}{perslay}
 \abx@aux@segm{0}{0}{perslay}
-\newlabel{fig:filtrations_top}{{14a}{21}{Sub- (resp. super-) level set filtration}{figure.caption.16}{}}
-\newlabel{sub@fig:filtrations_top}{{a}{21}{Sub- (resp. super-) level set filtration}{figure.caption.16}{}}
-\newlabel{fig:filtrations_left}{{14b}{21}{Ordinary persistence diagram}{figure.caption.16}{}}
-\newlabel{sub@fig:filtrations_left}{{b}{21}{Ordinary persistence diagram}{figure.caption.16}{}}
-\newlabel{fig:filtrations_right}{{14c}{21}{Extended persistence diagram}{figure.caption.16}{}}
-\newlabel{sub@fig:filtrations_right}{{c}{21}{Extended persistence diagram}{figure.caption.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces \textbf  {Ordinary vs extended persistence.} (Figures adapted from \blx@tocontentsinit {0}\cite {perslay}). In \ref {fig:filtrations_top}, each node of the graph is assigned its height. Persistence intervals are shown under the sequence. In \ref {fig:filtrations_left}, ordinary persistence captures connected components and loops, but essential classes lead to infinite intervals (black and green markers) and the upward branch (blue) isn't captured. In \ref {fig:filtrations_right}, extended persistence pairs all classes at finite values by combining sublevel and superlevel filtrations with relative homology.}}{21}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:filtrations}{{14}{21}{\textbf {Ordinary vs extended persistence.} (Figures adapted from \cite {perslay}). In \ref {fig:filtrations_top}, each node of the graph is assigned its height. Persistence intervals are shown under the sequence. In \ref {fig:filtrations_left}, ordinary persistence captures connected components and loops, but essential classes lead to infinite intervals (black and green markers) and the upward branch (blue) isn't captured. In \ref {fig:filtrations_right}, extended persistence pairs all classes at finite values by combining sublevel and superlevel filtrations with relative homology}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {paragraph}{Persistence modules, barcodes and diagrams.}{21}{equation.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Why a persistence diagram is not a Euclidean vector object.}{21}{equation.22}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Distances between diagrams.}{21}{equation.22}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Stability theorems.}{21}{equation.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Extended persistence.}{21}{figure.caption.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Vectorization of Persistence Diagrams}{21}{subsubsection.4.2.2}\protected@file@percent }
+\newlabel{sssec:vectorization_persistence_diagrams}{{4.2.2}{21}{Vectorization of Persistence Diagrams}{subsubsection.4.2.2}{}}
 \citation{persistence_landscapes}
 \abx@aux@cite{0}{persistence_landscapes}
 \abx@aux@segm{0}{0}{persistence_landscapes}
@@ -382,23 +379,25 @@
 \citation{xpert}
 \abx@aux@cite{0}{xpert}
 \abx@aux@segm{0}{0}{xpert}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces \textbf  {Common prescribed vectorizations of a persistence diagram.} From left to right: (a) A sample persistence diagram with points representing topological features; (b) Persistence landscape capturing the prominence of features across scales; (c) Persistence image providing a smoothed, grid-based representation; \textit  {Note:} Instead of considering persistence pairs as a \textit  {(birth,death)} tuple, persistence image is fitted on $(birth, death-birth)$ pairs. (d) Betti curve showing the count of features over filtration values.}}{22}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:ph-vectorizations}{{15}{22}{\textbf {Common prescribed vectorizations of a persistence diagram.} From left to right: (a) A sample persistence diagram with points representing topological features; (b) Persistence landscape capturing the prominence of features across scales; (c) Persistence image providing a smoothed, grid-based representation; \textit {Note:} Instead of considering persistence pairs as a \textit {(birth,death)} tuple, persistence image is fitted on $(birth, death-birth)$ pairs. (d) Betti curve showing the count of features over filtration values}{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {paragraph}{Extended persistence.}{22}{figure.caption.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Vectorization of Persistence Diagrams}{22}{subsubsection.4.2.2}\protected@file@percent }
-\newlabel{sssec:vectorization_persistence_diagrams}{{4.2.2}{22}{Vectorization of Persistence Diagrams}{subsubsection.4.2.2}{}}
+\newlabel{fig:filtrations_top}{{15a}{22}{Sub- (resp. super-) level set filtration}{figure.caption.17}{}}
+\newlabel{sub@fig:filtrations_top}{{a}{22}{Sub- (resp. super-) level set filtration}{figure.caption.17}{}}
+\newlabel{fig:filtrations_left}{{15b}{22}{Ordinary persistence diagram}{figure.caption.17}{}}
+\newlabel{sub@fig:filtrations_left}{{b}{22}{Ordinary persistence diagram}{figure.caption.17}{}}
+\newlabel{fig:filtrations_right}{{15c}{22}{Extended persistence diagram}{figure.caption.17}{}}
+\newlabel{sub@fig:filtrations_right}{{c}{22}{Extended persistence diagram}{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces \textbf  {Ordinary vs extended persistence.} (Figures adapted from \blx@tocontentsinit {0}\cite {perslay}). In \ref {fig:filtrations_top}, each node of the graph is assigned its height. Persistence intervals are shown under the sequence. In \ref {fig:filtrations_left}, ordinary persistence captures connected components and loops, but essential classes lead to infinite intervals (black and green markers) and the upward branch (blue) isn't captured. In \ref {fig:filtrations_right}, extended persistence pairs all classes at finite values by combining sublevel and superlevel filtrations with relative homology. Finally, $\text  {Ext}_0^+$, $\text  {Ext}_1^-$, $\text  {Ord}_0$ and $\text  {Ord}_1$ denote the different types of pairs in extended persistence.}}{22}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:filtrations}{{15}{22}{\textbf {Ordinary vs extended persistence.} (Figures adapted from \cite {perslay}). In \ref {fig:filtrations_top}, each node of the graph is assigned its height. Persistence intervals are shown under the sequence. In \ref {fig:filtrations_left}, ordinary persistence captures connected components and loops, but essential classes lead to infinite intervals (black and green markers) and the upward branch (blue) isn't captured. In \ref {fig:filtrations_right}, extended persistence pairs all classes at finite values by combining sublevel and superlevel filtrations with relative homology. Finally, $\text {Ext}_0^+$, $\text {Ext}_1^-$, $\text {Ord}_0$ and $\text {Ord}_1$ denote the different types of pairs in extended persistence}{figure.caption.17}{}}
 \citation{topology_aware_latent_diffusion}
 \abx@aux@cite{0}{topology_aware_latent_diffusion}
 \abx@aux@segm{0}{0}{topology_aware_latent_diffusion}
 \citation{cka}
 \abx@aux@cite{0}{cka}
 \abx@aux@segm{0}{0}{cka}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces \textbf  {Common prescribed vectorizations of a persistence diagram.} From left to right: (a) A sample persistence diagram with points representing topological features; (b) Persistence landscape capturing the prominence of features across scales; (c) Persistence image providing a smoothed, grid-based representation; \textit  {Note:} Instead of considering persistence pairs as a \textit  {(birth,death)} tuple, persistence image is fitted on $(birth, death-birth)$ pairs. (d) Betti curve showing the count of features over filtration values.}}{23}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:ph-vectorizations}{{16}{23}{\textbf {Common prescribed vectorizations of a persistence diagram.} From left to right: (a) A sample persistence diagram with points representing topological features; (b) Persistence landscape capturing the prominence of features across scales; (c) Persistence image providing a smoothed, grid-based representation; \textit {Note:} Instead of considering persistence pairs as a \textit {(birth,death)} tuple, persistence image is fitted on $(birth, death-birth)$ pairs. (d) Betti curve showing the count of features over filtration values}{figure.caption.18}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Subspace Alignment Protocol}{23}{subsubsection.4.2.3}\protected@file@percent }
 \newlabel{sssec:subspace_alignment_protocol}{{4.2.3}{23}{Subspace Alignment Protocol}{subsubsection.4.2.3}{}}
 \@writefile{toc}{\contentsline {paragraph}{Background}{23}{subsubsection.4.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Results}{23}{equation.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Changing the Pretraining Data Distribution}{23}{subsection.4.3}\protected@file@percent }
-\newlabel{ssec:changing_pretraining_data_distribution}{{4.3}{23}{Changing the Pretraining Data Distribution}{subsection.4.3}{}}
 \citation{pbert}
 \abx@aux@cite{0}{pbert}
 \abx@aux@segm{0}{0}{pbert}
@@ -411,10 +410,12 @@
 \citation{pcpmae}
 \abx@aux@cite{0}{pcpmae}
 \abx@aux@segm{0}{0}{pcpmae}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces \textbf  {Point-cloud reconstruction for different encoders.} Each pretrained model is fed with a point cloud with 2048 points. We reconstruct it with the decoder used during pretraining with a masking ratio of zero. To ensure topological structures of the input are captured, we patchify the input point cloud into overlapping local regions before encoding, and decode to a reconstructed point cloud of 4096 points. Reconstructed point-clouds don't exhibit the 3 characteristic holes of the input shape.}}{24}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:reconstructions}{{16}{24}{\textbf {Point-cloud reconstruction for different encoders.} Each pretrained model is fed with a point cloud with 2048 points. We reconstruct it with the decoder used during pretraining with a masking ratio of zero. To ensure topological structures of the input are captured, we patchify the input point cloud into overlapping local regions before encoding, and decode to a reconstructed point cloud of 4096 points. Reconstructed point-clouds don't exhibit the 3 characteristic holes of the input shape}{figure.caption.18}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces {\bf  Classification results on ScanObjectNN.} For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC.}}{24}{table.caption.19}\protected@file@percent }
-\newlabel{tb:scanobject}{{3}{24}{{\bf Classification results on ScanObjectNN.} For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC}{table.caption.19}{}}
+\@writefile{toc}{\contentsline {paragraph}{Experimental setting.}{24}{equation.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results}{24}{equation.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Changing the Pretraining Data Distribution}{24}{subsection.4.3}\protected@file@percent }
+\newlabel{ssec:changing_pretraining_data_distribution}{{4.3}{24}{Changing the Pretraining Data Distribution}{subsection.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces \textbf  {Point-cloud reconstruction for different encoders.} Each pretrained model is fed with a point cloud with 2048 points. We reconstruct it with the decoder used during pretraining with a masking ratio of zero. To ensure topological structures of the input are captured, we patchify the input point cloud into overlapping local regions before encoding, and decode to a reconstructed point cloud of 4096 points. Reconstructed point-clouds don't exhibit the 3 characteristic holes of the input shape.}}{24}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:reconstructions}{{17}{24}{\textbf {Point-cloud reconstruction for different encoders.} Each pretrained model is fed with a point cloud with 2048 points. We reconstruct it with the decoder used during pretraining with a masking ratio of zero. To ensure topological structures of the input are captured, we patchify the input point cloud into overlapping local regions before encoding, and decode to a reconstructed point cloud of 4096 points. Reconstructed point-clouds don't exhibit the 3 characteristic holes of the input shape}{figure.caption.19}{}}
 \citation{pbert}
 \abx@aux@cite{0}{pbert}
 \abx@aux@segm{0}{0}{pbert}
@@ -427,11 +428,13 @@
 \citation{pcpmae}
 \abx@aux@cite{0}{pcpmae}
 \abx@aux@segm{0}{0}{pcpmae}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces {\bf  Few-shot object classification on ModelNet40 and DONUT (genus).} We conduct 10 independent experiments for each setting and report mean accuracy (\%) with standard deviation. For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC.}}{25}{table.caption.20}\protected@file@percent }
-\newlabel{tb:few}{{4}{25}{{\bf Few-shot object classification on ModelNet40 and DONUT (genus).} We conduct 10 independent experiments for each setting and report mean accuracy (\%) with standard deviation. For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC}{table.caption.20}{}}
-\@writefile{toc}{\contentsline {paragraph}{Object Classification.}{25}{table.caption.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Few-Shot Classification.}{25}{table.caption.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{26}{section.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces {\bf  Classification results on ScanObjectNN.} For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC.}}{25}{table.caption.20}\protected@file@percent }
+\newlabel{tb:scanobject}{{3}{25}{{\bf Classification results on ScanObjectNN.} For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC}{table.caption.20}{}}
+\@writefile{toc}{\contentsline {paragraph}{Object Classification.}{25}{table.caption.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Few-Shot Classification.}{25}{table.caption.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{25}{section.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces {\bf  Few-shot object classification on ModelNet40 and DONUT (genus).} We conduct 10 independent experiments for each setting and report mean accuracy (\%) with standard deviation. For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC.}}{26}{table.caption.21}\protected@file@percent }
+\newlabel{tb:few}{{4}{26}{{\bf Few-shot object classification on ModelNet40 and DONUT (genus).} We conduct 10 independent experiments for each setting and report mean accuracy (\%) with standard deviation. For each backbone model, we compare performance when pretrained on ShapeNet (first row) versus ABC (second row). The third row shows the difference, with green indicating improvement and orange indicating decline when using ABC}{table.caption.21}{}}
 \citation{eulearn}
 \abx@aux@cite{0}{eulearn}
 \abx@aux@segm{0}{0}{eulearn}
@@ -439,14 +442,14 @@
 \newlabel{sec:suppl_topogen}{{A}{27}{Supplementary Material for DONUT}{appendix.A}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A.1}EuLearn Dataset Analysis}{27}{subsection.A.1}\protected@file@percent }
 \newlabel{ssec:suppl_eulearn_analysis}{{A.1}{27}{EuLearn Dataset Analysis}{subsection.A.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces \textbf  {UMAP projections of Point-BERT embeddings colored by genus.} Clear clusters by genus appear for canonical orientations (left) but vanish under random rotations (right), showing that genus separation in EuLearn is tied to orientation rather than topology.}}{27}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:eulearn-umap-comparison}{{17}{27}{\textbf {UMAP projections of Point-BERT embeddings colored by genus.} Clear clusters by genus appear for canonical orientations (left) but vanish under random rotations (right), showing that genus separation in EuLearn is tied to orientation rather than topology}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces \textbf  {UMAP projections of Point-BERT embeddings colored by genus.} Clear clusters by genus appear for canonical orientations (left) but vanish under random rotations (right), showing that genus separation in EuLearn is tied to orientation rather than topology.}}{27}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:eulearn-umap-comparison}{{18}{27}{\textbf {UMAP projections of Point-BERT embeddings colored by genus.} Clear clusters by genus appear for canonical orientations (left) but vanish under random rotations (right), showing that genus separation in EuLearn is tied to orientation rather than topology}{figure.caption.22}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Sampling Labels}{27}{subsection.A.2}\protected@file@percent }
 \newlabel{ssec:suppl_sampling_labels}{{A.2}{27}{Sampling Labels}{subsection.A.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces \textbf  {Classification accuracy of a $k$-nearest neighbor classifier vs. training rotation range.} Accuracy is perfect when training and testing on canonical orientations but collapses as random rotations along the z-axis are introduced, revealing orientation-dependent bias in EuLearn. \textit  {Note:} Results are cross-validated with 5 folds.}}{28}{figure.caption.22}\protected@file@percent }
-\newlabel{fig:eulearn-acc-angle}{{18}{28}{\textbf {Classification accuracy of a $k$-nearest neighbor classifier vs. training rotation range.} Accuracy is perfect when training and testing on canonical orientations but collapses as random rotations along the z-axis are introduced, revealing orientation-dependent bias in EuLearn. \textit {Note:} Results are cross-validated with 5 folds}{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces \textbf  {Linear probing accuracy on Point-BERT embeddings of canonical vs. rotated shapes.} Probes trained on canonical orientations (\includegraphics [height=1em,valign=c]{figs/utils/unrotated.pdf}) achieve high accuracy only on canonical test data, collapsing under rotation. (\includegraphics [height=1em,valign=c]{figs/utils/rotated.pdf}). Probes trained on rotated shapes generalize poorly in both cases, confirming that EuLearn does not provide a stable signal for genus.}}{28}{figure.caption.22}\protected@file@percent }
-\newlabel{tab:eulearn-overfit}{{19}{28}{\textbf {Linear probing accuracy on Point-BERT embeddings of canonical vs. rotated shapes.} Probes trained on canonical orientations (\includegraphics [height=1em,valign=c]{figs/utils/unrotated.pdf}) achieve high accuracy only on canonical test data, collapsing under rotation. (\includegraphics [height=1em,valign=c]{figs/utils/rotated.pdf}). Probes trained on rotated shapes generalize poorly in both cases, confirming that EuLearn does not provide a stable signal for genus}{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces \textbf  {Classification accuracy of a $k$-nearest neighbor classifier vs. training rotation range.} Accuracy is perfect when training and testing on canonical orientations but collapses as random rotations along the z-axis are introduced, revealing orientation-dependent bias in EuLearn. \textit  {Note:} Results are cross-validated with 5 folds.}}{28}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:eulearn-acc-angle}{{19}{28}{\textbf {Classification accuracy of a $k$-nearest neighbor classifier vs. training rotation range.} Accuracy is perfect when training and testing on canonical orientations but collapses as random rotations along the z-axis are introduced, revealing orientation-dependent bias in EuLearn. \textit {Note:} Results are cross-validated with 5 folds}{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces \textbf  {Linear probing accuracy on Point-BERT embeddings of canonical vs. rotated shapes.} Probes trained on canonical orientations (\includegraphics [height=1em,valign=c]{figs/utils/unrotated.pdf}) achieve high accuracy only on canonical test data, collapsing under rotation. (\includegraphics [height=1em,valign=c]{figs/utils/rotated.pdf}). Probes trained on rotated shapes generalize poorly in both cases, confirming that EuLearn does not provide a stable signal for genus.}}{28}{figure.caption.23}\protected@file@percent }
+\newlabel{tab:eulearn-overfit}{{20}{28}{\textbf {Linear probing accuracy on Point-BERT embeddings of canonical vs. rotated shapes.} Probes trained on canonical orientations (\includegraphics [height=1em,valign=c]{figs/utils/unrotated.pdf}) achieve high accuracy only on canonical test data, collapsing under rotation. (\includegraphics [height=1em,valign=c]{figs/utils/rotated.pdf}). Probes trained on rotated shapes generalize poorly in both cases, confirming that EuLearn does not provide a stable signal for genus}{figure.caption.23}{}}
 \@writefile{toc}{\contentsline {paragraph}{Role of $k$.}{28}{subsection.A.2}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Sampling $(\beta _0, g)$   \textbf  {Input:} $g^{\max },\tmspace  +\thickmuskip {.2777em} G^{\max },\tmspace  +\thickmuskip {.2777em} \beta _0^{\min },\tmspace  +\thickmuskip {.2777em} \beta _0^{\max },\tmspace  +\thickmuskip {.2777em} k$}}{28}{algorithm.1}\protected@file@percent }
 \newlabel{alg:topogen-labels-sampling}{{1}{28}{Sampling $(\beta _0, g)$ \\ \textbf {Input:} $g^{\max },\; G^{\max },\; \beta _0^{\min },\; \beta _0^{\max },\; k$}{algorithm.1}{}}
@@ -455,8 +458,8 @@
 \citation{counting}
 \abx@aux@cite{0}{counting}
 \abx@aux@segm{0}{0}{counting}
-\newlabel{tab:topogen-hyperparams}{{\caption@xref {tab:topogen-hyperparams}{ on input line 93}}{29}{Role of $k$}{table.caption.23}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Hyperparameter values used for the DONUT dataset for the experiments. Probing tasks boil down to classifying shapes across $\beta _0^{\max } - \beta _0^{\min } + 1 = 6$ categories for connected components and 11 categories for genera.}}{29}{table.caption.23}\protected@file@percent }
+\newlabel{tab:topogen-hyperparams}{{\caption@xref {tab:topogen-hyperparams}{ on input line 93}}{29}{Role of $k$}{table.caption.24}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Hyperparameter values used for the DONUT dataset for the experiments. Probing tasks boil down to classifying shapes across $\beta _0^{\max } - \beta _0^{\min } + 1 = 6$ categories for connected components and 11 categories for genera.}}{29}{table.caption.24}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Algorithmic Details.}{29}{subsection.A.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Complexity.}{29}{subsection.A.3}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces \textsc  {Enumerate-Solutions}   \textbf  {Input:} $a$, $b$, $g^{max}$   \textbf  {Output:} $S$}}{30}{algorithm.2}\protected@file@percent }
@@ -465,8 +468,8 @@
 \newlabel{ssec:topogen-baseline-training}{{A.4}{30}{Baselines Training Details}{subsection.A.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A.5}Additional Results}{30}{subsection.A.5}\protected@file@percent }
 \newlabel{ssec:topogen-additional-results}{{A.5}{30}{Additional Results}{subsection.A.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Comparison of typical training hyperparameters for point-based models (PointNet, PointNet++, DGCNN) and topology-based models (PersFormer, xPerT, PersLay). A vertical line separates the two families of architectures.}}{31}{table.caption.24}\protected@file@percent }
-\newlabel{suppl:topogen-baseline-training}{{6}{31}{Comparison of typical training hyperparameters for point-based models (PointNet, PointNet++, DGCNN) and topology-based models (PersFormer, xPerT, PersLay). A vertical line separates the two families of architectures}{table.caption.24}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Comparison of typical training hyperparameters for point-based models (PointNet, PointNet++, DGCNN) and topology-based models (PersFormer, xPerT, PersLay). A vertical line separates the two families of architectures.}}{31}{table.caption.25}\protected@file@percent }
+\newlabel{suppl:topogen-baseline-training}{{6}{31}{Comparison of typical training hyperparameters for point-based models (PointNet, PointNet++, DGCNN) and topology-based models (PersFormer, xPerT, PersLay). A vertical line separates the two families of architectures}{table.caption.25}{}}
 \abx@aux@read@bbl@mdfivesum{C15F40BEFFA83DC56E658B4A9540B92A}
 \abx@aux@defaultrefcontext{0}{persistence_images}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{intermediate_layers}{nty/global//global/global/global}
