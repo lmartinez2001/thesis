@@ -220,63 +220,6 @@
     \field{year}{1981}
   \endentry
 
-  \entry{top_layer}{misc}{}{}
-    \name{author}{6}{}{%
-      {{hash=BGR}{%
-         family={Brüel-Gabrielsson},
-         familyi={B\bibinithyphendelim G\bibinitperiod},
-         given={Rickard},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=NBJ}{%
-         family={Nelson},
-         familyi={N\bibinitperiod},
-         given={Bradley\bibnamedelima J.},
-         giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=DA}{%
-         family={Dwaraknath},
-         familyi={D\bibinitperiod},
-         given={Anjan},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=SP}{%
-         family={Skraba},
-         familyi={S\bibinitperiod},
-         given={Primoz},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=GLJ}{%
-         family={Guibas},
-         familyi={G\bibinitperiod},
-         given={Leonidas\bibnamedelima J.},
-         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=CG}{%
-         family={Carlsson},
-         familyi={C\bibinitperiod},
-         given={Gunnar},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{BGR+1}
-    \strng{fullhash}{BGRNBJDASPGLJCG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
-    \verb{eprint}
-    \verb 1905.12200
-    \endverb
-    \field{title}{A Topology Layer for Machine Learning}
-    \verb{url}
-    \verb https://arxiv.org/abs/1905.12200
-    \endverb
-    \field{eprinttype}{arXiv}
-    \field{eprintclass}{cs.LG}
-    \field{year}{2020}
-  \endentry
-
   \entry{persistence_landscapes}{misc}{}{}
     \name{author}{1}{}{%
       {{hash=BP}{%
@@ -301,38 +244,6 @@
     \endverb
     \field{eprinttype}{arXiv}
     \field{eprintclass}{math.AT}
-    \field{year}{2015}
-  \endentry
-
-  \entry{top_signatures}{inproceedings}{}{}
-    \name{author}{3}{}{%
-      {{hash=CM}{%
-         family={Carrière},
-         familyi={C\bibinitperiod},
-         given={Mathieu},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=OSY}{%
-         family={Oudot},
-         familyi={O\bibinitperiod},
-         given={Steve\bibnamedelima Y.},
-         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
-      }}%
-      {{hash=OM}{%
-         family={Ovsjanikov},
-         familyi={O\bibinitperiod},
-         given={Maks},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{CMOSYOM1}
-    \strng{fullhash}{CMOSYOM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \field{booktitle}{Symposium on Geometry Processing}
-    \field{title}{Stable Topological Signatures for Points on 3D Shapes}
     \field{year}{2015}
   \endentry
 
@@ -579,6 +490,47 @@
     \field{volume}{9}
     \field{journaltitle}{Foundations of Computational Mathematics}
     \field{year}{2009}
+  \endentry
+
+  \entry{cohen2007stability}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=CSD}{%
+         family={Cohen-Steiner},
+         familyi={C\bibinithyphendelim S\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=EH}{%
+         family={Edelsbrunner},
+         familyi={E\bibinitperiod},
+         given={Herbert},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Harer},
+         familyi={H\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{CSDEHHJ1}
+    \strng{fullhash}{CSDEHHJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1007/s00454-006-1276-5
+    \endverb
+    \field{number}{1}
+    \field{pages}{103\bibrangedash 120}
+    \field{title}{Stability of persistence diagrams}
+    \field{volume}{37}
+    \field{journaltitle}{Discrete \& Computational Geometry}
+    \field{year}{2007}
   \endentry
 
   \entry{objaverse}{misc}{}{}

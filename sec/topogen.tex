@@ -13,7 +13,7 @@
 
 Understanding how models capture topological properties of 3D shapes is a key step toward disentangling geometric representation learning from semantic categorization. Existing 3D datasets, such as Objaverse~\cite{objaverse,objaverse_xl} or ShapeNet~\cite{shapenet}, primarily organize data by semantic class or surface geometry, without systematic control of topology. Probing topology-aware representations therefore requires datasets that expose explicit topological labels under controlled geometric variability.
 
-To address this, we introduce DONUT, a scalable dataset of synthetic 3D shapes annotated with precise and balanced topological labels. Unlike prior datasets, DONUT is built from parametric families that guarantee topological correctness while enabling high geometric diversity. This design allows principled evaluation of how models represent intrinsic topological invariants such as connected components and genus.
+DONUT is a synthetic dataset designed to test whether 3D encoders capture topological structure rather than only geometry. Each object is a watertight manifold mesh with known numbers of connected components ($\beta_0$) and genus ($g$). This controlled setting allows us to separate geometric and topological learning.
 
 \subsection{Existing datasets}
 \label{ssec:existing_datasets}
@@ -25,7 +25,7 @@ The MANTRA dataset (Manifold Triangulation Assemblage) \cite{mantra} provides co
 
 \input{tables/dataset-compare.tex}
 
-\paragraph{Noisy topology.}
+\paragraph{Large object-centric datasets.}
 Large mesh datasets such as Thingi10K~\cite{thingi}, Objaverse~\cite{objaverse} and ABC~\cite{abc} contain CAD models and artistic objects, and include coarse topological annotations (number of components, genus). However, these annotations are unreliable for several reasons:
 
 \begin{enumerate}
@@ -33,11 +33,11 @@ Large mesh datasets such as Thingi10K~\cite{thingi}, Objaverse~\cite{objaverse} 
   \item \textit{Severe class imbalance.} While a wide range of genus values is theoretically possible, the overwhelming majority of meshes in both datasets have genus 0–2, making them unsuitable for balanced probing tasks.
   \item \textit{Structural artifacts.} Many meshes are non-manifold or self-intersecting, rendering quantities such as the Euler characteristic ill-defined:
 \begin{equation}
-  \chi = V - E + F = 2 - 2g - b + c
+  \chi = V - E + F = 2 - 2g
   \label{eq:euler}
 \end{equation}
 
-where $V,E,F$ are the number of vertices, edges, and faces, $g$ is genus, $b$ the number of boundary components, and $c$ the number of connected components.
+where $V,E,F$ are the number of vertices, edges, and faces, $g$ is genus.
 Attempts to repair such meshes (e.g., Manifold~\cite{manifold}, ManifoldPlus~\cite{manifoldplus}, DOGN~\cite{dogn}, CLAY~\cite{clay}) face tradeoffs between oversmoothing geometry, introducing artifacts, or incurring prohibitive computational cost. As a result, these datasets cannot provide reliable large-scale topological ground truth.
 \end{enumerate}
 
@@ -134,7 +134,7 @@ where $(s_x, s_y, s_z) > 0$ are scale factors along the $x, y, z$ axes respectiv
 
 To generate many samples (up to $10^5$) in a reasonable amount of time, we leverage the parametric forms of the shapes whenever possible. This approach minimizes computationally intensive operations and allows for efficient mesh generation.
 
-\paragraph{Cones.} To be completed
+\paragraph{Cones.} Cones are generated using the built-in \texttt{trimesh.creation.cone} primitive. Internally, \textit{trimesh} constructs a triangulated circular base in the $xy$-plane and connects each boundary vertex to a single apex point along the $z$-axis, forming a fan of triangular faces.
 
 \paragraph{Superquadrics.} Meshes corresponding to super ellipsoids and super toroids are generated directly from their parametric forms. The procedure consists of two steps: 1) generate a base template mesh (a sphere for ellipsoids, a torus for toroids) where vertices are expressed in spherical (resp. toroidal) coordinates, and 2) deform it according to the superquadric equations. This construction is lightweight, parallelizable, and supports fast large-scale dataset generation. The parametric equations we use in practice are as follows:
 \begin{equation}
