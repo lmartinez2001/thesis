@@ -183,11 +183,26 @@ We choose CKA for several reasons. First, its normalization makes the similarity
 Thus in our protocol, we treat a vectorization of the persistence diagram as one representational matrix $Y$, and the activations extracted from a given layer of the 3D encoder as $X$. Then we compute $\mathrm{CKA}(X,Y)$ to quantify how well that encoder subspace aligns with the topological modality.
 
 \paragraph{Experimental setting.}
+In the subspace‐alignment experiment we focus on three distinct vectorizations of persistence diagrams: (1) persistence landscapes, (2) the top k most persistent pairs as a prescribed descriptor, and (3) ATOL features. We deliberately exclude learned vectorization methods (e.g., PersLay, Persformer) because they are designed and tailored for graph‐data tasks and training them on persistence diagrams derived from 3D point clouds proved challenging to tune and to get stable convergence in our setting.
+
+Following the same protocol as in the probing experiment, we apply the alignment measure at every transformer block (i.e., for each layer of the backbone encoder) to observe how alignment evolves with depth. For each layer $l$, let $X_l\in\mathbb{R}^{n\times d_l}$ be the activations (frozen, pretrained backbone) and $Y\in \mathbb{R}^{n\times d_\text{topo}}$ be the vectorised topological features (same $Y$ used across layers). We compute the linear CKA similarity between $X_ll$ and $Y$ as described in Section \ref{sssec:subspace_alignment_protocol}. We report all results in Figure \ref{fig:cka-results}.
 
 
+\paragraph{Results.}
 
-\paragraph{Results}
-To be completed.
+The alignment scores (CKA) are reported in Figure~\ref{fig:cka-results}. While the linear-probing experiment showed a modest upward trend with increasing depth, here we observe that the CKA alignment does not systematically increase in deeper layers. In fact, despite the trend in probing accuracy, alignment scores across layers remain flat or even dip in deeper blocks.
+
+More surprisingly, alignment scores depend heavily on the vectorization method. The persistence-landscape representation scores poorly: this is expected given that landscapes produce very sparse signals (many zeros) in our 3D point-cloud setting, and increasing the number of landscape levels did not improve results. In contrast, the ATOL features show strong alignment with encoder activations on the training set, indicating that these unsupervised topological vectors are well-matched to what the backbone represents. However, when we compute alignment using the features derived from the DONUT dataset (or a held-out portion thereof), the alignment of ATOL features drops markedly. This drop highlights the poor transferability of such features: although well aligned in sample, they generalise less well. For the top-$k$ persistent pair vectorization, we observed intermediate behaviour: better than landscapes, worse than ATOL, and with moderate sensitivity to the choice of $k$.
+
+Note that for clarity we report results only for the two backbone models, Point‑BERT and Point‑MAE, because the other models we tested did not exhibit qualitatively different trends.
+Together, these findings suggest that simply increasing model depth is not sufficient to improve alignment to topological subspaces; rather the choice of vectorization is critical, and topological transfer remains a significant hurdle.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{figs/cka_results.pdf}
+  \caption{\textbf{CKA results for different layers.} The plots show the CKA similarity between the activations of the 3D encoder and the vectorized persistence diagrams across different layers. Higher CKA values indicate better alignment with the topological modality.}
+  \label{fig:cka-results}
+\end{figure}
 
 \subsection{Changing the Pretraining Data Distribution}
 \label{ssec:changing_pretraining_data_distribution}

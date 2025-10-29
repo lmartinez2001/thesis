@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIn the subspace‐alignment experiment we focus on three distinct vectorizations of persistence diagrams: (1) persistence landscapes, (2) the top k most persistent pairs as a prescribed descriptor, and (3) ATOL features\\E$"}
