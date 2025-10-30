@@ -8,6 +8,21 @@ We first conduct a probing analysis to estimate how much topological information
 \subsection{Model Probing}
 \label{ssec:model_probing}
 
+We start by probing transformer models to assess whether their internal representations encode information about shape topology. Specifically, we test if simple linear classifiers can recover the genus and number of connected components of shapes from the DONUT dataset using the representations of each intermediate transformer block. This approach provides a first estimate of how topological signals are distributed across the model depth.
+
+\paragraph{Motivation.}
+Linear probing is a standard approach in representation learning to evaluate how much a given factor of variation is linearly accessible from the learned embeddings. It assumes that if a linear classifier performs well, the corresponding information is already represented in a linearly separable manner. Importantly, several works have shown that the most informative representations for downstream tasks are not always located in the final layers of a model. Intermediate layers can encode more general or transferable structures before they are transformed into task-specific representations. This has been established in both vision and language transformers~\cite{intermediate_layers, structural_probe, vit_probing}. We therefore analyze not only the final layer, but the entire depth of each model, to capture where topology-related features emerge.
+
+\paragraph{Experimental setup.}
+For each evaluated model, we freeze the pretrained backbone and extract offline activations from all transformer blocks on the DONUT dataset. At every layer $l$, we train two separate linear classifiers on top of the frozen representations to predict (i) the genus and (ii) the number of connected components. We perform 5-fold cross-validation (23,613 training samples and 5,903 validation samples) and report averaged accuracy on the validation set.
+
+\paragraph{Results.}
+Figure~\ref{fig:probing-results} shows that probing accuracy tends to increase with network depth for both models, indicating that higher transformer layers capture richer structural information. The improvement is modest for genus prediction, with an average increase of about 3\% between the first and last layers. In contrast, connected component prediction improves by roughly 8\%, suggesting that the notion of component separation becomes more explicit as features become increasingly global. This aligns with the expectation that transformers progressively aggregate local patch information into holistic shape-level representations.
+
+Interestingly, in Point-MAE, accuracy for genus prediction plateaus after layer 5. This saturation may reflect the limited capacity of shallow hierarchies to encode topological invariants that depend on multi-scale relationships between local patches. Testing deeper or hierarchical variants of Point-MAE could help determine whether such information emerges later in the network.
+
+Despite these relative improvements, absolute scores remain low: around 20\% for genus and 50\% for connected components, highlighting that both models only weakly encode topology. This supports the view that current pretraining objectives, which focus on geometric reconstruction or semantic alignment, do not drive models to capture global connectivity. While deeper layers improve aggregation and invariance, they remain sensitive to geometric details rather than structural invariants. These results reinforce that topology-aware objectives or explicit topological supervision may be required to make 3D encoders truly aware of shape structure beyond geometry.
+
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{figs/probing.pdf}
@@ -15,32 +30,17 @@ We first conduct a probing analysis to estimate how much topological information
   \label{fig:probing-results}
 \end{figure}
 
-We start by probing transformer models to assess whether their internal representations encode information about shape topology. Specifically, we test if simple linear classifiers can recover the genus and number of connected components of shapes from the DONUT dataset using the representations of each intermediate layer. This approach provides a first estimate of how topological signals are distributed across the model depth.
-
-\paragraph{Motivation.}
-Linear probing is a standard approach in representation learning to evaluate how much a given factor of variation is linearly accessible from the learned embeddings. It assumes that if a linear classifier performs well, the corresponding information is already represented in a linearly separable manner. Importantly, several works have shown that the most informative representations for downstream tasks are not always located in the final layers of a model. Intermediate layers can encode more general or transferable structures before they are transformed into task-specific representations. This has been established in both vision and language transformers~\cite{intermediate_layers, structural_probe, vit_probing}. We therefore analyze not only the final layer, but the entire depth of each model, to capture where topology-related features emerge.
-
-\paragraph{Experimental setup.}
-For each evaluated model, we freeze the pretrained backbone and extract offline activations from all transformer layers on the DONUT dataset. At every layer $l$, we train two separate linear classifiers on top of the frozen representations to predict (i) the genus and (ii) the number of connected components. We perform 5-fold cross-validation and report averaged accuracy on the validation set.
-
-\paragraph{Results.}
-Overall, Figure~\ref{fig:probing-results} probing accuracy tends to increase with network depth for both models, indicating that higher transformer layers capture richer structural information. The improvement is modest for genus prediction, with an average increase of about 3\% between the first and last layers. In contrast, connected component prediction improves by roughly 8\%, suggesting that the notion of component separation becomes more explicit as features become increasingly global. This aligns with the expectation that transformers progressively aggregate local patch information into holistic shape-level representations.
-
-Interestingly, in Point-MAE, accuracy for genus prediction plateaus after layer 5. This saturation may reflect the limited capacity of shallow hierarchies to encode topological invariants that depend on multi-scale relationships between local patches. Testing deeper or hierarchical variants of Point-MAE could help determine whether such information emerges later in the network.
-
-Despite these relative improvements, absolute scores remain low: around 20\% for genus and 50\% for connected components, highlighting that both models only weakly encode topology. This supports the view that current pretraining objectives, which focus on geometric reconstruction or semantic alignment, do not drive models to capture global connectivity. While deeper layers improve aggregation and invariance, they remain sensitive to geometric details rather than structural invariants. These results reinforce that topology-aware objectives or explicit topological supervision may be required to make 3D encoders truly aware of shape structure beyond geometry.
-
-\subsection{Subspace Alignment with Persistent Homology}
+\subsection{Features Alignment with Persistent Homology}
 \label{ssec:ph}
+We study the relationship between representations learned by 3D shape encoders and those derived from persistent homology. Following the perspective of the Platonic Representation Hypothesis~\cite{plato,platonic}, we view learned embeddings as potentially containing subspaces that capture intrinsic structural information. Information captured by persistent homology can also be treated as a complementary modality. Assuming there's a way to encode topological features into a vector space, we can then ask whether the learned and topological features align. It's worth noticing that the analogy with \cite{platonic} is not perfect: while it's assumed that representations tend to converge at scale, topological features, even learned ones, aren't the result of large scale training.
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   \includegraphics[width=\linewidth]{figs/alignment.pdf}
   \caption{\textbf{Alignment procedure overview.} We extract features from a 3D point cloud with the model we seek to evaluate. We also vectorize its corresponding persistence diagram (Section~\ref{sssec:vectorization_persistence_diagrams}). We then compute the CKA similarity (Section~\ref{sssec:subspace_alignment_protocol}) between the two sets of features to quantify how well the learned representation aligns with topological signatures.}
   \label{fig:alignment}
 \end{figure}
 
-We study the relationship between representations learned by 3D shape encoders and those derived from persistent homology. Following the perspective of the Platonic Representation Hypothesis~\cite{plato,platonic}, we view learned embeddings as potentially containing subspaces that capture intrinsic structural information. Information captured by persistent homology can also be treated as a complementary modality. Assuming there's a way to encode topological features into a vector space, we can then ask whether the learned and topological subspaces align. It's worth noticing that the analogy with \cite{platonic} is not perfect: while it's assumed that representations tend to converge at scale, topological features, even learned ones, aren't the result of large scale training.
 
 We first review background on persistent homology and its vectorization. We then formally define the metrics used to quantify alignment. Finally, we describe our alignment protocol and present results across encoders and datasets.
 
@@ -192,11 +192,6 @@ Following the same protocol as in the probing experiment, we apply the alignment
 
 The alignment scores (CKA) are reported in Figure~\ref{fig:cka-results}. While the linear-probing experiment showed a modest upward trend with increasing depth, here we observe that the CKA alignment does not systematically increase in deeper layers. In fact, despite the trend in probing accuracy, alignment scores across layers remain flat or even dip in deeper blocks.
 
-More surprisingly, alignment scores depend heavily on the vectorization method. The persistence-landscape representation scores poorly: this is expected given that landscapes produce very sparse signals (many zeros) in our 3D point-cloud setting, and increasing the number of landscape levels did not improve results. In contrast, the ATOL features show strong alignment with encoder activations on the training set, indicating that these unsupervised topological vectors are well-matched to what the backbone represents. However, when we compute alignment using the features derived from the DONUT dataset (or a held-out portion thereof), the alignment of ATOL features drops markedly. This drop highlights the poor transferability of such features: although well aligned in sample, they generalise less well. For the top-$k$ persistent pair vectorization, we observed intermediate behaviour: better than landscapes, worse than ATOL, and with moderate sensitivity to the choice of $k$.
-
-Note that for clarity we report results only for the two backbone models, Point‑BERT and Point‑MAE, because the other models we tested did not exhibit qualitatively different trends.
-Together, these findings suggest that simply increasing model depth is not sufficient to improve alignment to topological subspaces; rather the choice of vectorization is critical, and topological transfer remains a significant hurdle.
-
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{figs/cka_results.pdf}
@@ -204,12 +199,17 @@ Together, these findings suggest that simply increasing model depth is not suffi
   \label{fig:cka-results}
 \end{figure}
 
+More surprisingly, alignment scores depend heavily on the vectorization method. The persistence-landscape representation scores poorly: this is expected given that landscapes produce very sparse signals (many zeros) in our 3D point-cloud setting, and increasing the number of landscape levels did not improve results. In contrast, the ATOL features show strong alignment with encoder activations on the training set, indicating that these unsupervised topological vectors are well-matched to what the backbone represents. However, when we compute alignment using the features derived from the DONUT dataset (or a held-out portion thereof), the alignment of ATOL features drops markedly. This drop highlights the poor transferability of such features: although well aligned in sample, they generalise less well. For the top-$k$ persistent pair vectorization, we observed intermediate behaviour: better than landscapes, worse than ATOL, and with moderate sensitivity to the choice of $k$.
+
+Note that for clarity we report results only for the two backbone models, Point‑BERT and Point‑MAE, because the other models we tested did not exhibit qualitatively different trends.
+Together, these findings suggest that simply increasing model depth is not sufficient to improve alignment to topological subspaces; rather the choice of vectorization is critical, and topological transfer remains a significant hurdle.
+
+
 \subsection{Changing the Pretraining Data Distribution}
 \label{ssec:changing_pretraining_data_distribution}
 
 \begin{figure}[h]
   \centering
-  
   \includegraphics[width=\linewidth]{figs/reconstruction.pdf}
   \caption{\textbf{Point-cloud reconstruction for different encoders.} Each pretrained model is fed with a point cloud with 2048 points. We reconstruct it with the decoder used during pretraining with a masking ratio of zero. To ensure topological structures of the input are captured, we patchify the input point cloud into overlapping local regions before encoding, and decode to a reconstructed point cloud of 4096 points. Reconstructed point-clouds don't exhibit the 3 characteristic holes of the input shape.}
   \label{fig:reconstructions}

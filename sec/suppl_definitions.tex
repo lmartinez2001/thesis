@@ -1,11 +1,10 @@
-\section{Supplementary proofs and definitions}
+\section{Supplementary Proofs and Definitions}
 \label{sec:suppl-definitions}
 
 \subsection{Proofs}
 \label{ssec:suppl-proofs}
 
 Section~\ref{ssec:topogen-limitations} states that for any closed orientable 2-manifold, the first and second Betti numbers satisfy $\beta_1 = 2g$ and $\beta_2 = \beta_0$. We provide a proof of this below.
-
 \noindent
 A closed orientable surface of genus $g$ can be seen as a sphere with $g$ handles attached. 
 For such a surface, the Euler characteristic is known to be
@@ -33,11 +32,71 @@ Thus,
 \end{equation}
 
 
-% \subsection{Metrics}
+\subsection{Definitions}
+\label{ssec:suppl-defs}
 
-% \paragraph{Balanced accuracy} For a classification task with $K$ classes, the balanced accuracy is defined as:
-% \begin{equation}\label{eq:balanced-accuracy}
-% \text{Balanced Accuracy} = \frac{1}{K} \sum_{i=1}^{K} \frac{TP_i}{TP_i + FN_i}
-% \end{equation}
+\subsubsection{Balanced (Macro) Accuracy}
+For a $C$-class task with per-class recall $\mathrm{TP}_c/(\mathrm{TP}_c+\mathrm{FN}_c)$, the balanced accuracy is the unweighted mean of class recalls:
+\begin{equation}
+\mathrm{BalancedAcc} \;=\; \frac{1}{C} \sum_{c=1}^{C} \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FN}_c}.
+\end{equation}
+This treats all classes equally and is preferred under class imbalance.
 
-% where $TP_i$ and $FN_i$ are the number of true positives and false negatives for class $i$, respectively. This metric is particularly useful for imbalanced datasets, as each class is reweighted according to its importance.
+\subsubsection{Macro F1 (``Balanced F1'')}
+Let precision and recall for class $c$ be
+\begin{equation}
+\mathrm{Prec}_c \;=\; \frac{\mathrm{TP}_c}{\mathrm{TP}_c+\mathrm{FP}_c},
+\qquad
+\mathrm{Rec}_c \;=\; \frac{\mathrm{TP}_c}{\mathrm{TP}_c+\mathrm{FN}_c}.
+\end{equation}
+The per-class F1 and its macro average are
+\begin{equation}
+\mathrm{F1}_c \;=\; \frac{2\,\mathrm{Prec}_c\,\mathrm{Rec}_c}{\mathrm{Prec}_c+\mathrm{Rec}_c},
+\qquad
+\mathrm{MacroF1} \;=\; \frac{1}{C}\sum_{c=1}^{C} \mathrm{F1}_c.
+\end{equation}
+MacroF1 equally weights classes and is insensitive to class frequency.
+
+\subsubsection{Mean Squared Error (MSE) for Ordinal Targets}
+For ordinal ground-truth labels $y_i \in \mathbb{Z}$ (e.g., genus, number of components) and real-valued predictions $\hat{y}_i \in \mathbb{R}$ produced by a regressor,
+\begin{equation}
+\mathrm{MSE} \;=\; \frac{1}{n}\sum_{i=1}^{n} (\,\hat{y}_i - y_i\,)^2.
+\end{equation}
+When reporting discrete predictions, $\hat{y}_i$ can be integer-rounded before computing classification metrics, while MSE is still computed on the real outputs to reflect ordinal distance.
+
+\subsubsection{Chamfer Distance (Point Sets)}
+Given finite point sets $P,Q \subset \mathbb{R}^3$, the symmetric squared Chamfer distance is
+\begin{equation}
+d_{\mathrm{Chamfer}}(P,Q) \;=\; \frac{1}{|P|}\sum_{p\in P}\min_{q\in Q}\|p-q\|_2^2 \;+\; \frac{1}{|Q|}\sum_{q\in Q}\min_{p\in P}\|p-q\|_2^2.
+\end{equation}
+It measures bidirectional nearest-neighbor discrepancy between shapes represented as point clouds.
+
+\subsubsection{Linear Probing (Formalization)}
+Let $Z \in \mathbb{R}^{n\times d}$ be frozen features from a given encoder layer for $n$ samples and $C$ classes.
+A linear probe learns weights $W \in \mathbb{R}^{d\times C}$ and bias $b \in \mathbb{R}^C$ by minimizing cross-entropy:
+\begin{equation}
+\min_{W,b}\; \frac{1}{n}\sum_{i=1}^{n} \Big[ -\log \Big( \frac{\exp\big((Z_i W + b)_{y_i}\big)}{\sum_{c=1}^C \exp\big((Z_i W + b)_c\big)} \Big) \Big]
+\end{equation}
+with $Z_i$ the $i$-th row of $Z$ and label $y_i \in \{1,\dots,C\}$. For ordinal tasks, a regression probe minimizes $\frac{1}{n}\sum_i \|Z_i w + b - y_i\|_2^2$ with $w \in \mathbb{R}^d$.
+
+\subsubsection{Farthest Point Sampling (FPS)}
+For a finite set $P=\{p_j\}_{j=1}^N \subset \mathbb{R}^3$ and desired sample size $M$, FPS selects $\{c_k\}_{k=1}^M$ iteratively:
+\begin{equation}
+c_1 \in P \text{ arbitrary}, \qquad
+c_{k+1} \;=\; \arg\max_{p \in P} \; \min_{1 \leq r \leq k} \;\|p - c_r\|_2.
+\end{equation}
+This greedily maximizes coverage by repeatedly adding the point farthest from the current set $\{c_r\}$.
+
+\subsubsection{$k$-Nearest Neighbors (KNN) Grouping for Patches}
+Given patch centers $\{c_j\}_{j=1}^M$ (e.g., from FPS) and a point set $P$, the $K$-NN patch around $c_j$ is
+\begin{equation}
+\mathcal{P}_j \;=\; \{ \text{$K$ points in $P$ closest to } c_j \text{ in Euclidean distance} \}.
+\end{equation}
+Token embeddings are computed from $\mathcal{P}_j$ and optionally augmented with a positional encoding of $c_j$.
+
+\subsubsection{UMAP Objective (for Completeness)}
+UMAP constructs fuzzy $k$-NN graphs in high- and low-dimensional spaces with memberships $w_{ij}$ and $\tilde{w}_{ij}$, and optimizes the cross-entropy between them:
+\begin{equation}
+\mathcal{L}_{\mathrm{UMAP}} \;=\; - \sum_{i<j} \Big[ w_{ij}\,\log \tilde{w}_{ij} \;+\; (1-w_{ij})\,\log (1-\tilde{w}_{ij}) \Big].
+\end{equation}
+This preserves local neighborhood structure while enabling global separation useful for visualization.

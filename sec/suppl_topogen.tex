@@ -185,14 +185,16 @@ A naïve approach of the algorithm's complexity is $O(a^{g^{max}+1})$, since at 
   \end{algorithmic}
 \end{algorithm}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\linewidth]{figs/topogen/generation_time.pdf}
+   \caption{\textbf{Generation time for different dataset sizes.} We report the time required to generate datasets of varying sizes using the DONUT framework. The results demonstrate that even large-scale variants remain practical in terms of generation time.}
+   \label{fig:topogen-gen-time}
+\end{figure}
+
 
 \subsection{Baselines Training Details}
 \label{ssec:topogen-baseline-training}
 
 Table~\ref{suppl:topogen-baseline-training} provides the training details for the baselines presented in Table~\ref{tab:topogen-results}. Every model is trained on point clouds containing 4096 points. This number is chosen because each mesh in the DONUT dataset is pre-sampled offline with 8192 points. Using 4096 points provides a dense enough representation to capture the underlying topological structures while enabling random resampling from the original 8192-point clouds. This resampling reduces the risk of overfitting to specific point locations and improves the robustness of the learned representations.
 \input{tables/donut-model-params.tex}
-
-\subsection{Additional Results}
-\label{ssec:topogen-additional-results}
-
-We complete the results provided in Table~\ref{tab:topogen-results} with per-class metrics for each baseline. 
