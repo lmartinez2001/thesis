@@ -1,6 +1,36 @@
-% \section{Supplementary Definitions}
-% \label{sec:suppl-definitions}
+\section{Supplementary proofs and definitions}
+\label{sec:suppl-definitions}
 
+\subsection{Proofs}
+\label{ssec:suppl-proofs}
+
+Section~\ref{ssec:topogen-limitations} states that for any closed orientable 2-manifold, the first and second Betti numbers satisfy $\beta_1 = 2g$ and $\beta_2 = \beta_0$. We provide a proof of this below.
+
+\noindent
+A closed orientable surface of genus $g$ can be seen as a sphere with $g$ handles attached. 
+For such a surface, the Euler characteristic is known to be
+\begin{equation}
+\chi = 2 - 2g.
+\end{equation}
+
+The Euler characteristic also satisfies
+\begin{equation}
+\chi = \beta_0 - \beta_1 + \beta_2,
+\end{equation}
+where $\beta_i$ are the Betti numbers.
+
+Since the surface is closed and connected, we have $\beta_0 = 1$. 
+For orientable surfaces, there is one independent 2-dimensional hole, so $\beta_2 = 1$.
+
+Substituting these values gives
+\begin{equation}
+2 - 2g = 1 - \beta_1 + 1 \quad \Rightarrow \quad \beta_1 = 2g.
+\end{equation}
+
+Thus,
+\begin{equation}
+\beta_1 = 2g, \qquad \beta_2 = \beta_0.
+\end{equation}
 
 
 % \subsection{Metrics}

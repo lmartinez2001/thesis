@@ -20,19 +20,19 @@
 \contentsline {subsection}{\numberline {2.3}Analysis}{10}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}General Properties}{10}{subsubsection.2.3.1}%
 \contentsline {paragraph}{Dataset statistics.}{10}{figure.caption.10}%
-\contentsline {paragraph}{Distributions and scalability.}{11}{figure.caption.10}%
+\contentsline {paragraph}{Distributions and scalability.}{10}{figure.caption.10}%
 \contentsline {subsubsection}{\numberline {2.3.2}Baselines and Transferability}{11}{subsubsection.2.3.2}%
 \contentsline {paragraph}{Results.}{11}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Saliency Analysis}{11}{subsubsection.2.3.3}%
-\contentsline {paragraph}{Definition.}{11}{figure.caption.12}%
+\contentsline {subsubsection}{\numberline {2.3.3}Saliency Analysis}{12}{subsubsection.2.3.3}%
+\contentsline {paragraph}{Definition.}{12}{figure.caption.12}%
 \contentsline {paragraph}{Interpretation on point clouds.}{12}{equation.6}%
 \contentsline {paragraph}{Practical computation.}{12}{equation.6}%
-\contentsline {paragraph}{Results.}{12}{equation.6}%
-\contentsline {subsection}{\numberline {2.4}Limitations and Further Improvements}{12}{subsection.2.4}%
-\contentsline {paragraph}{Topological Variety.}{12}{subsection.2.4}%
+\contentsline {paragraph}{Results.}{13}{equation.6}%
+\contentsline {subsection}{\numberline {2.4}Limitations and Further Improvements}{13}{subsection.2.4}%
+\contentsline {paragraph}{Topological Variety.}{13}{subsection.2.4}%
 \contentsline {paragraph}{Geometric Complexity.}{13}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Used Models}{13}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Baselines Models}{13}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Baselines Models}{14}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}PointNet}{14}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}PointNet++}{14}{subsubsection.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.1.3}DGCNN (Dynamic Graph CNN)}{14}{subsubsection.3.1.3}%
@@ -46,27 +46,27 @@
 \contentsline {paragraph}{Why we focus on unimodal encoders.}{18}{equation.21}%
 \contentsline {section}{\numberline {4}Experiments}{18}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Model Probing}{18}{subsection.4.1}%
-\contentsline {paragraph}{Motivation.}{19}{figure.caption.15}%
-\contentsline {paragraph}{Experimental setup.}{19}{figure.caption.15}%
-\contentsline {paragraph}{Results.}{19}{figure.caption.15}%
+\contentsline {paragraph}{Motivation.}{18}{figure.caption.16}%
+\contentsline {paragraph}{Experimental setup.}{19}{figure.caption.16}%
+\contentsline {paragraph}{Results.}{19}{figure.caption.16}%
 \contentsline {subsection}{\numberline {4.2}Subspace Alignment with Persistent Homology}{19}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Persistence Diagrams}{19}{subsubsection.4.2.1}%
-\contentsline {paragraph}{Filtrations.}{19}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1}Persistence Diagrams}{20}{subsubsection.4.2.1}%
+\contentsline {paragraph}{Filtrations.}{20}{subsubsection.4.2.1}%
 \contentsline {paragraph}{Homology and persistent maps.}{20}{subsubsection.4.2.1}%
 \contentsline {paragraph}{Persistence modules, barcodes and diagrams.}{20}{equation.22}%
 \contentsline {paragraph}{Why a persistence diagram is not a Euclidean vector object.}{20}{equation.22}%
-\contentsline {paragraph}{Distances between diagrams.}{20}{equation.22}%
+\contentsline {paragraph}{Distances between diagrams.}{21}{equation.22}%
 \contentsline {paragraph}{Stability theorems.}{21}{equation.24}%
-\contentsline {paragraph}{Extended persistence.}{21}{figure.caption.17}%
-\contentsline {subsubsection}{\numberline {4.2.2}Vectorization of Persistence Diagrams}{22}{subsubsection.4.2.2}%
+\contentsline {paragraph}{Extended persistence.}{21}{figure.caption.18}%
+\contentsline {subsubsection}{\numberline {4.2.2}Vectorization of Persistence Diagrams}{21}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Subspace Alignment Protocol}{23}{subsubsection.4.2.3}%
 \contentsline {paragraph}{Background}{23}{subsubsection.4.2.3}%
-\contentsline {paragraph}{Experimental setting.}{23}{equation.28}%
+\contentsline {paragraph}{Experimental setting.}{24}{equation.28}%
 \contentsline {paragraph}{Results.}{24}{equation.28}%
-\contentsline {subsection}{\numberline {4.3}Changing the Pretraining Data Distribution}{24}{subsection.4.3}%
-\contentsline {paragraph}{Object Classification.}{25}{table.caption.21}%
-\contentsline {paragraph}{Few-Shot Classification.}{26}{table.caption.22}%
-\contentsline {section}{\numberline {5}Conclusion}{26}{section.5}%
+\contentsline {subsection}{\numberline {4.3}Changing the Pretraining Data Distribution}{25}{subsection.4.3}%
+\contentsline {paragraph}{Object Classification.}{26}{table.caption.22}%
+\contentsline {paragraph}{Few-Shot Classification.}{26}{table.caption.23}%
+\contentsline {section}{\numberline {5}Conclusion}{27}{section.5}%
 \contentsline {section}{\numberline {A}Supplementary Material for DONUT}{28}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1}EuLearn Dataset Analysis}{28}{subsection.A.1}%
 \contentsline {subsection}{\numberline {A.2}Sampling Labels}{28}{subsection.A.2}%
@@ -76,3 +76,5 @@
 \contentsline {paragraph}{Complexity.}{30}{subsection.A.3}%
 \contentsline {subsection}{\numberline {A.4}Baselines Training Details}{31}{subsection.A.4}%
 \contentsline {subsection}{\numberline {A.5}Additional Results}{31}{subsection.A.5}%
+\contentsline {section}{\numberline {B}Supplementary proofs and definitions}{31}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Proofs}{31}{subsection.B.1}%

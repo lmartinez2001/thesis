@@ -1,0 +1,18 @@
+\begin{table}[h]
+  \begin{center}
+  \begin{tabular}{l l l c}
+  Model & Venue & Self-Supervised &  Hierarchical \\
+  \midrule
+  PointNet~\cite{pointnet} & CVPR 2017 & \xmark & \xmark \\
+  PointNet++~\cite{pointnet++} & NeurIPS 2017 & \xmark & \cmark \\
+  DGCNN~\cite{dgcnn} & TOG 2019 & \xmark & \xmark \\
+  Point-BERT~\cite{pbert} & CVPR 2022 & Masked Point Modeling & \xmark \\
+  Point-MAE~\cite{pmae} & ECCV 2022 & Masked Auto-Encoding (MAE) & \xmark \\
+  Point-M2AE~\cite{pm2ae} & NeurIPS 2022 & MAE & \cmark \\
+  PCP-MAE~\cite{pcpmae} & NeurIPS 2024 & MAE + centers prediction & \xmark \\
+  \midrule
+  \end{tabular}
+  \end{center}
+  \caption{\textbf{Overview of the models used in this work.} We summarise venue, year, whether supervised or self-supervised, and if self-supervised the pretraining objective}
+  \label{tab:used_models}
+\end{table}
